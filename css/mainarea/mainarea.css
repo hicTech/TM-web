@@ -1,0 +1,47 @@
+.MAINAREA-header{
+	height: 35px
+}
+
+.MAINAREA-controller{
+	background-color:#222;
+	vertical-align: top
+}
+
+.MAINAREA-navigator{
+	height: 40px;
+}
+
+.MAINAREA-main{
+	height: 100%
+}
+
+.MAINAREA-slider{
+	
+}
+
+.MAINAREA-slider ul{
+	list-style-type:none;
+	margin: 0px;
+	padding: 0px
+}
+
+.MAINAREA-slider ul li{
+	float: left;
+	width: 100%;
+}
+
+.MAINAREA-slider ul li:first-child{
+	display: block
+}
+
+.MAINAREA-sheet-footer{
+	background-color:#0f0f0f;
+	vertical-align: top;
+	height:35px
+}
+
+.MAINAREA-footer{
+	height:25px;
+	background-color:#fff;
+	vertical-align: top
+}

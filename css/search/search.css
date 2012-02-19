@@ -1,0 +1,128 @@
+.SEARCH{
+	background-color: #ddd;
+	padding: 2px;
+	overflow:auto;
+	margin:-1px 0px 0px -1px;
+}
+
+.SEARCH-box{
+	color : #fff;
+	width : 280px;
+	min-height : 250px;
+	padding:2px 2px;
+	float :left;
+	border:solid 1px #ddd;
+	border-radius: 9px;
+	background-color: #ddd;
+	    -webkit-box-shadow:     inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	               -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	                    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset
+}
+
+.SEARCH-box:hover{
+	    -webkit-box-shadow:     inset 1px 1px 35px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	               -moz-box-shadow: inset 1px 1px 35px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	                    box-shadow: inset 1px 1px 35px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset
+}
+
+.SEARCH-box-header{
+	color : #222;
+	height: 25px;
+	font-size: 14px;
+	font-weight:bold;
+	padding:8px 10px;
+	float : left;
+	clear: both
+}
+
+.SEARCH-box-title{
+	float: left;
+	margin: 5px
+}
+
+.SEARCH-box-header-separator{
+	background-image: url(img/horizontal_separator.png);
+	width: 65%;
+	margin:0px auto;
+	height:2px;
+	clear: both
+}
+
+.SEARCH-box-item-container{
+	font-size: 12px;
+	margin: 10px;
+	padding-top : 5px;
+	clear: both
+}
+
+.SEARCH-box-item-container ul{
+	list-style-type:circle; 
+}
+
+.SEARCH-box-item-container ul li{
+	padding: 3px;
+	cursor: pointer
+}
+
+.SEARCH-box-item-container ul li:hover{
+	color: #2aa6c0
+}
+
+.SEARCH-inner-box{
+	color : #fff;
+	font-size: 12px;
+	min-width :170px;
+	min-height : 100px;
+	margin : 10px 0px 0px 10px;
+	padding:1px 4px;
+	overflow : auto;
+	border : solid 1px #2a2a2a;
+	float :left;
+	border-radius: 5px;
+	background-color: #222222;
+	    -webkit-box-shadow:     inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	               -moz-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	                    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+}
+
+.SEARCH-inner-box-header{
+	margin: 0px 0px 0px -7px;
+	height: 28px;
+	font-size: 12px;
+	padding:2px;
+	float : left;
+	overflow :hidden;
+	clear: both
+}
+
+.SEARCH-inner-box-header .badge-label{
+	color: #eee;
+	margin: 2px 0px 0px -10px
+}
+
+.SEARCH-inner-box-header-separator{
+	background-image: url(img/horizontal_separator_dark.png);
+	width: 65%;
+	margin:0px auto;
+	height:2px;
+	clear: both
+}
+
+.SEARCH-inner-box-item-container{
+	font-size: 11px;
+	margin: -5px 0px 0px -25px;
+	clear: both
+}
+
+.SEARCH-inner-box-item-container ul{
+	list-style-type:none;
+}
+
+.SEARCH-inner-box-item-container ul li{
+	padding: 2px;
+	cursor: pointer
+}
+
+.SEARCH-inner-box-item-container ul li:hover{
+	color: #2aa6c0
+}

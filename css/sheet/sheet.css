@@ -1,0 +1,25 @@
+.SHEET{
+	height:0px; !important
+	width: 90%;
+	overflow:auto;
+	margin: 10px;
+	border: solid 1px #ccc;
+	background-image: url(img/alpha10.png);
+	border-radius: 3px;
+	color: #3d3c3c;
+	    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+               -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                    box-shadow:0 1px 4px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.SHEET-container{
+	margin: 10px auto;
+	padding: 0px 10px
+}
+
+
+.SHEET-footer{
+	margin-bottom: 20px;
+	font-weight: bold
+}
+

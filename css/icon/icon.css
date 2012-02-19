@@ -1,0 +1,364 @@
+/*
+ * 72 x 47 
+ */
+
+.ICON-47{
+	width: 47px;
+	height: 47px;
+	float: left
+}
+
+.ICON-47.no-canvas{
+	margin:-9px
+}
+
+
+.ICON-47.white{background-image: url(img/TM/tm_icons_set_white_47x47.png);}
+.ICON-47.grey{background-image: url(img/TM/tm_icons_set_grey_47x47.png);}
+.ICON-47.grey-styled{background-image: url(img/TM/tm_icons_set_grey_styled_47x47.png);}
+.ICON-47.blue-styled{background-image: url(img/TM/tm_icons_set_blue_styled_47x47.png);}
+.ICON-47.orange-styled{background-image: url(img/TM/tm_icons_set_orange_styled_47x47.png);}
+.ICON-47.purple-styled{background-image: url(img/TM/tm_icons_set_purple_styled_47x47.png);}
+.ICON-47.red-styled{background-image: url(img/TM/tm_icons_set_red_styled_47x47.png);}
+
+
+.ICON-47.home{ background-position: 0px 0px; }
+.ICON-47.anagrafica{ background-position: -47px 0px;}
+.ICON-47.raccolta{ background-position: -94px 0px;}
+.ICON-47.unita{ background-position: -141px 0px;}
+.ICON-47.criopreservata,
+.ICON-47.criopreservazione,
+.ICON-47.stoccaggio{ background-position: -188px 0px;}
+.ICON-47.magazzino{ background-position: -235px 0px;}
+.ICON-47.reportistica{ background-position: -282px 0px;}
+.ICON-47.utenti{ background-position: -329px 0px;}
+.ICON-47.admin{ background-position: -376px 0px;}
+.ICON-47.alert{ background-position: -423px 0px;}
+
+.ICON-47.frazionamento{ background-position: 0px -47px; }
+.ICON-47.paziente{ background-position: -47px -47px;}
+.ICON-47.manipolazione{ background-position: -94px -47px;}
+.ICON-47.caratterizzazione{ background-position: -141px -47px;}
+.ICON-47.accettata,.ICON-47.idonea{ background-position: -188px -47px;}
+.ICON-47.clinica{ background-position: -235px -47px;}
+.ICON-47.timing{ background-position: -282px -47px;}
+.ICON-47.rilascio_unita{ background-position: -329px -47px;}
+.ICON-47.idoneita_unita_criopreservata{ background-position: -376px -47px;}
+.ICON-47.autologa,
+.ICON-47.reinfusione{ background-position: -423px -47px;}
+
+.ICON-47.in_raccolta{ background-position: 0px -94px; }
+.ICON-47.terminata,.ICON-47.effettuata{ background-position: -47px -94px;}
+.ICON-47.lotto{ background-position: -94px -94px;}
+.ICON-47.stoccaggio{ background-position: -141px -94px;}
+.ICON-47.scongelamento{ background-position: -188px -94px;}
+.ICON-47.unita_accettata{ background-position: -235px -94px;}
+.ICON-47.allogenica{ background-position: -282px -94px;}
+.ICON-47.unita_reinfusa{ background-position: -329px -94px;}
+.ICON-47.diagnosi{ background-position: -376px -94px;}
+.ICON-47.ciclo{ background-position: -423px -94px;}
+
+
+/*
+ * 36 x 36
+ */
+
+.ICON-36{
+	width: 36px;
+	height: 36px;
+	float: left
+}
+.ICON-36.no-canvas{
+	margin:-4px
+}
+.ICON-36.white{background-image: url(img/TM/tm_icons_set_white_36x36.png);}
+.ICON-36.grey{background-image: url(img/TM/tm_icons_set_grey_36x36.png);}
+
+.ICON-36.home{ background-position: 0px 0px; }
+.ICON-36.anagrafica{ background-position: -36px 0px;}
+.ICON-36.raccolta{ background-position: -72px 0px;}
+.ICON-36.unita{ background-position: -105px 0px;}
+.ICON-36.criopreservata,
+.ICON-36.criopreservazione,
+.ICON-36.stoccaggio{ background-position: -141px 0px;}
+.ICON-36.magazzino{ background-position: -177px 0px;}
+.ICON-36.reportistica{ background-position: -213px 0px;}
+.ICON-36.utenti{ background-position: -249px 0px;}
+.ICON-36.admin{ background-position: -285px 0px;}
+.ICON-36.alert{ background-position: -321px 0px;}
+
+.ICON-36.frazionamento{ background-position: 0px -36px; }
+.ICON-36.paziente{ background-position: -36px -36px;}
+.ICON-36.manipolazione{ background-position: -72px -36px;}
+.ICON-36.caratterizzazione{ background-position: -105px -36px;}
+.ICON-36.accettata,
+.ICON-36.idonea{ background-position: -141px -36px;}
+.ICON-36.clinica{ background-position: -177px -36px;}
+.ICON-36.timing{ background-position: -213px -36px;}
+.ICON-36.rilascio_unita{ background-position: -249px -36px;}
+.ICON-36.idoneita_unita_criopreservata{ background-position: -285px -36px;}
+.ICON-36.autologa,
+.ICON-36.reinfusione{ background-position: -321px -36px;}
+
+.ICON-36.in_raccolta{ background-position: 0px -72px; }
+.ICON-36.terminata,.ICON-36.effettuata{ background-position: -36px -72px;}
+.ICON-36.lotto{ background-position: -72px -72px;}
+.ICON-36.stoccaggio{ background-position: -105px -72px;}
+.ICON-36.scongelamento{ background-position: -141px -72px;}
+.ICON-36.unita_accettata{ background-position: -177px -72px;}
+.ICON-36.allogenica{ background-position: -213px -72px;}
+.ICON-36.unita_reinfusa{ background-position: -249px -72px;}
+.ICON-36.diagnosi{ background-position: -285px -72px;}
+.ICON-36.ciclo{ background-position: -321px -72px;}
+
+
+/*
+ * badge
+ */
+
+.ICON-badge{
+	border-radius: 3px;
+	height: 25px;
+	font-size: 12px;
+	padding:3px 3px;
+	float : left;
+	overflow :hidden;
+	width: 210px;
+	margin: 2px 2px
+}
+
+.ICON-badge.small{
+	border-radius: 3px;
+	height: 20px;
+	font-size: 11px;
+	padding:3px 3px;
+	float : left;
+	overflow :hidden;
+	width: 190px;
+	margin: 2px 2px
+}
+
+.ICON-badge.small .ICON-36{
+	margin-top: -7px
+}
+
+.ICON-badge.small .badge-label{
+	margin: -2px 0px 0px -8px
+}
+
+.ICON-badge.active{
+	cursor:pointer
+}
+
+
+.ICON-badge.white{
+	background-image: url(img/alpha20.png);
+}
+.ICON-badge.white.active:hover{
+	background-image: url(img/alpha40.png);
+}
+
+.ICON-badge.grey{
+	background-image: url(img/alpha80.png);
+	color:#fff;
+}
+.ICON-badge.grey.active:hover{
+	background-image: url(img/alpha90.png);
+}
+
+.badge-label{
+	padding: 6px 0px 0px 40px
+}
+
+
+
+/*
+ * tool - ICON
+ */
+.ICON-tool { width: 16px; height: 16px; background-image: url(img/TOOL/tool_icons_000000.png);display: block; float: left}
+.ICON-tool.grey {background-image: url(img/TOOL/tool_icons_3b3b3b.png); }
+.ICON-tool.light_grey {background-image: url(img/TOOL/tool_icons_888888.png); }
+.ICON-tool.dark_grey {background-image: url(img/TOOL/tool_icons_222222.png); }
+.ICON-tool.very_light_grey {background-image: url(img/TOOL/tool_icons_dddddd.png); }
+.ICON-tool.white {background-image: url(img/TOOL/tool_icons_ffffff.png); }
+.ICON-tool.red {background-image: url(img/TOOL/tool_icons_ff0000.png); }
+.ICON-tool.green {background-image: url(img/TOOL/tool_icons_6fb23d.png); }
+.ICON-tool.blue {background-image: url(img/TOOL/tool_icons_428dda.png); }
+
+
+/* positioning */
+.ICON-tool.carat-1-n { background-position: 0 0; }
+.ICON-tool.carat-1-ne { background-position: -16px 0; }
+.ICON-tool.carat-1-e { background-position: -32px 0; }
+.ICON-tool.carat-1-se { background-position: -48px 0; }
+.ICON-tool.carat-1-s { background-position: -64px 0; }
+.ICON-tool.carat-1-sw { background-position: -80px 0; }
+.ICON-tool.carat-1-w { background-position: -96px 0; }
+.ICON-tool.carat-1-nw { background-position: -112px 0; }
+.ICON-tool.carat-2-n-s { background-position: -128px 0; }
+.ICON-tool.carat-2-e-w { background-position: -144px 0; }
+.ICON-tool.triangle-1-n { background-position: 0 -16px; }
+.ICON-tool.triangle-1-ne { background-position: -16px -16px; }
+.ICON-tool.triangle-1-e { background-position: -32px -16px; }
+.ICON-tool.triangle-1-se { background-position: -48px -16px; }
+.ICON-tool.triangle-1-s { background-position: -64px -16px; }
+.ICON-tool.triangle-1-sw { background-position: -80px -16px; }
+.ICON-tool.triangle-1-w { background-position: -96px -16px; }
+.ICON-tool.triangle-1-nw { background-position: -112px -16px; }
+.ICON-tool.triangle-2-n-s { background-position: -128px -16px; }
+.ICON-tool.triangle-2-e-w { background-position: -144px -16px; }
+.ICON-tool.arrow-1-n { background-position: 0 -32px; }
+.ICON-tool.arrow-1-ne { background-position: -16px -32px; }
+.ICON-tool.arrow-1-e { background-position: -32px -32px; }
+.ICON-tool.arrow-1-se { background-position: -48px -32px; }
+.ICON-tool.arrow-1-s { background-position: -64px -32px; }
+.ICON-tool.arrow-1-sw { background-position: -80px -32px; }
+.ICON-tool.arrow-1-w { background-position: -96px -32px; }
+.ICON-tool.arrow-1-nw { background-position: -112px -32px; }
+.ICON-tool.arrow-2-n-s { background-position: -128px -32px; }
+.ICON-tool.arrow-2-ne-sw { background-position: -144px -32px; }
+.ICON-tool.arrow-2-e-w { background-position: -160px -32px; }
+.ICON-tool.arrow-2-se-nw { background-position: -176px -32px; }
+.ICON-tool.arrowstop-1-n { background-position: -192px -32px; }
+.ICON-tool.arrowstop-1-e { background-position: -208px -32px; }
+.ICON-tool.arrowstop-1-s { background-position: -224px -32px; }
+.ICON-tool.arrowstop-1-w { background-position: -240px -32px; }
+.ICON-tool.arrowthick-1-n { background-position: 0 -48px; }
+.ICON-tool.arrowthick-1-ne { background-position: -16px -48px; }
+.ICON-tool.arrowthick-1-e { background-position: -32px -48px; }
+.ICON-tool.arrowthick-1-se { background-position: -48px -48px; }
+.ICON-tool.arrowthick-1-s { background-position: -64px -48px; }
+.ICON-tool.arrowthick-1-sw { background-position: -80px -48px; }
+.ICON-tool.arrowthick-1-w { background-position: -96px -48px; }
+.ICON-tool.arrowthick-1-nw { background-position: -112px -48px; }
+.ICON-tool.arrowthick-2-n-s { background-position: -128px -48px; }
+.ICON-tool.arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ICON-tool.arrowthick-2-e-w { background-position: -160px -48px; }
+.ICON-tool.arrowthick-2-se-nw { background-position: -176px -48px; }
+.ICON-tool.arrowthickstop-1-n { background-position: -192px -48px; }
+.ICON-tool.arrowthickstop-1-e { background-position: -208px -48px; }
+.ICON-tool.arrowthickstop-1-s { background-position: -224px -48px; }
+.ICON-tool.arrowthickstop-1-w { background-position: -240px -48px; }
+.ICON-tool.arrowreturnthick-1-w { background-position: 0 -64px; }
+.ICON-tool.arrowreturnthick-1-n { background-position: -16px -64px; }
+.ICON-tool.arrowreturnthick-1-e { background-position: -32px -64px; }
+.ICON-tool.arrowreturnthick-1-s { background-position: -48px -64px; }
+.ICON-tool.arrowreturn-1-w { background-position: -64px -64px; }
+.ICON-tool.arrowreturn-1-n { background-position: -80px -64px; }
+.ICON-tool.arrowreturn-1-e { background-position: -96px -64px; }
+.ICON-tool.arrowreturn-1-s { background-position: -112px -64px; }
+.ICON-tool.arrowrefresh-1-w { background-position: -128px -64px; }
+.ICON-tool.arrowrefresh-1-n { background-position: -144px -64px; }
+.ICON-tool.arrowrefresh-1-e { background-position: -160px -64px; }
+.ICON-tool.arrowrefresh-1-s { background-position: -176px -64px; }
+.ICON-tool.arrow-4 { background-position: 0 -80px; }
+.ICON-tool.arrow-4-diag { background-position: -16px -80px; }
+.ICON-tool.extlink { background-position: -32px -80px; }
+.ICON-tool.newwin { background-position: -48px -80px; }
+.ICON-tool.refresh { background-position: -64px -80px; }
+.ICON-tool.shuffle { background-position: -80px -80px; }
+.ICON-tool.transfer-e-w { background-position: -96px -80px; }
+.ICON-tool.transferthick-e-w { background-position: -112px -80px; }
+.ICON-tool.folder-collapsed { background-position: 0 -96px; }
+.ICON-tool.folder-open { background-position: -16px -96px; }
+.ICON-tool.document { background-position: -32px -96px; }
+.ICON-tool.document-b { background-position: -48px -96px; }
+.ICON-tool.note { background-position: -64px -96px; }
+.ICON-tool.mail-closed { background-position: -80px -96px; }
+.ICON-tool.mail-open { background-position: -96px -96px; }
+.ICON-tool.suitcase { background-position: -112px -96px; }
+.ICON-tool.comment { background-position: -128px -96px; }
+.ICON-tool.person { background-position: -144px -96px; }
+.ICON-tool.print { background-position: -160px -96px; }
+.ICON-tool.trash { background-position: -176px -96px; }
+.ICON-tool.locked { background-position: -192px -96px; }
+.ICON-tool.unlocked { background-position: -208px -96px; }
+.ICON-tool.bookmark { background-position: -224px -96px; }
+.ICON-tool.tag { background-position: -240px -96px; }
+.ICON-tool.home { background-position: 0 -112px; }
+.ICON-tool.flag { background-position: -16px -112px; }
+.ICON-tool.calendar { background-position: -32px -112px; }
+.ICON-tool.cart { background-position: -48px -112px; }
+.ICON-tool.pencil { background-position: -64px -112px; }
+.ICON-tool.clock { background-position: -80px -112px; }
+.ICON-tool.disk { background-position: -96px -112px; }
+.ICON-tool.calculator { background-position: -112px -112px; }
+.ICON-tool.zoomin { background-position: -128px -112px; }
+.ICON-tool.zoomout { background-position: -144px -112px; }
+.ICON-tool.search { background-position: -160px -112px; }
+.ICON-tool.wrench { background-position: -176px -112px; }
+.ICON-tool.gear { background-position: -192px -112px; }
+.ICON-tool.heart { background-position: -208px -112px; }
+.ICON-tool.star { background-position: -224px -112px; }
+.ICON-tool.link { background-position: -240px -112px; }
+.ICON-tool.cancel { background-position: 0 -128px; }
+.ICON-tool.plus { background-position: -16px -128px; }
+.ICON-tool.plusthick { background-position: -32px -128px; }
+.ICON-tool.minus { background-position: -48px -128px; }
+.ICON-tool.minusthick { background-position: -64px -128px; }
+.ICON-tool.close { background-position: -80px -128px; }
+.ICON-tool.closethick { background-position: -96px -128px; }
+.ICON-tool.key { background-position: -112px -128px; }
+.ICON-tool.lightbulb { background-position: -128px -128px; }
+.ICON-tool.scissors { background-position: -144px -128px; }
+.ICON-tool.clipboard { background-position: -160px -128px; }
+.ICON-tool.copy { background-position: -176px -128px; }
+.ICON-tool.contact { background-position: -192px -128px; }
+.ICON-tool.image { background-position: -208px -128px; }
+.ICON-tool.video { background-position: -224px -128px; }
+.ICON-tool.script { background-position: -240px -128px; }
+.ICON-tool.alert { background-position: 0 -144px; }
+.ICON-tool.info { background-position: -16px -144px; }
+.ICON-tool.notice { background-position: -32px -144px; }
+.ICON-tool.help { background-position: -48px -144px; }
+.ICON-tool.check { background-position: -64px -144px; }
+.ICON-tool.bullet { background-position: -80px -144px; }
+.ICON-tool.radio-off { background-position: -96px -144px; }
+.ICON-tool.radio-on { background-position: -112px -144px; }
+.ICON-tool.pin-w { background-position: -128px -144px; }
+.ICON-tool.pin-s { background-position: -144px -144px; }
+.ICON-tool.play { background-position: 0 -160px; }
+.ICON-tool.pause { background-position: -16px -160px; }
+.ICON-tool.seek-next { background-position: -32px -160px; }
+.ICON-tool.seek-prev { background-position: -48px -160px; }
+.ICON-tool.seek-end { background-position: -64px -160px; }
+.ICON-tool.seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ICON-tool.seek-first { background-position: -80px -160px; }
+.ICON-tool.stop { background-position: -96px -160px; }
+.ICON-tool.eject { background-position: -112px -160px; }
+.ICON-tool.volume-off { background-position: -128px -160px; }
+.ICON-tool.volume-on { background-position: -144px -160px; }
+.ICON-tool.power { background-position: 0 -176px; }
+.ICON-tool.signal-diag { background-position: -16px -176px; }
+.ICON-tool.signal { background-position: -32px -176px; }
+.ICON-tool.battery-0 { background-position: -48px -176px; }
+.ICON-tool.battery-1 { background-position: -64px -176px; }
+.ICON-tool.battery-2 { background-position: -80px -176px; }
+.ICON-tool.battery-3 { background-position: -96px -176px; }
+.ICON-tool.circle-plus { background-position: 0 -192px; }
+.ICON-tool.circle-minus { background-position: -16px -192px; }
+.ICON-tool.circle-close { background-position: -32px -192px; }
+.ICON-tool.circle-triangle-e { background-position: -48px -192px; }
+.ICON-tool.circle-triangle-s { background-position: -64px -192px; }
+.ICON-tool.circle-triangle-w { background-position: -80px -192px; }
+.ICON-tool.circle-triangle-n { background-position: -96px -192px; }
+.ICON-tool.circle-arrow-e { background-position: -112px -192px; }
+.ICON-tool.circle-arrow-s { background-position: -128px -192px; }
+.ICON-tool.circle-arrow-w { background-position: -144px -192px; }
+.ICON-tool.circle-arrow-n { background-position: -160px -192px; }
+.ICON-tool.circle-zoomin { background-position: -176px -192px; }
+.ICON-tool.circle-zoomout { background-position: -192px -192px; }
+.ICON-tool.circle-check { background-position: -208px -192px; }
+.ICON-tool.circlesmall-plus { background-position: 0 -208px; }
+.ICON-tool.circlesmall-minus { background-position: -16px -208px; }
+.ICON-tool.circlesmall-close { background-position: -32px -208px; }
+.ICON-tool.squaresmall-plus { background-position: -48px -208px; }
+.ICON-tool.squaresmall-minus { background-position: -64px -208px; }
+.ICON-tool.squaresmall-close { background-position: -80px -208px; }
+.ICON-tool.grip-dotted-vertical { background-position: 0 -224px; }
+.ICON-tool.grip-dotted-horizontal { background-position: -16px -224px; }
+.ICON-tool.grip-solid-vertical { background-position: -32px -224px; }
+.ICON-tool.grip-solid-horizontal { background-position: -48px -224px; }
+.ICON-tool.gripsmall-diagonal-se { background-position: -64px -224px; }
+.ICON-tool.grip-diagonal-se { background-position: -80px -224px; }

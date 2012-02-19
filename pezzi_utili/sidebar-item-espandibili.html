@@ -1,0 +1,974 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Transplant-Management</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	
+	<!-- CSS TM -->
+	<link rel="stylesheet" href="css/general/general.css">
+	<link rel="stylesheet" href="css/input/input.css">
+	<link rel="stylesheet" href="css/sidebar/sidebar.css">
+	<link rel="stylesheet" href="css/mainarea/mainarea.css">	
+	<link rel="stylesheet" href="css/view/view.css">
+	<link rel="stylesheet" href="css/form/form.css">
+	<link rel="stylesheet" href="css/table/table.css">
+	<link rel="stylesheet" href="css/fieldset/fieldset.css">
+	<link rel="stylesheet" href="css/icon/icon.css">
+	<link rel="stylesheet" href="css/button/button.css">
+	<link rel="stylesheet" href="css/controller/controller.css">
+	<link rel="stylesheet" href="css/tool/tool.css">
+	<link rel="stylesheet" href="css/navigator/navigator.css">
+
+	
+	<!-- JQUERY -->
+	<script src="lib/jquery/jquery-v1.7.1.js"></script>
+	
+	
+	<!-- JQUERY UI-->
+	<script src="lib/jqueryUI/js/jquery-ui-1.8.17.custom.min.js"></script>
+	<link rel="stylesheet" href="lib/jqueryUI/css/smoothness/jquery-ui-1.8.17.custom.css">
+
+	
+	<!-- SCRIPT TEMPORANEO-->
+	<script src="temp_script.js"></script>
+
+
+	
+	
+	
+</head>
+<body>
+
+<div class="GENERAL-body">
+	<table class="GENERAL-body-table">
+		<!--<tr>
+			<td class="GENERAL-header" colspan="2">  
+				<div class="logo"></div>
+			</td>
+		</tr>-->
+		<tr>
+			<td class="GENERAL-sidebar"> <!-- sidebar -->
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button selected">
+						<div><div class="ICON-47 grey-styled home"></div></div>
+						<div class="SIDEBAR-button-label">Home</div>
+					</div>
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div><div class="ICON-47 grey-styled anagrafica"></div></div>
+						<div class="SIDEBAR-button-label">Anagrafica</div>
+						<div class="SIDEBAR-button-search-icon"></div>
+					</div>
+					<div class="SIDEBAR-search">
+						<div class="SIDEBAR-button-searchfields">
+							<div>
+								<div class="SIDEBAR-label">Nome</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div>
+								<div class="SIDEBAR-label">Cognome</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div>
+								<div class="SIDEBAR-label">Codice</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div class="SIDEBAR-searchfield-button-container">
+								<button class="BUTTON" class="search">Cerca</button>
+								<button class="close">Chiudi</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div><div class="ICON-47 grey-styled raccolta"></div></div>
+						<div class="SIDEBAR-button-label">Raccolta</div>
+						<div class="SIDEBAR-button-search-icon"></div>
+					</div>
+					<div class="SIDEBAR-search">
+						<div class="SIDEBAR-button-searchfields">
+							<div>
+								<div class="SIDEBAR-label">Nome</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div>
+								<div class="SIDEBAR-label">Cognome</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div>
+								<div class="SIDEBAR-label">Codice</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div class="SIDEBAR-searchfield-button-container">
+								<button class="search">Cerca</button>
+								<button class="close">Chiudi</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div><div class="ICON-47 grey-styled unita"></div></div>
+						<div class="SIDEBAR-button-label">Unità</div>
+						<div class="SIDEBAR-button-search-icon"></div>
+					</div>
+					<div class="SIDEBAR-search">
+						<div class="SIDEBAR-button-searchfields">
+							<div>
+								<div class="SIDEBAR-label">Nome</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div>
+								<div class="SIDEBAR-label">Cognome</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div>
+								<div class="SIDEBAR-label">Codice</div>
+								<div class="SIDEBAR-input"><input type="text"></div>
+							</div>
+							<div class="SIDEBAR-searchfield-button-container">
+								<button class="search">Cerca</button>
+								<button class="close">Chiudi</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div><div class="ICON-47 grey-styled stoccaggio"></div></div>
+						<div class="SIDEBAR-button-label">Stoccaggio</div>
+					</div>
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div><div class="ICON-47 grey-styled magazzino"></div></div>
+						<div class="SIDEBAR-button-label">Magazzino</div>
+					</div>
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div class="ICON-47 grey-styled reportistica"></div>
+						<div class="SIDEBAR-button-label">Reportistica</div>
+					</div>
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div class="ICON-47 grey-styled utenti"></div>
+						<div class="SIDEBAR-button-label">Utenti</div>
+					</div>
+				</div>
+				
+				<div class="SIDEBAR-item">
+					<div class="SIDEBAR-button">
+						<div class="ICON-47 grey-styled admin"></div>
+						<div class="SIDEBAR-button-label">Admin</div>
+					</div>
+				</div>
+
+			</td> <!-- end sidebar -->
+			
+			
+			
+			<td class="GENERAL-mainarea"> <!-- mainarea-->
+				
+					<div class="CONTROLLER">
+						
+						<div class="CONTROLLER-box">
+							<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled idoneita_unita_criopreservata no-canvas"></div><div class="badge-label">Idoneità unità criopreservata</div></div>
+							<div class="CONTROLLER-box-header-separator"></div>
+							<div class="CONTROLLER-box-item-container">
+								<div>
+									<ul>
+										<li>Primo link</li>
+										<li>Secondo link</li>
+										<li>Terzo link</li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="CONTROLLER-box">
+							<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+							<div class="CONTROLLER-box-header-separator"></div>
+							<div class="CONTROLLER-box-item-container">
+								<div class="CONTROLLER-inner-box">
+									<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unita</div></div>
+									<div class="CONTROLLER-inner-box-header-separator"></div>
+									<div class="CONTROLLER-inner-box-item-container">
+										<div>
+											<ul>
+												<li>Primo link</li>
+												<li>Secondo link</li>
+												<li>Terzo link</li>
+												
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="CONTROLLER-inner-box">
+									<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unita</div></div>
+									<div class="CONTROLLER-inner-box-header-separator"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				
+				
+				
+					
+					<!--
+					<div class="NAVIGATOR-container">
+						<table class="NAVIGATOR-table">
+							<tr>
+								<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows back"></div></td>
+
+								<td class="NAVIGATOR-steps-indicator">
+									<div class="NAVIGATOR-steps-indicator-container">
+										
+											<div class="step_indicator">Caratterizzazione</div>
+											<div class="step_indicator">Criopreservazione</div>
+											<div class="step_indicator current">Scongelamento</div>
+											<div class="step_indicator">Reinfusione</div>
+											<div class="step_indicator">Caratterizzazione</div>
+											<div class="step_indicator">Criopreservazione</div>
+											<div class="step_indicator current">Scongelamento</div>
+											<div class="step_indicator">Reinfusione</div>
+											
+									
+									</div>
+								</td>							
+								<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows forward"></div></td>
+							</tr>
+						</table>
+					</div>
+					-->
+					
+					
+					<div class="MAINAREA-container">
+						<div class="MAINAREA-header">
+							<ul>
+								<li><div class="header-tab-item-selected">Ricerca</div></li>
+								<li><div class="header-tab-item">Icons/label</div></li>
+								<li><div >Scheda dati</div></li>
+								<li><div>Form</div></li>
+								<li><div>Tabella</div></li>
+								<li><div>Buttons</div></li>
+								<li><div>Icons</div></li>
+							</ul>
+						</div>
+						
+						<div class="MAINAREA-body">
+							
+							<div class="VIEW-box">
+								<ul>
+									<li>
+										
+										
+										<div class="CONTROLLER-box">
+											<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled paziente no-canvas"></div><div class="badge-label">Anagrafica</div></div>
+											<div class="CONTROLLER-box-header-separator"></div>
+											<div class="CONTROLLER-box-item-container">
+												<div>
+													<div class="FORM-field">
+														<p class="FORM-label">Cognome:</p>
+														<p><input type="text" placeholder="placeholder"></p>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+										
+										
+										
+										
+										
+									</li>
+									<li>
+										<div style='margin:0px 0px 20px 0px; overflow:auto'>
+											
+										
+											<div class="ICON-badge white"><div class="ICON-36 grey home no-canvas"></div><div class="badge-label">Home</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey timing no-canvas"></div><div class="badge-label">Timing</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey alert no-canvas"></div><div class="badge-label">Alert</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
+											<div class="ICON-badge white"><div class="ICON-36 grey idoneita_unita_criopreservata no-canvas"></div><div class="badge-label">Idoneità unità criopreservata</div></div>
+										
+										
+										</div>
+										
+										<div style="overflow:auto; margin:0px 0px 20px 0px">
+											
+										
+											<div class="ICON-badge grey"><div class="ICON-36 white home no-canvas"></div><div class="badge-label">Home</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white timing no-canvas"></div><div class="badge-label">Timing</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white alert no-canvas"></div><div class="badge-label">Alert</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
+											<div class="ICON-badge grey"><div class="ICON-36 white scongelamento no-canvas"></div><div class="badge-label">Scongelamento</div></div>
+										
+										
+										</div>
+										
+											
+										<div style="overflow:auto; margin:0px 0px 20px 0px">
+											<div class="ICON-badge grey small"><div class="ICON-36 white home no-canvas"></div><div class="badge-label">Home</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white timing no-canvas"></div><div class="badge-label">Timing</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white alert no-canvas"></div><div class="badge-label">Alert</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
+											<div class="ICON-badge grey small"><div class="ICON-36 white utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
+										</div>
+										
+										<div style="overflow:auto; margin:0px 0px 20px 0px">
+											<div class="ICON-badge white small "><div class="ICON-36 grey home no-canvas"></div><div class="badge-label">Home</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey timing no-canvas"></div><div class="badge-label">Timing</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey alert no-canvas"></div><div class="badge-label">Alert</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
+											<div class="ICON-badge white small"><div class="ICON-36 grey utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
+										</div>
+										
+										<div>ATTIVI</div>
+										
+										<div style="overflow:auto; margin:0px 0px 20px 0px">
+											<div class="ICON-badge grey small active"><div class="ICON-36 white home no-canvas"></div><div class="badge-label">Home</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white timing no-canvas"></div><div class="badge-label">Timing</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white alert no-canvas"></div><div class="badge-label">Alert</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
+											<div class="ICON-badge grey small active"><div class="ICON-36 white utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
+										</div>
+										
+										<div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey home no-canvas"></div><div class="badge-label">Home</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey timing no-canvas"></div><div class="badge-label">Timing</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey alert no-canvas"></div><div class="badge-label">Alert</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
+											<div class="ICON-badge white small active"><div class="ICON-36 grey idoneita_unita_criopreservata no-canvas"></div><div class="badge-label">Idoneità unità criopreservata</div></div>
+										</div>
+										
+										
+										
+									</li>
+									<li>
+										
+													<fieldset class="FIELDSET">
+														<legend class="FIELDSET-legend">Legend</legend>
+														<div>
+															<div class="VIEW-row">
+																<div class="VIEW-label">Codice:</div>
+																<div class="VIEW-value">F-345</div>
+															</div>
+															<div class="VIEW-row">
+																<div class="VIEW-label">Data:</div>
+																<div class="VIEW-value">12/25/2012</div>
+															</div>
+														</div>
+													</fieldset>
+													
+													<fieldset class="FIELDSET collapsible collapsed">
+														<legend class="FIELDSET-legend"><button type="button" class="BUTTON small">Altro tasto</button></legend>
+														<div class="FIELDSET-collapsible-area">
+															<div class="VIEW-row">
+																<div class="VIEW-label">Codice:</div>
+																<div class="VIEW-value">F-345</div>
+															</div>
+															<div class="VIEW-row">
+																<div class="VIEW-label">Data:</div>
+																<div class="VIEW-value">12/25/2012</div>
+															</div>
+														</div>
+													</fieldset>
+													
+										
+													<div class="VIEW-fieldset">
+														<div class="VIEW-filed-set-icon"><div class="ICON-47 white paziente"></div>Dati paziente</div>
+														<div class="VIEW-row">
+															<div class="VIEW-label">Nome:</div>
+															<div class="VIEW-value">Marco</div>
+														</div>
+														<div class="VIEW-row">
+															<div class="VIEW-label">Cognome:</div>
+															<div class="VIEW-value">Liguori</div>
+														</div>
+														<div class="VIEW-row">
+															<div class="VIEW-label">Data di nascita:</div>
+															<div class="VIEW-value">17/12/1982</div>
+														</div>
+														<div class="VIEW-row">
+															<div class="VIEW-label">Codice:</div>
+															<div class="VIEW-value">38882</div>
+														</div>
+													</div>
+											
+										
+										
+									</li>
+									
+									
+									
+									
+									<li>
+										
+										
+													<div class="FORM-field">
+														<p class="FORM-label">Nome:</p>
+														<p><input type="text" placeholder="placeholder"></p>
+													</div>
+													<div class="FORM-field">
+														<p class="FORM-label">Cognome:</p>
+														<p><input type="text" placeholder="placeholder"></p>
+													</div>
+													
+													<div class="FORM-field">
+														<p class="FORM-label">Seleziona multipla:</p>
+														<div class="checkbox-container">
+															<div>Primo</div>
+															<div><input type="checkbox" /></div>
+														</div>
+														<div class="checkbox-container">
+															<div>Secondo</div>
+															<div><input type="checkbox"/></div>
+														</div>
+														<div class="checkbox-container">
+															<div>Terzo</div>
+															<div><input type="checkbox"/></div>
+														</div>
+													</div>
+													
+													
+													<div class="FORM-field">
+														<p class="FORM-label">Titolo:</p>
+														<p><select><option>pollo</option><option>gallo</option><option>gatto</option><option>cane</option></select></p>
+													</div>
+													
+													
+													<div class="FORM-field">
+														<p class="FORM-label">Titolo:</p>
+														<p><textarea></textarea></p>
+													</div>
+													
+													<div class="FORM-field">
+														<p class="FORM-label">Seleziona esclusiva:</p>
+														<div class="radio-container">
+															<div>Primo</div>
+															<div><input type="radio" name="radio" /></div>
+														</div>
+														<div class="radio-container">
+															<div>Secondo</div>
+															<div><input type="radio"  name="radio" /></div>
+														</div>
+														
+													</div>
+												
+											
+									</li>
+									
+									
+									<li>
+										
+													
+													<table class="TABLE">
+													    <thead>
+													    	<tr>
+													        	<th>Employee</th>
+													            <th>Salary</th>
+													            <th>Bonus</th>
+													            <th>Supervisor</th>
+													        </tr>
+													    </thead>
+													    <tbody>
+													    	<tr>
+													        	<td>Stephen C. Cox</td>
+													            <td>$300</td>
+													            <td>$50</td>
+													            <td>Bob</td>
+													        </tr>
+													        <tr>
+													        	<td>Josephin Tan</td>
+													            <td>$150</td>
+													            <td>-</td>
+													            <td>Annie</td>
+													        </tr>
+													        <tr>
+													        	<td>Joyce Ming</td>
+													            <td>$200</td>
+													            <td>$35</td>
+													            <td>Andy</td>
+													        </tr>
+													        <tr>
+													        	<td>James A. Pentel</td>
+													            <td>$175</td>
+													            <td>$25</td>
+													            <td>Annie</td>
+													        </tr>
+													        <tr>
+													        	<td>Joyce Ming</td>
+													            <td>$200</td>
+													            <td>$35</td>
+													            <td>Andy</td>
+													        </tr>
+													        <tr>
+													        	<td>James A. Pentel</td>
+													            <td>$175</td>
+													            <td>$25</td>
+													            <td>Annie</td>
+													        </tr>
+													        <tr>
+													        	<td>Joyce Ming</td>
+													            <td>$200</td>
+													            <td>$35</td>
+													            <td>Andy</td>
+													        </tr>
+													        <tr>
+													        	<td>James A. Pentel</td>
+													            <td>$175</td>
+													            <td>$25</td>
+													            <td>Annie</td>
+													        </tr>
+													        <tr>
+													        	<td>Joyce Ming</td>
+													            <td>$200</td>
+													            <td>$35</td>
+													            <td>Andy</td>
+													        </tr>
+													        <tr>
+													        	<td>James A. Pentel</td>
+													            <td>$175</td>
+													            <td>$25</td>
+													            <td>Annie</td>
+													        </tr>
+													    </tbody>
+													</table>
+
+
+
+									</li>
+									
+									
+									<li>
+										
+										
+													
+													
+													
+												
+													<div class="FORM-field FORM-buttons-container">
+														<button type="button" class="BUTTON big">Tasto uno</button> 
+														<button type="button" class="BUTTON">Altro tasto</button>
+														<button type="button" class="BUTTON small">Altro tasto</button>
+														
+														<button type="button" class="BUTTON big green">Tasto uno</button> 
+														<button type="button" class="BUTTON green">Altro tasto</button>
+														<button type="button" class="BUTTON small green">Altro tasto</button>
+
+													</div>
+													
+													<div class="FORM-field FORM-buttons-container">
+														<button type="button" class="BUTTON big blue">Tasto uno</button> 
+														<button type="button" class="BUTTON blue">Altro tasto</button>
+														<button type="button" class="BUTTON small blue">Altro tasto</button>
+														
+														<button type="button" class="BUTTON big red">Tasto uno</button> 
+														<button type="button" class="BUTTON red">Altro tasto</button>
+														<button type="button" class="BUTTON small red">Altro  asd</button>
+														
+													</div>
+													
+
+													
+										
+											
+									</li>
+									
+									
+									
+									
+									
+									
+									
+									<li>
+										
+													
+													<div style="background-color:#222; overflow:auto">
+														<div class="ICON-47 grey-styled home"></div>
+														<div class="ICON-47 grey-styled anagrafica"></div>
+														<div class="ICON-47 grey-styled raccolta"></div>
+														<div class="ICON-47 grey-styled unita"></div>
+														<div class="ICON-47 grey-styled criopreservata"></div> <!-- oppure ICON-47 grey-styled criopreservazione oppure ICON-47 grey-styled stoccaggio-->
+														<div class="ICON-47 grey-styled magazzino"></div> 
+														<div class="ICON-47 grey-styled reportistica"></div> 
+														<div class="ICON-47 grey-styled admin"></div> 
+														<div class="ICON-47 grey-styled utenti"></div> 
+														<div class="ICON-47 grey-styled alert"></div> 
+														<div class="ICON-47 grey-styled frazionamento"></div>
+														<div class="ICON-47 grey-styled paziente"></div>
+														<div class="ICON-47 grey-styled manipolazione"></div>
+														<div class="ICON-47 grey-styled caratterizzazione"></div>
+														<div class="ICON-47 grey-styled accettata"></div> <!-- oppure ICON-47 grey-styled idonea -->
+														<div class="ICON-47 grey-styled clinica"></div> 
+														<div class="ICON-47 grey-styled timing"></div> 
+														<div class="ICON-47 grey-styled rilascio_unita"></div> 
+														<div class="ICON-47 grey-styled idoneita_unita_criopreservata"></div> 
+														<div class="ICON-47 grey-styled autologa"></div>  <!-- oppure ICON-47 grey-styled reinfusione -->
+														<div class="ICON-47 grey-styled raccolta"></div>
+														<div class="ICON-47 grey-styled lotto"></div>
+														<div class="ICON-47 grey-styled stoccaggio"></div>
+														<div class="ICON-47 grey-styled scongelamento"></div>
+														<div class="ICON-47 grey-styled terminata"></div> <!-- oppure ICON-47 grey-styled effettuata -->
+														<div class="ICON-47 grey-styled unita_accettata"></div> 
+														<div class="ICON-47 grey-styled allogenica"></div> 
+														<div class="ICON-47 grey-styled unita_reinfusa"></div> 
+														<div class="ICON-47 grey-styled diagnosi"></div> 
+														<div class="ICON-47 grey-styled ciclo"></div> 
+													</div>
+													
+													
+													<div style="background-color:#222; overflow:auto; margin-top:10px">
+														<div class="ICON-47 white home"></div>
+														<div class="ICON-47 white anagrafica"></div>
+														<div class="ICON-47 white raccolta"></div>
+														<div class="ICON-47 white unita"></div>
+														<div class="ICON-47 white criopreservata"></div> <!-- oppure ICON-47 white criopreservazione oppure ICON-47 white stoccaggio-->
+														<div class="ICON-47 white magazzino"></div> 
+														<div class="ICON-47 white reportistica"></div> 
+														<div class="ICON-47 white admin"></div> 
+														<div class="ICON-47 white utenti"></div> 
+														<div class="ICON-47 white alert"></div> 
+														<div class="ICON-47 white frazionamento"></div>
+														<div class="ICON-47 white paziente"></div>
+														<div class="ICON-47 white manipolazione"></div>
+														<div class="ICON-47 white caratterizzazione"></div>
+														<div class="ICON-47 white accettata"></div> <!-- oppure ICON-47 white idonea -->
+														<div class="ICON-47 white clinica"></div> 
+														<div class="ICON-47 white timing"></div> 
+														<div class="ICON-47 white rilascio_unita"></div> 
+														<div class="ICON-47 white idoneita_unita_criopreservata"></div> 
+														<div class="ICON-47 white autologa"></div>  <!-- oppure ICON-47 white reinfusione -->
+														<div class="ICON-47 white raccolta"></div>
+														<div class="ICON-47 white lotto"></div>
+														<div class="ICON-47 white stoccaggio"></div>
+														<div class="ICON-47 white scongelamento"></div>
+														<div class="ICON-47 white terminata"></div> <!-- oppure ICON-47 white effettuata -->
+														<div class="ICON-47 white unita_accettata"></div> 
+														<div class="ICON-47 white allogenica"></div> 
+														<div class="ICON-47 white unita_reinfusa"></div> 
+														<div class="ICON-47 white diagnosi"></div> 
+														<div class="ICON-47 white ciclo"></div> 
+													</div>
+													
+													
+													<div style="background-color:#222; overflow:auto; margin-top:10px">
+														<div class="ICON-47 blue-styled home"></div>
+														<div class="ICON-47 blue-styled anagrafica"></div>
+														<div class="ICON-47 blue-styled raccolta"></div>
+														<div class="ICON-47 blue-styled unita"></div>
+														<div class="ICON-47 blue-styled criopreservata"></div> <!-- oppure ICON-47 blue-styled criopreservazione oppure ICON-47 blue-styled stoccaggio-->
+														<div class="ICON-47 blue-styled magazzino"></div> 
+														<div class="ICON-47 blue-styled reportistica"></div> 
+														<div class="ICON-47 blue-styled admin"></div> 
+														<div class="ICON-47 blue-styled utenti"></div> 
+														<div class="ICON-47 blue-styled alert"></div> 
+														<div class="ICON-47 blue-styled frazionamento"></div>
+														<div class="ICON-47 blue-styled paziente"></div>
+														<div class="ICON-47 blue-styled manipolazione"></div>
+														<div class="ICON-47 blue-styled caratterizzazione"></div>
+														<div class="ICON-47 blue-styled accettata"></div> <!-- oppure ICON-47 blue-styled idonea -->
+														<div class="ICON-47 blue-styled clinica"></div> 
+														<div class="ICON-47 blue-styled timing"></div> 
+														<div class="ICON-47 blue-styled rilascio_unita"></div> 
+														<div class="ICON-47 blue-styled idoneita_unita_criopreservata"></div> 
+														<div class="ICON-47 blue-styled autologa"></div>  <!-- oppure ICON-47 blue-styled reinfusione -->
+														<div class="ICON-47 blue-styled raccolta"></div>
+														<div class="ICON-47 blue-styled lotto"></div>
+														<div class="ICON-47 blue-styled stoccaggio"></div>
+														<div class="ICON-47 blue-styled scongelamento"></div>
+														<div class="ICON-47 blue-styled terminata"></div> <!-- oppure ICON-47 blue-styled effettuata -->
+														<div class="ICON-47 blue-styled unita_accettata"></div> 
+														<div class="ICON-47 blue-styled allogenica"></div> 
+														<div class="ICON-47 blue-styled unita_reinfusa"></div> 
+														<div class="ICON-47 blue-styled diagnosi"></div> 
+														<div class="ICON-47 blue-styled ciclo"></div> 
+													</div>
+													
+													
+													
+													<div style="background-color:#222; overflow:auto; margin-top:10px">
+														<div class="ICON-47 orange-styled home"></div>
+														<div class="ICON-47 orange-styled anagrafica"></div>
+														<div class="ICON-47 orange-styled raccolta"></div>
+														<div class="ICON-47 orange-styled unita"></div>
+														<div class="ICON-47 orange-styled criopreservata"></div> <!-- oppure ICON-47 orange-styled criopreservazione oppure ICON-47 orange-styled stoccaggio-->
+														<div class="ICON-47 orange-styled magazzino"></div> 
+														<div class="ICON-47 orange-styled reportistica"></div> 
+														<div class="ICON-47 orange-styled admin"></div> 
+														<div class="ICON-47 orange-styled utenti"></div> 
+														<div class="ICON-47 orange-styled alert"></div> 
+														<div class="ICON-47 orange-styled frazionamento"></div>
+														<div class="ICON-47 orange-styled paziente"></div>
+														<div class="ICON-47 orange-styled manipolazione"></div>
+														<div class="ICON-47 orange-styled caratterizzazione"></div>
+														<div class="ICON-47 orange-styled accettata"></div> <!-- oppure ICON-47 orange-styled idonea -->
+														<div class="ICON-47 orange-styled clinica"></div> 
+														<div class="ICON-47 orange-styled timing"></div> 
+														<div class="ICON-47 orange-styled rilascio_unita"></div> 
+														<div class="ICON-47 orange-styled idoneita_unita_criopreservata"></div> 
+														<div class="ICON-47 orange-styled autologa"></div>  <!-- oppure ICON-47 orange-styled reinfusione -->
+														<div class="ICON-47 orange-styled raccolta"></div>
+														<div class="ICON-47 orange-styled lotto"></div>
+														<div class="ICON-47 orange-styled stoccaggio"></div>
+														<div class="ICON-47 orange-styled scongelamento"></div>
+														<div class="ICON-47 orange-styled terminata"></div> <!-- oppure ICON-47 orange-styled effettuata -->
+														<div class="ICON-47 orange-styled unita_accettata"></div> 
+														<div class="ICON-47 orange-styled allogenica"></div> 
+														<div class="ICON-47 orange-styled unita_reinfusa"></div> 
+														<div class="ICON-47 orange-styled diagnosi"></div> 
+														<div class="ICON-47 orange-styled ciclo"></div> 
+													</div>
+													
+													
+													<div style="background-color:#222; overflow:auto; margin-top:10px">
+														<div class="ICON-47 purple-styled home"></div>
+														<div class="ICON-47 purple-styled anagrafica"></div>
+														<div class="ICON-47 purple-styled raccolta"></div>
+														<div class="ICON-47 purple-styled unita"></div>
+														<div class="ICON-47 purple-styled criopreservata"></div> <!-- oppure ICON-47 purple-styled criopreservazione oppure ICON-47 purple-styled stoccaggio-->
+														<div class="ICON-47 purple-styled magazzino"></div> 
+														<div class="ICON-47 purple-styled reportistica"></div> 
+														<div class="ICON-47 purple-styled admin"></div> 
+														<div class="ICON-47 purple-styled utenti"></div> 
+														<div class="ICON-47 purple-styled alert"></div> 
+														<div class="ICON-47 purple-styled frazionamento"></div>
+														<div class="ICON-47 purple-styled paziente"></div>
+														<div class="ICON-47 purple-styled manipolazione"></div>
+														<div class="ICON-47 purple-styled caratterizzazione"></div>
+														<div class="ICON-47 purple-styled accettata"></div> <!-- oppure ICON-47 purple-styled idonea -->
+														<div class="ICON-47 purple-styled clinica"></div> 
+														<div class="ICON-47 purple-styled timing"></div> 
+														<div class="ICON-47 purple-styled rilascio_unita"></div> 
+														<div class="ICON-47 purple-styled idoneita_unita_criopreservata"></div> 
+														<div class="ICON-47 purple-styled autologa"></div>  <!-- oppure ICON-47 purple-styled reinfusione -->
+														<div class="ICON-47 purple-styled raccolta"></div>
+														<div class="ICON-47 purple-styled lotto"></div>
+														<div class="ICON-47 purple-styled stoccaggio"></div>
+														<div class="ICON-47 purple-styled scongelamento"></div>
+														<div class="ICON-47 purple-styled terminata"></div> <!-- oppure ICON-47 purple-styled effettuata -->
+														<div class="ICON-47 purple-styled unita_accettata"></div> 
+														<div class="ICON-47 purple-styled allogenica"></div> 
+														<div class="ICON-47 purple-styled unita_reinfusa"></div> 
+														<div class="ICON-47 purple-styled diagnosi"></div> 
+														<div class="ICON-47 purple-styled ciclo"></div> 
+													</div>
+														
+													
+													<div style="background-color:#fff; overflow:auto; margin-top:10px">
+														<div class="ICON-47 grey home"></div>
+														<div class="ICON-47 grey anagrafica"></div>
+														<div class="ICON-47 grey raccolta"></div>
+														<div class="ICON-47 grey unita"></div>
+														<div class="ICON-47 grey criopreservata"></div> <!-- oppure ICON-47 grey criopreservazione oppure ICON-47 grey stoccaggio-->
+														<div class="ICON-47 grey magazzino"></div> 
+														<div class="ICON-47 grey reportistica"></div> 
+														<div class="ICON-47 grey admin"></div> 
+														<div class="ICON-47 grey utenti"></div> 
+														<div class="ICON-47 grey alert"></div> 
+														<div class="ICON-47 grey frazionamento"></div>
+														<div class="ICON-47 grey paziente"></div>
+														<div class="ICON-47 grey manipolazione"></div>
+														<div class="ICON-47 grey caratterizzazione"></div>
+														<div class="ICON-47 grey accettata"></div> <!-- oppure ICON-47 grey idonea -->
+														<div class="ICON-47 grey clinica"></div> 
+														<div class="ICON-47 grey timing"></div> 
+														<div class="ICON-47 grey rilascio_unita"></div> 
+														<div class="ICON-47 grey idoneita_unita_criopreservata"></div> 
+														<div class="ICON-47 grey autologa"></div>  <!-- oppure ICON-47 grey reinfusione -->
+														<div class="ICON-47 grey raccolta"></div>
+														<div class="ICON-47 grey lotto"></div>
+														<div class="ICON-47 grey stoccaggio"></div>
+														<div class="ICON-47 grey scongelamento"></div>
+														<div class="ICON-47 grey terminata"></div> <!-- oppure ICON-47 grey effettuata -->
+														<div class="ICON-47 grey unita_accettata"></div> 
+														<div class="ICON-47 grey allogenica"></div> 
+														<div class="ICON-47 grey unita_reinfusa"></div> 
+														<div class="ICON-47 grey diagnosi"></div> 
+														<div class="ICON-47 grey ciclo"></div> 
+													</div>
+														
+													<div style="background-color:#222; overflow:auto; margin-top:10px">
+														<div class="ICON-36 white home"></div>
+														<div class="ICON-36 white anagrafica"></div>
+														<div class="ICON-36 white raccolta"></div>
+														<div class="ICON-36 white unita"></div>
+														<div class="ICON-36 white criopreservata"></div> <!-- oppure ICON-36 white criopreservazione oppure ICON-36 white stoccaggio-->
+														<div class="ICON-36 white magazzino"></div> 
+														<div class="ICON-36 white reportistica"></div> 
+														<div class="ICON-36 white admin"></div> 
+														<div class="ICON-36 white utenti"></div> 
+														<div class="ICON-36 white alert"></div> 
+														<div class="ICON-36 white frazionamento"></div>
+														<div class="ICON-36 white paziente"></div>
+														<div class="ICON-36 white manipolazione"></div>
+														<div class="ICON-36 white caratterizzazione"></div>
+														<div class="ICON-36 white accettata"></div> <!-- oppure ICON-36 white idonea -->
+														<div class="ICON-36 white clinica"></div> 
+														<div class="ICON-36 white timing"></div> 
+														<div class="ICON-36 white rilascio_unita"></div> 
+														<div class="ICON-36 white idoneita_unita_criopreservata"></div> 
+														<div class="ICON-36 white autologa"></div>  <!-- oppure ICON-36 white reinfusione -->
+														<div class="ICON-36 white raccolta"></div>
+														<div class="ICON-36 white lotto"></div>
+														<div class="ICON-36 white stoccaggio"></div>
+														<div class="ICON-36 white scongelamento"></div>
+														<div class="ICON-36 white terminata"></div> <!-- oppure ICON-36 white effettuata -->
+														<div class="ICON-36 white unita_accettata"></div> 
+														<div class="ICON-36 white allogenica"></div> 
+														<div class="ICON-36 white unita_reinfusa"></div> 
+														<div class="ICON-36 white diagnosi"></div> 
+														<div class="ICON-36 white ciclo"></div> 
+													</div>
+													
+													<div style="background-color:#fff; overflow:auto; margin-top:10px">
+														<div class="ICON-36 grey home"></div>
+														<div class="ICON-36 grey anagrafica"></div>
+														<div class="ICON-36 grey raccolta"></div>
+														<div class="ICON-36 grey unita"></div>
+														<div class="ICON-36 grey criopreservata"></div> <!-- oppure ICON-36 grey criopreservazione oppure ICON-36 grey stoccaggio-->
+														<div class="ICON-36 grey magazzino"></div> 
+														<div class="ICON-36 grey reportistica"></div> 
+														<div class="ICON-36 grey admin"></div> 
+														<div class="ICON-36 grey utenti"></div> 
+														<div class="ICON-36 grey alert"></div> 
+														<div class="ICON-36 grey frazionamento"></div>
+														<div class="ICON-36 grey paziente"></div>
+														<div class="ICON-36 grey manipolazione"></div>
+														<div class="ICON-36 grey caratterizzazione"></div>
+														<div class="ICON-36 grey accettata"></div> <!-- oppure ICON-36 grey idonea -->
+														<div class="ICON-36 grey clinica"></div> 
+														<div class="ICON-36 grey timing"></div> 
+														<div class="ICON-36 grey rilascio_unita"></div> 
+														<div class="ICON-36 grey idoneita_unita_criopreservata"></div> 
+														<div class="ICON-36 grey autologa"></div>  <!-- oppure ICON-36 grey reinfusione -->
+														<div class="ICON-36 grey raccolta"></div>
+														<div class="ICON-36 grey lotto"></div>
+														<div class="ICON-36 grey stoccaggio"></div>
+														<div class="ICON-36 grey scongelamento"></div>
+														<div class="ICON-36 grey terminata"></div> <!-- oppure ICON-36 grey effettuata -->
+														<div class="ICON-36 grey unita_accettata"></div> 
+														<div class="ICON-36 grey allogenica"></div> 
+														<div class="ICON-36 grey unita_reinfusa"></div> 
+														<div class="ICON-36 grey diagnosi"></div> 
+														<div class="ICON-36 grey ciclo"></div> 
+													</div>
+														
+
+													
+										
+											
+									</li>
+								</ul>
+								
+								
+							</div>
+						</div>
+						
+						<div class="MAINAREA-footer">
+							<ul>
+								<li><div>Nuovo</div></li>
+								<li><div>Modifica</div></li>
+								<li><div>Elimina</div></li>
+							</ul>
+						</div>
+						
+					</div>
+				
+			</td> <!-- end mainarea -->
+			
+			
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>	
+				

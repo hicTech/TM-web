@@ -1,0 +1,14 @@
+/*  FONT-SIZE datapicker  */
+div.ui-datepicker{
+	font-size:12px;
+}
+
+/*  RESIZING SLIDER  */
+.ui-slider-horizontal {
+	height: 0.5em;
+}
+
+.ui-slider .ui-slider-handle {
+	width: 0.9em;
+	height: 0.9em;
+}

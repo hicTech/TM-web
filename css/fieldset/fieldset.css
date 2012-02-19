@@ -1,0 +1,26 @@
+
+.FIELDSET{
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: solid 1px #bbb;
+	background-color: rgba(0,0,0,0.03);
+	padding: 20px;
+	margin: 10px 0px 10px 0px
+}
+
+.FIELDSET-legend{
+	font-weight: bold;
+	color: #444;
+	padding: 0px 20px 0px 20px
+}
+
+
+
+.FIELDSET.collapsed > .FIELDSET-collapsible-area{
+	display: none
+}
+
+.FIELDSET.collapsible .FIELDSET-legend{
+	padding: 0px 5px 0px 5px
+}
+

@@ -1,0 +1,65 @@
+
+
+.VIEW-box{
+	
+}
+
+
+.VIEW-fieldset{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	background-image: url(img/fieldset_separator.png);
+	background-repeat:no-repeat;
+	background-position: bottom;
+	position: relative;
+	min-height: 75px
+}
+
+.VIEW-fieldset:last-child{
+	border-bottom: none;
+	background-image: none;
+}
+
+.VIEW-filed-set-icon{
+	width: 45px; 
+	height: 5px;
+	position: absolute;
+	top:-10px;
+	left:58px;
+	font-size: 10px;
+	text-align: center;
+	padding: 40px 0px 0px 0px;
+	color: #666;
+	background-repeat: no-repeat
+}
+
+
+.VIEW-row{
+	clear: both;
+	height: 20px;
+	text-align: center;
+}
+
+.VIEW-row:last-child{
+	border-bottom: none
+}
+
+.VIEW-label{
+	float: left;
+	width: 46%;
+	text-align: right;
+	margin: 0px 20px 0px 0px
+	
+}
+
+.VIEW-value{
+	float: left;
+	width: 47%;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 15px
+}
+
+       
+        

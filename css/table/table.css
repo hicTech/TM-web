@@ -1,0 +1,40 @@
+
+
+.TABLE{
+	font-size: 12px;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+
+.TABLE tr:nth-child(odd)    { background-color:#c4c4c5}
+.TABLE tr:nth-child(even)    { background-color:#d1d1d1}
+
+
+
+.TABLE th{
+	font-size: 14px;
+	font-weight: normal;
+	color: #222;
+	padding: 10px 8px;
+	border-bottom: 2px solid #ddd;
+	text-align: center;
+	font-weight: bold;
+	background-color: #bdbdbf
+}
+
+
+.TABLE td{
+	border-bottom: 1px solid #ccc;
+	color: #000;
+	padding: 6px 8px;
+	cursor: pointer;
+	text-align: center;
+
+}
+
+
+.TABLE tbody tr:hover td{
+	color: #fff;
+}

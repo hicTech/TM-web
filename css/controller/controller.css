@@ -1,0 +1,120 @@
+.CONTROLLER{
+	background-color: #3b3b3b;
+	padding: 2px;
+	overflow:auto;
+	margin:-1px 0px 0px -1px;
+}
+.CONTROLLER-box{
+	color : #fff;
+	float :left;
+	margin : 5px;
+	padding:2px 8px 8px 8px;
+	border : solid 1px #3b3b3b;
+	border-radius: 4px;
+	background-color: #2a2a2a;
+	    -webkit-box-shadow:     inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+               -moz-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+}
+
+
+.CONTROLLER-box-header{
+	height: 25px;
+	font-size: 14px;
+	text-shadow: rgba(0, 0, 0, .9) 0 2px 2px;
+	font-weight:bold;
+	padding:5px 20px;
+	float : left;
+	overflow :hidden;
+	clear: both
+}
+
+.CONTROLLER-box-header-separator{
+	background-image: url(img/horizontal_separator.png);
+	width: 65%;
+	margin:0px auto;
+	height:2px;
+	clear: both
+}
+
+.CONTROLLER-box-item-container{
+	font-size: 12px;
+	margin: 0px 0px 0px -10px;
+	overflow: auto;
+	clear: both
+}
+
+.CONTROLLER-box-item-container ul{
+	list-style-type:circle; 
+}
+
+.CONTROLLER-box-item-container ul li{
+	padding: 3px;
+	cursor: pointer;
+	white-space: nowrap
+}
+
+.CONTROLLER-box-item-container ul li:hover{
+	color: #2aa6c0
+}
+
+
+
+.CONTROLLER-inner-box{
+	min-width: 120px;
+	min-height : 80px;
+	color : #fff;
+	font-size: 12px;
+	margin : 10px 0px 0px 10px;
+	padding:1px 10px;
+	overflow : auto;
+	border : solid 1px #2a2a2a;
+	float :left;
+	border-radius: 5px;
+	background-color: #222222;
+	    -webkit-box-shadow:     inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+               -moz-box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+}
+
+.CONTROLLER-inner-box-header{
+	margin: 0px 0px 0px -7px;
+	height: 28px;
+	font-size: 12px;
+	padding:2px;
+	float : left;
+	overflow :hidden;
+	clear: both
+}
+
+.CONTROLLER-inner-box-header .badge-label{
+	color: #eee;
+	margin: 2px 0px 0px -10px
+}
+
+.CONTROLLER-inner-box-header-separator{
+	background-image: url(img/horizontal_separator_dark.png);
+	width: 65%;
+	margin:0px auto;
+	height:2px;
+	clear: both
+}
+
+.CONTROLLER-inner-box-item-container{
+	font-size: 11px;
+	margin: -5px 0px 0px -25px;
+	clear: both
+}
+
+.CONTROLLER-inner-box-item-container ul{
+	list-style-type:none;
+}
+
+.CONTROLLER-inner-box-item-container ul li{
+	padding: 2px;
+	cursor: pointer
+}
+
+.CONTROLLER-inner-box-item-container ul li:hover{
+	color: #2aa6c0
+}

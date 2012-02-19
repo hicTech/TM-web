@@ -1,0 +1,214 @@
+
+
+
+/*
+ * FORM
+ */
+
+fieldset{
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: solid 1px #bbb;
+	background-color: rgba(0,0,0,0.03);
+	padding: 20px
+}
+
+legend{
+	font-weight: bold;
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.8);
+}
+
+.FORM-field-row{
+	margin-bottom:10px;
+	width: 100%;
+	clear: both
+}
+
+.FORM-field{
+	float: left;
+	margin-bottom:10px;
+}
+
+
+.buttons-container{
+	padding-top: 20px;
+	clear:both;
+	text-align: center
+}
+
+.FORM-field-row > p, .FORM-field > p{
+	margin:0px
+}
+
+.FORM-label{
+	color: #222;
+	font-weight:bold;
+	font-size: 13px;
+	padding:0px 3px;
+	
+}
+
+.FORM-slider{
+	width:250px; 
+	margin-top:4px
+}
+
+.FORM-slider-input{
+	width:60px
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+input[type='number'], 
+input[type='search'],
+textarea{
+	background: #F6F6F6;
+	color: #666;
+	font-size: 13px;
+	padding: 7px 14px;
+	border: 1px solid #B9B9B9;
+	border-top-color: #A4A4A4;
+	-moz-box-shadow: 0 1px 0 #fff,inset 0 1px 1px rgba(0,0,0,.17);
+	-ms-box-shadow: 0 1px 0 #fff,inset 0 1px 1px rgba(0,0,0,.17);
+	-o-box-shadow: 0 1px 0 #fff,inset 0 1px 1px rgba(0,0,0,.17);
+	-webkit-box-shadow: 0 1px 0 #fff,inset 0 1px 1px rgba(0,0,0,.17);
+	box-shadow: 0 1px 0 #fff,inset 0 1px 1px rgba(0,0,0,.17);
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	width: 85%
+}
+
+input[type='date']{
+	background-image: url(img/date_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 150px;
+	padding: 7px 12px;
+}
+
+input[type='search']{
+	-webkit-appearance: none;
+	padding: 7px 4px;
+	background-image: url(img/search_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+
+}
+
+input[type='search'].input_no_value{
+	background-image: none
+}
+
+input:focus,
+textarea:focus{
+	background: #fff;
+
+}
+
+.checkbox-container,
+.radio-container{
+	font-size:12px;
+	float: left;
+	padding: 5px;
+	margin: 2px 30px 10px 0px;
+	background-image: url(img/alpha20.png);
+	border-radius:3px
+}
+
+
+.checkbox-container > div,
+.radio-container > div{
+	float: left;
+}
+
+.checkbox-container > div:first-child,
+.radio-container > div:first-child{
+	float: left;
+	margin:0px 5px 0px 0px;
+	padding-top:2px
+}
+
+
+select{
+	width: 158px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+	padding: 0 12px 0 8px;
+	color: #222;
+	border-color:#eee;
+	font: 12px/21px arial,sans-serif;
+	overflow: hidden;
+	height: 30px;
+	margin-top: 2px;
+}
+
+/*
+ * LITTLE FORM
+ */
+
+
+.FORM-field-row.little{
+	margin-bottom:5px;
+	color:#222
+}
+
+.FORM-field-row.little p.FORM-label{
+	font-size: 11px;
+	padding:0px 3px;
+}
+
+
+
+.FORM-field-row.little p input[type='text'],
+.FORM-field-row.little p input[type='email'],
+.FORM-field-row.little p input[type='password'],
+.FORM-field-row.little p input[type='date'],
+.FORM-field-row.little p input[type='number'],
+.FORM-field-row.little p input[type='search'],
+.FORM-field-row.little p textarea{
+	font-size: 11px;
+	padding: 4px 4px 4px 8px;
+
+}
+
+
+.FORM-field-row.little p input[type='date']{
+	background-image: url(img/little_date_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 4px 4px 4px 12px;
+}
+
+.FORM-field-row.little p input[type='search']{
+	padding: 4px;
+	-webkit-appearance: none;
+	background-image: url(img/little_search_icon.png);
+	background-repeat: no-repeat;
+	background-position: right
+}
+
+.FORM-field-row.little p input[type='search'].input_no_value{
+	background-image: none
+}
+
+.FORM-field-row.little .FORM-slider{
+	width: 150px
+}
+
+
+.FORM-field-row.little .checkbox-container ,
+.FORM-field-row.little .radio-container{
+	font-size:11px;
+	float: left;
+	padding: 2px 5px 0px 8px;
+	margin: 2px 10px 7px 3px;
+}
+
+.FORM-field-row.little p select{
+	font-size: 11px;
+	padding: 0px 10px;
+	height : 22px;
+
+}
