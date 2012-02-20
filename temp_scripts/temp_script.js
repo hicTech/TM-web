@@ -313,9 +313,12 @@ $(document).ready(function(){
 	}
 	
 	
+	/*
+	 * timepicker (LIVE)
+	 */
 	
-	
-	
+	$("input[type='time']").timepicker({});
+		
 
 });
 

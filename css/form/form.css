@@ -64,6 +64,7 @@ input[type='password'],
 input[type='date'],
 input[type='number'], 
 input[type='search'],
+input[type='time'],
 textarea{
 	background: #F6F6F6;
 	color: #666;
@@ -97,6 +98,15 @@ input[type='search']{
 	background-repeat: no-repeat;
 	background-position: right;
 
+}
+
+input[type='time']{
+	-webkit-appearance: none;
+	padding: 7px 12px;
+	background-image: url(img/time_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 100px;
 }
 
 input[type='search'].input_no_value{
@@ -167,6 +177,7 @@ select{
 .FORM-field-row.little p input[type='date'],
 .FORM-field-row.little p input[type='number'],
 .FORM-field-row.little p input[type='search'],
+.FORM-field-row.little p input[type='time'],
 .FORM-field-row.little p textarea{
 	font-size: 11px;
 	padding: 4px 4px 4px 8px;
@@ -176,6 +187,13 @@ select{
 
 .FORM-field-row.little p input[type='date']{
 	background-image: url(img/little_date_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 4px 4px 4px 12px;
+}
+
+.FORM-field-row.little p input[type='time']{
+	background-image: url(img/little_time_icon.png);
 	background-repeat: no-repeat;
 	background-position: right;
 	padding: 4px 4px 4px 12px;
