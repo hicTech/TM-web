@@ -230,3 +230,29 @@ select{
 	height : 22px;
 
 }
+
+
+.likeTag-container{
+	float: left;
+	padding: 5px;
+	margin: 6px 12px 10px 0px;
+	background-image: url(img/alpha20.png);
+	border-radius:3px
+}
+
+.likeTag-container > div{
+	float: left;
+	margin: 0px 0px 0px 10px;
+	background-image: url(img/x.png);
+	width: 15px;
+	height: 14px;
+	cursor: pointer
+}
+.likeTag-container > div:hover{
+	background-color: #ddd
+}
+
+.likeTag-container > span{
+	float: left;
+	margin: 0px 0px 0px 2px
+}
