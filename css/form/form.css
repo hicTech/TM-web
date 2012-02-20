@@ -109,6 +109,16 @@ input[type='time']{
 	width: 100px;
 }
 
+
+input[type='text'][data-role='tags']{
+	-webkit-appearance: none;
+	padding: 7px 12px;
+	background-image: url(img/tags_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 40%;
+}
+
 input[type='search'].input_no_value{
 	background-image: none
 }
@@ -199,6 +209,13 @@ select{
 	padding: 4px 4px 4px 12px;
 }
 
+.FORM-field-row.little p input[type='text'][data-role='tags']{
+	background-image: url(img/little_tags_icon.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 4px 4px 4px 12px;
+}
+
 .FORM-field-row.little p input[type='search']{
 	padding: 4px;
 	-webkit-appearance: none;
@@ -232,7 +249,7 @@ select{
 }
 
 
-.likeTag-container{
+.FORM-tag-container{
 	float: left;
 	padding: 5px;
 	margin: 6px 12px 10px 0px;
@@ -240,7 +257,7 @@ select{
 	border-radius:3px
 }
 
-.likeTag-container > div{
+.FORM-tag-container > div{
 	float: left;
 	margin: 0px 0px 0px 10px;
 	background-image: url(img/x.png);
@@ -248,11 +265,11 @@ select{
 	height: 14px;
 	cursor: pointer
 }
-.likeTag-container > div:hover{
+.FORM-tag-container > div:hover{
 	background-color: #ddd
 }
 
-.likeTag-container > span{
+.FORM-tag-container > span{
 	float: left;
 	margin: 0px 0px 0px 2px
 }

@@ -322,7 +322,7 @@ $(document).ready(function(){
 	
 	
 	/*
-	 * multiple tags select
+	 * multiple tags select & input
 	 */
 	
 	$("select[data-role='tags']").each(function(){
@@ -356,17 +356,20 @@ $(document).ready(function(){
 	}
 	
 	function addSingleTag(el,type,value){
-			var is_select = (type.indexOf("select")==0); 
-			var input = (type == "select") ? el.parents(".FORM-field-row").find("select") : el.parents(".FORM-field-row").find("input");
-			var tag_container = el.parents(".FORM-field-row").find(".tag_container");
+			var is_select = (type.indexOf("select")==0);
+			var form_field_row = el.parents(".FORM-field-row");
+			var input = (type == "select") ? form_field_row.find("select") : form_field_row.find("input");
+			var tag_container = form_field_row.find(".tag_container");
 			if(is_select){
 				var $option = findOption(input, value);
 				var value_to_add = $option.val();
 				var label = $option.html();
 				
-				
-				
-				tag_container.append(addSpecificTag(value_to_add,label,"select"));
+				var $tag = $(addSpecificTag(value_to_add,label));
+				$tag.find(".x").click(function(){
+					removeTag($(this),label,"select",value)
+				});
+				tag_container.append($tag);
 				$option.remove();
 			}
 			else{
@@ -395,10 +398,10 @@ $(document).ready(function(){
 			
 	}
 	
-	function addSpecificTag(value,label,type){
-			return "<div class='likeTag-container' data-value='"+value+"'><span>"+label+"</span><div onclick='removeTag(this,\""+label+"\",\""+type+"\",\""+value+"\")'></div></div>";
+	function addSpecificTag(value,label){
+			return "<div class='FORM-tag-container' data-value='"+value+"'><span>"+label+"</span><div class='x'></div></div>";
 		}
-	
+		
 	function findOption(el, value){
 			if(!(_.isNull(value) || _.isUndefined(value)))
 				value = ""+value;
@@ -408,7 +411,41 @@ $(document).ready(function(){
 				return $(el).find("option:selected");
 		}
 		
-	
+	function removeTag(el,value_to_remove,type,value){
+			var tag=$(el).parent();
+			if(type=="select"){
+				var select = el.parents(".FORM-field-row").find("select");
+				
+				select.append("<option value='"+value+"'>"+value_to_remove+"</option>");
+				
+				var parent = tag.parent();
+				tag.remove();
+				var new_value="";
+				parent.find(".FORM-tag-container").each(function(){
+					new_value+=$(this).data("value")+","
+				})
+				
+				//per popare i valori nell'hidden
+				//new_value=new_value.substr(0,new_value.length-1);
+				//hidden.val(new_value)
+			}
+			else{
+				var hidden=$(el).parent().parent().prev().find("input[type='hidden']")
+				var hiddenVal=hidden.val();
+				var arr= hiddenVal.split(",");
+				arr.splice(_.indexOf(arr, value_to_remove),1);
+				
+				var new_value="";
+				for(i in arr){
+					new_value+=arr[i]
+					if(i!=arr.length-1)
+						new_value+=",";
+				}
+				hidden.val(new_value)
+				tag.remove();
+			}
+		}
+		
 	
 	
 
