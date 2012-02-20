@@ -1,7 +1,6 @@
 
 $(document).ready(function(){
 	
-	
 	/*
 	 * sidebar NOTE: se trova SIDEBAR-search in SIDEBAR-item lo espande se no no!
 	 */
