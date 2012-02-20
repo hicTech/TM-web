@@ -312,6 +312,102 @@ $(document).ready(function(){
 	}
 	
 	
+	/*
+	 * timepicker (LIVE)
+	 */
+	
+	$("input[type='time']").timepicker({});
+	
+	
+	
+	
+	/*
+	 * multiple tags select
+	 */
+	
+	$("select[data-role='tags']").each(function(){
+		$(this).change(function(){
+			addTag($(this),"select",$(this).val())
+		})
+	})
+	
+	function addTag(el,type,value){
+			if(type.indexOf("select")==0)
+				addSingleTag(el,type,value);
+			else{	
+				var val = $field.find("input[type=\"text\"]").val();
+				
+				if(val.indexOf("  ") != -1){
+					alert("inserisci i tag separati da un solo spazio");
+					return false;
+				}
+				else{
+					if(val.indexOf(" ") > 0){
+						var arr = val.split(" ");
+						for (i in arr){
+							(arr[i] != " ") ? addSingleTag(el,type,arr[i]) : null;
+						}
+					}
+					else{
+						addSingleTag(el,type,value);	
+					}
+				}
+			}
+	}
+	
+	function addSingleTag(el,type,value){
+			var is_select = (type.indexOf("select")==0); 
+			var input = (type == "select") ? el.parents(".FORM-field-row").find("select") : el.parents(".FORM-field-row").find("input");
+			var tag_container = el.parents(".FORM-field-row").find(".tag_container");
+			if(is_select){
+				var $option = findOption(input, value);
+				var value_to_add = $option.val();
+				var label = $option.html();
+				
+				
+				
+				tag_container.append(addSpecificTag(value_to_add,label,"select"));
+				$option.remove();
+			}
+			else{
+				var inputVal = (_.isNull(value) || _.isUndefined(value)) ? input.val() : (""+value);
+				if(inputVal==""){
+					return
+				}
+				
+				var hiddenVal=hidden.val();
+				var arr=hiddenVal.split(",");
+				
+				if(_.indexOf(arr, inputVal)!=-1){
+					input.val("");
+					return false;
+				}
+				
+				tag_container.append(addSpecificTag(inputVal,inputVal,"input"));
+				input.val("");
+				if(hidden.val() == ""){
+					hidden.val(inputVal); 
+				}
+				else{
+					hidden.val(hidden.val()+","+inputVal);
+				}
+			}
+			
+	}
+	
+	function addSpecificTag(value,label,type){
+			return "<div class='likeTag-container' data-value='"+value+"'><span>"+label+"</span><div onclick='removeTag(this,\""+label+"\",\""+type+"\",\""+value+"\")'></div></div>";
+		}
+	
+	function findOption(el, value){
+			if(!(_.isNull(value) || _.isUndefined(value)))
+				value = ""+value;
+			if(_.isString(value))
+				return $(el).find("option[value=\""+value+"\"]");
+			else
+				return $(el).find("option:selected");
+		}
+		
 	
 	
 	
