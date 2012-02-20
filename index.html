@@ -27,45 +27,44 @@
 	<link rel="stylesheet" href="css/main/main.css">
 	<link rel="stylesheet" href="css/sheet/sheet.css">
 	
-<!-- IE6 and lower -->
-<!--[if lt IE 7]>
-	<html class="no-js ie6 oldie" lang="en"> 
-<![endif]-->
-
-<!--[if IE 7]>    
-	<html class="no-js ie7 oldie" lang="en">
-	<link rel="stylesheet" type="text/css" href="css/ie/ie7.css">
-<![endif]-->
-
-<!--[if IE 8]>
-	<html class="no-js ie8 oldie" lang="en">
-<![endif]-->
-
-<!--[if gt IE 8]>
-	<!--> <html class="no-js" lang="en">
-<!--<![endif]-->
+	<!-- IE6 and lower -->
+	<!--[if lt IE 7]>
+		<html class="no-js ie6 oldie" lang="en"> 
+	<![endif]-->
+	
+	<!--[if IE 7]>    
+		<html class="no-js ie7 oldie" lang="en">
+		<link rel="stylesheet" type="text/css" href="css/ie/ie7.css">
+	<![endif]-->
+	
+	<!--[if IE 8]>
+		<html class="no-js ie8 oldie" lang="en">
+	<![endif]-->
+	
+	<!--[if gt IE 8]>
+		<!--> <html class="no-js" lang="en">
+	<!--<![endif]-->
 	
 
+	<!-- JQUERY -->
+	<script src="lib/jquery/jquery-v1.7.1.js"></script>
 	
-<!-- JQUERY -->
-<script src="lib/jquery/jquery-v1.7.1.js"></script>
-
-
-<!-- JQUERY UI-->
-<script src="lib/jqueryUI/js/jquery-ui-1.8.17.custom.min.js"></script>
-<link rel="stylesheet" href="lib/jqueryUI/css/smoothness/jquery-ui-1.8.17.custom.css">
-
-<!-- HICTECH JQUERY UI customizations-->
-<link rel="stylesheet" href="css/jqueryUICustomizations/jqueryUICustomizations.css">
-
-<!-- SCRIPT TEMPORANEO hicTech-->
-<script src="temp_scripts/temp_script.js"></script>
-
-<!-- SLIDER MAIN -->
-<script src="temp_scripts/jquery.bxSlider.min.js"></script>
-
-<!-- time picker -->
-<script src="temp_scripts/plugins/timePicker.js"></script>
+	
+	<!-- JQUERY UI-->
+	<script src="lib/jqueryUI/js/jquery-ui-1.8.17.custom.min.js"></script>
+	<link rel="stylesheet" href="lib/jqueryUI/css/smoothness/jquery-ui-1.8.17.custom.css">
+	
+	<!-- HICTECH JQUERY UI customizations-->
+	<link rel="stylesheet" href="css/jqueryUICustomizations/jqueryUICustomizations.css">
+	
+	<!-- SCRIPT TEMPORANEO hicTech-->
+	<script src="temp_scripts/temp_script.js"></script>
+	
+	<!-- SLIDER MAIN -->
+	<script src="temp_scripts/jquery.bxSlider.min.js"></script>
+	
+	<!-- time picker -->
+	<script src="temp_scripts/plugins/timePicker.js"></script>
 	
 </head>
 <body>
@@ -203,6 +202,20 @@
 																	<p class="FORM-label">Data:</p>
 																	<p><input type="date" placeholder="placeholder"></p>
 																</div>
+																
+																<div class="FORM-field-row little">
+																	<p class="FORM-label">Tags:</p>
+																	<p><select onchange='addTag(this,\"select\")'><option value=''>Opzione 1</option><option value=''>Opzione 1</option><option value=''>Opzione 1</option></select></p>
+																	<p><div class='tag_container'></div></p>	
+																</div>
+																
+																<div class="FORM-field-row little">
+																	<p class="FORM-label">Data:</p>
+																	<p><input type="date" placeholder="placeholder"></p>
+																</div>
+																
+																
+					
 														     
 															</div>
 														</div>
