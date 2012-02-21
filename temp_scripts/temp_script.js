@@ -261,8 +261,7 @@ $(document).ready(function(){
 												- parseInt(($(".MAINAREA-navigator").is(":visible")) ? $(".MAINAREA-navigator").css("height") : 0) 
 												- parseInt(($(".MAIN-header").is(":visible")) ? $(".MAIN-header").css("height") : 0) 
 												- parseInt(($(".MAIN-footer").is(":visible")) ? $(".MAIN-footer").css("height") : 0) 
-												- parseInt(($(".MAINAREA-sheet-footer").is(":visible")) ? $(".MAINAREA-sheet-footer").css("height") : 0) 
-												- parseInt(($(".MAINAREA-footer").is(":visible")) ? $(".MAINAREA-footer").css("height") : 0);							
+												- parseInt(($(".MAINAREA-sheet-footer").is(":visible")) ? $(".MAINAREA-sheet-footer").css("height") : 0);							
 										
 		$(".SHEET").css("height",expander_h);
 		$(".SHEET").css("width",getViewPort().width - 250);

@@ -7,8 +7,10 @@
 	vertical-align: top
 }
 
+
+
 .MAINAREA-navigator{
-	height: 40px;
+	height: 50px;
 }
 
 .MAINAREA-main{
@@ -35,13 +37,7 @@
 }
 
 .MAINAREA-sheet-footer{
-	background-color:#0f0f0f;
+	background-color:#222;
 	vertical-align: top;
-	height:35px
-}
-
-.MAINAREA-footer{
-	height:25px;
-	background-color:#fff;
-	vertical-align: top
+	height:30px
 }

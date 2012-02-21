@@ -62,7 +62,7 @@
 }
 
 .step_indicator.current{
-		background-image: url(img/alpha80.png);
+	background-image: url(img/alpha80.png);
 	background-position: -19px 0px; 
 	color: #fff;
 }

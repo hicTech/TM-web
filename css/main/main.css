@@ -1,7 +1,48 @@
 .MAIN-header{
-	height: 25px
+	height: 40px;
+	overflow: hidden;
+	margin: 0px 9px;
+	border : solid 1px #bbb;
+	border-bottom : none;
+	background-image: url(img/alpha20.png);
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
+.MAIN-title{
+}
+
+.MAIN-title > div{
+	float: left;
+	margin: -2px 0px 0px 5px
+}
+
+.MAIN-title > div:nth-child(2){
+	margin: 12px 0px 0px 0px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #444
+}
+
+
 .MAIN-footer{
-	height: 40px
+	height: 46px;
+}
+
+.MAIN-footer-container{
+	width:100%;
+	margin: 0px auto;
+	text-align: center;
+	white-space: nowrap;
+	line-height: 12px;
+	overflow: hidden;
+}
+
+.MAIN.footer-container button{
+	display: inline-block;
+	white-space: normal;
+	text-align: normal;
+	vertical-align: middle;
 }
