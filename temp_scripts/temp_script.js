@@ -272,6 +272,7 @@ $(document).ready(function(){
 										
 		$(".SHEET").css("height",expander_h);
 		$(".SHEET").css("width",getViewPort().width - 250);
+		$(".CONTROLLER-wrapper").css("width",getViewPort().width - 230);
 		
 		var current_slide = slider.getCurrentSlide();
 		slider.destroyShow();

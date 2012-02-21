@@ -4,8 +4,12 @@
 	overflow:auto;
 	margin:-1px 0px 0px -1px;
 }
-
 .CONTROLLER-wrapper{
+	height: 180px;
+	overflow-x: scroll;
+}
+
+.CONTROLLER-wrapper-nowrap{
 	white-space: nowrap;
 }
 .CONTROLLER-box{
@@ -122,3 +126,7 @@
 .CONTROLLER-inner-box-item-container ul li:hover{
 	color: #2aa6c0
 }
+
+
+
+
