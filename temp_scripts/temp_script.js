@@ -331,11 +331,21 @@ $(document).ready(function(){
 		})
 	})
 	
+	$("input[data-role='tags']").each(function(){
+		var $button = $('<button class="BUTTON small">Aggiungi</button>');
+		$button.click(function(){
+			addTag($(this),"input")
+		})
+		$(this).after($button)
+	})
+	
+	
+	
 	function addTag(el,type,value){
 			if(type.indexOf("select")==0)
 				addSingleTag(el,type,value);
 			else{	
-				var val = $field.find("input[type=\"text\"]").val();
+				var val = el.parents(".FORM-field-row").find("input").val();
 				
 				if(val.indexOf("  ") != -1){
 					alert("inserisci i tag separati da un solo spazio");
@@ -358,21 +368,31 @@ $(document).ready(function(){
 	function addSingleTag(el,type,value){
 			var is_select = (type.indexOf("select")==0);
 			var form_field_row = el.parents(".FORM-field-row");
-			var input = (type == "select") ? form_field_row.find("select") : form_field_row.find("input");
+			var input = (type == "select") ? form_field_row.find("select[data-role='tags']") : form_field_row.find("input[data-role='tags']");
+			var hidden = form_field_row.find("input[type='hidden']")
+			
 			var tag_container = form_field_row.find(".tag_container");
 			if(is_select){
 				var $option = findOption(input, value);
 				var value_to_add = $option.val();
 				var label = $option.html();
 				
+				if(hidden.val() == ""){
+					hidden.val(value_to_add); 
+				}
+				else{
+					hidden.val(hidden.val()+","+value_to_add);
+				}
+				
 				var $tag = $(addSpecificTag(value_to_add,label));
-				$tag.find(".x").click(function(){
+				$tag.find(".remove_this_tag").click(function(){
 					removeTag($(this),label,"select",value)
 				});
 				tag_container.append($tag);
 				$option.remove();
 			}
 			else{
+				
 				var inputVal = (_.isNull(value) || _.isUndefined(value)) ? input.val() : (""+value);
 				if(inputVal==""){
 					return
@@ -386,7 +406,12 @@ $(document).ready(function(){
 					return false;
 				}
 				
-				tag_container.append(addSpecificTag(inputVal,inputVal,"input"));
+				var $tag = $(addSpecificTag(inputVal,inputVal));
+				$tag.find("remove_this_tag").click(function(inputVal){
+					removeTag($(this),label,"input",inputVal)
+				});
+				
+				tag_container.append($tag);
 				input.val("");
 				if(hidden.val() == ""){
 					hidden.val(inputVal); 
@@ -399,7 +424,7 @@ $(document).ready(function(){
 	}
 	
 	function addSpecificTag(value,label){
-			return "<div class='FORM-tag-container' data-value='"+value+"'><span>"+label+"</span><div class='x'></div></div>";
+			return "<div class='FORM-tag-container' data-value='"+value+"'><span>"+label+"</span><div class='remove_this_tag'></div></div>";
 		}
 		
 	function findOption(el, value){
@@ -413,8 +438,11 @@ $(document).ready(function(){
 		
 	function removeTag(el,value_to_remove,type,value){
 			var tag=$(el).parent();
+			var form_field_row = el.parents(".FORM-field-row");
+			var hidden = form_field_row.find("input[type=hidden]")
 			if(type=="select"){
-				var select = el.parents(".FORM-field-row").find("select");
+				var select = form_field_row.find("select");
+				
 				
 				select.append("<option value='"+value+"'>"+value_to_remove+"</option>");
 				
@@ -425,12 +453,11 @@ $(document).ready(function(){
 					new_value+=$(this).data("value")+","
 				})
 				
-				//per popare i valori nell'hidden
-				//new_value=new_value.substr(0,new_value.length-1);
-				//hidden.val(new_value)
+				
+				new_value=new_value.substr(0,new_value.length-1);
+				hidden.val(new_value)
 			}
 			else{
-				var hidden=$(el).parent().parent().prev().find("input[type='hidden']")
 				var hiddenVal=hidden.val();
 				var arr= hiddenVal.split(",");
 				arr.splice(_.indexOf(arr, value_to_remove),1);
