@@ -17,8 +17,16 @@
 
 .SHEET-container{
 	margin: 10px auto;
-	padding: 0px 10px
+	padding: 10px 25px
 }
+
+.SHEET-container-half{
+	margin: 10px auto;
+	padding: 10px 25px;
+	width: 40%;
+	float: left
+}
+
 
 
 .SHEET-footer{

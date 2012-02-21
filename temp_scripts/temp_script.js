@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
 	
+	
+
+	
 	/*
 	 * sidebar NOTE: se trova SIDEBAR-search in SIDEBAR-item lo espande se no no!
 	 */
@@ -97,12 +100,14 @@ $(document).ready(function(){
 	 */
 	
 	$(".FORM-slider").each(function(){
-		var $input = $(this).parents(".FORM-field-row").find("input");
+		var $form_field = $(this).parents(".FORM-field-row");
+		var $input = $form_field.find("input.FORM-slider-input");
 		
 		var init_value = ( !! $(this).data("init-value") ) ? $(this).data("init-value") : "";
 		var min_value = ( !! $(this).data("min-value") ) ? $(this).data("min-value") : "";
 		var max_value = ( !! $(this).data("max-value") ) ? $(this).data("max-value") : "";
 		var step_value = ( !! $(this).data("step-value") ) ? $(this).data("step-value") : "";
+		var combo = ($(this).data("role") ) ? true : false;
 		
 		( $(this).data("readonly") == true ) ? $input.attr("disabled","disabled") : "";
 		
@@ -113,8 +118,10 @@ $(document).ready(function(){
 			min: min_value,
 			max: max_value,
 			step: step_value,
-			slide: function( event, ui ) {
+			slide: function( event, ui) {
 				$input.val(ui.value);
+				if(combo)
+					$form_field.find("[data-role='combo-slider-data-preview']").html(ui.value)
 			}
 		})
 	});

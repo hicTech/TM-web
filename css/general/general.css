@@ -2,6 +2,7 @@ html, body{
 	margin:-1px 0px 0px -1px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
+	overflow: hidden
 }
 
 .GENERAL-body{
