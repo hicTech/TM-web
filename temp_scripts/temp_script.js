@@ -269,8 +269,23 @@ $(document).ready(function(){
 												- parseInt(($(".MAIN-header").is(":visible")) ? $(".MAIN-header").css("height") : 0) 
 												- parseInt(($(".MAIN-footer").is(":visible")) ? $(".MAIN-footer").css("height") : 0) 
 												- parseInt(($(".MAINAREA-sheet-footer").is(":visible")) ? $(".MAINAREA-sheet-footer").css("height") : 0);							
+		
+		
+		///////////// calcolo e settaggio della correta width a CONTROLLER-wrapper-nowrap
+		////////////  (come somma delle width e dei margin dei suoi figli)
+		var tot = 0;
+		$(".CONTROLLER-wrapper-nowrap > div").each(function(){
+			tot += parseInt($(this).css("width"))+30
+		});
+		alert(tot)
+		$(".CONTROLLER-wrapper-nowrap").css("width",tot)
+		///////////// calcolo e settaggio della correta width a CONTROLLER-wrapper-nowrap
+		////////////  (come somma delle width e dei margin dei suoi figli)
+		
 										
 		$(".SHEET").css("height",expander_h);
+		
+		/// tolgo la width e i margin della sidebar alla width della viewport (circa 250)
 		$(".SHEET").css("width",getViewPort().width - 250);
 		$(".CONTROLLER-wrapper").css("width",getViewPort().width - 230);
 		
