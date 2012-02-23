@@ -225,8 +225,7 @@ $(document).ready(function(){
 	});
 	
 	/*
-	 * gestione SLIDER
-	 * 
+	 * gestione SLIDER main
 	 * 
 	 */
 	
@@ -244,94 +243,7 @@ $(document).ready(function(){
 	    return false;
 	});
 	
-	/*
-	 * Di seguito gestisco lo slargamento automatico del div .SHEET e il ricalcolo dello slider
-	 * la funzione refreshLayout() viene invocata al caricamento 
-	 * ed al resizing delle window
-	 * OKKIO: deve essere invocata anche al resizing di una delle linee
-	 * sue sorelle (vedi expander_h).
-	 */
 	
-
-	refreshLayout()
-	
-	$(function(){
-	    $(window).resize(function(){
-	        refreshLayout()
-	    });
-	});
-	
-	function refreshLayout(){
-		
-		var expander_h = getViewPort().height 	- parseInt(($(".MAINAREA-header").is(":visible")) ? $(".MAINAREA-header").css("height") : 0)
-												- parseInt(($(".MAINAREA-controller").is(":visible")) ? $(".MAINAREA-controller").css("height") : 0) 
-												- parseInt(($(".MAINAREA-navigator").is(":visible")) ? $(".MAINAREA-navigator").css("height") : 0) 
-												- parseInt(($(".MAIN-header").is(":visible")) ? $(".MAIN-header").css("height") : 0) 
-												- parseInt(($(".MAIN-footer").is(":visible")) ? $(".MAIN-footer").css("height") : 0) 
-												- parseInt(($(".MAINAREA-sheet-footer").is(":visible")) ? $(".MAINAREA-sheet-footer").css("height") : 0);							
-		
-		
-		///////////// calcolo e settaggio della correta width a CONTROLLER-wrapper-nowrap
-		////////////  (come somma delle width e dei margin dei suoi figli)
-		var tot = 0;
-		$(".CONTROLLER-wrapper-nowrap > div").each(function(){
-			tot += parseInt($(this).css("width"))+30
-		});
-		alert(tot)
-		$(".CONTROLLER-wrapper-nowrap").css("width",tot)
-		///////////// calcolo e settaggio della correta width a CONTROLLER-wrapper-nowrap
-		////////////  (come somma delle width e dei margin dei suoi figli)
-		
-										
-		$(".SHEET").css("height",expander_h);
-		
-		/// tolgo la width e i margin della sidebar alla width della viewport (circa 250)
-		$(".SHEET").css("width",getViewPort().width - 250);
-		$(".CONTROLLER-wrapper").css("width",getViewPort().width - 230);
-		
-		var current_slide = slider.getCurrentSlide();
-		slider.destroyShow();
-		slider = $('.SLIDER').bxSlider({
-			    	controls : false,
-			    	startingSlide : current_slide
-			    });
-		
-		if(jQuery.browser.version == 7){
-			var tr_expander_h = expander_h + parseInt(($(".MAIN-header").is(":visible")) ? $(".MAIN-header").css("height") : 0) 
-										   + parseInt(($(".MAIN-footer").is(":visible")) ? $(".MAIN-footer").css("height") : 0);
-			$(".SHEET").parents("tr").eq(0).css("height",tr_expander_h);
-		}
-
-	}
-	
-	
-	
-	/*
-	 * calcolo viewport crossbrowser
-	 */
-	
-	function getViewPort(){
-		if (typeof window.innerWidth != 'undefined'){
-		      viewportWidth = window.innerWidth,
-		      viewportHeight = window.innerHeight
-		}
-		else if (typeof document.documentElement != 'undefined'
-		&& typeof document.documentElement.clientWidth !=
-		'undefined' && document.documentElement.clientWidth != 0){
-			viewportWidth = document.documentElement.clientWidth,
-			viewportHeight = document.documentElement.clientHeight
-		}  
-		
-		else{
-			viewportWidth = document.getElementsByTagName('body')[0].clientWidth,
-			viewportHeight = document.getElementsByTagName('body')[0].clientHeight
-		}
-		
-		return {
-			width : viewportWidth,
-			height : viewportHeight
-		}
-	}
 	
 	
 	/*

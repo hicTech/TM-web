@@ -24,3 +24,31 @@
 	 background-position: -44px 0px; 
 }
 
+
+
+.TOOL-little-arrows{
+	background-image: url(img/little_arrows.png);
+	width: 26px;
+	height: 35px;
+	cursor: pointer;
+	margin: 5px
+}
+
+.TOOL-little-arrows.right{
+	 background-position: 0px 0px;
+}
+
+.TOOL-little-arrows.right:hover{
+	 background-position: -26px 0px; 
+}
+
+.TOOL-little-arrows.left{
+	 background-position: -78px 0px;
+
+
+}
+
+.TOOL-little-arrows.left:hover{
+	 background-position: -52px 0px; 
+}
+

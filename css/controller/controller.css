@@ -5,12 +5,13 @@
 	margin:-1px 0px 0px -1px;
 }
 .CONTROLLER-wrapper{
-	height: 180px;
 	overflow-x: scroll;
+
 }
 
 .CONTROLLER-wrapper-nowrap{
 	white-space: nowrap;
+	
 }
 .CONTROLLER-box{
 	color : #fff;
@@ -127,6 +128,31 @@
 	color: #2aa6c0
 }
 
+.CONTROLLER-arrow-right,.CONTROLLER-arrow-left{
+	display:none;
+	position:fixed;
+	width:150px; 
+	height:140px;
+	right:0px
+}
 
+
+.CONTROLLER-arrow-right{
+	right:0px;
+	background-image: url(img/arrow_right_bg.png);
+}
+
+.CONTROLLER-arrow-right > div{
+	margin: 0px 0px 0px 80px
+}
+
+.CONTROLLER-arrow-left{
+	left:226px;
+	background-image: url(img/arrow_left_bg.png);
+}
+
+.CONTROLLER-arrow-left > div{
+	margin:0px 0px 0px 10px
+}
 
 
