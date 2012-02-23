@@ -2,18 +2,13 @@
 $(document).ready(function(){
 	
 	
-
-	/*
-	 * Di seguito gestisco lo slargamento automatico del div .SHEET e il ricalcolo dello slider
-	 * la funzione calculateLayout() viene invocata al caricamento 
-	 * ed al resizing delle window
-	 * OKKIO: deve essere invocata anche al resizing di una delle linee
-	 * sue sorelle (vedi expander_h).
-	 */
+	var mouseX;
+	$(document).bind("mousemove",function(e){
+			mouseX = e.pageX;
+	}); 
 	
 	
 	calculateLayout();
-	calculateLayout(); // non so perchè ma se non è chrome debbo invocarlo due volte (credo sia un problema di css)
 	
 	
 	$(function(){
@@ -42,11 +37,6 @@ $(document).ready(function(){
 										   + parseInt(($(".MAIN-footer").is(":visible")) ? $(".MAIN-footer").css("height") : 0);
 			$(".SHEET").parents("tr").eq(0).css("height",tr_expander_h);
 		}
-		
-		
-		//horizontal
-		///////////// calcolo e settaggio della correta width a CONTROLLER-wrapper-nowrap
-		////////////  (come somma delle width e dei margin dei suoi figli)
 	
 		/// tolgo la width e i margin della sidebar alla width della viewport (circa 250)
 		$(".SHEET").css("width",getViewPort().width - 250);
@@ -61,8 +51,12 @@ $(document).ready(function(){
 	
 	function calculateController(){
 		
-		var speed = 4;
+		var scroller_tollerance = 70;    // di quanti pixel il contenuto deve eccedere rispetto al contenitore per attivare lo scroller
+		var hidding_arrows_offset = 12;
+		var sensibility = 6;
 		
+		///////////// calcolo e settaggio della correta width a CONTROLLER-wrapper-nowrap
+		////////////  (come somma delle width e dei margin dei suoi figli)
 		var controller_content_with_ammount = 0;
 		$(".CONTROLLER-wrapper-nowrap > div").each(function(){
 			controller_content_with_ammount += parseInt($(this).css("width"))+28
@@ -78,8 +72,9 @@ $(document).ready(function(){
 		
 		
 		
-		if(overflow < 70)
+		if(overflow < scroller_tollerance)
 			return false;
+		
 		else{
 			$(".CONTROLLER-arrow-right").show();
 			$(".CONTROLLER-arrow-right,.CONTROLLER-arrow-left").css("height",wrapper_height-20);
@@ -93,12 +88,10 @@ $(document).ready(function(){
 												
 					function(){
 						interval_right = setInterval(function(){
-							//$(document).one().bind("mousemove",function(e){console.log( e.pageX);}); 
-							$(".CONTROLLER-wrapper").scrollTo( {top:'-=0px', left:'+='+speed})
+							scrollContent("ahead" , sensibility)
 						});
 					},
 					function(){
-						//$(document).one().unbind("mousemove"); 
 						clearInterval(interval_right);
 					}
 			 );
@@ -107,7 +100,7 @@ $(document).ready(function(){
 			$(".CONTROLLER-arrow-left").hover(
 					function(){
 						interval_left = setInterval(function(){
-							$(".CONTROLLER-wrapper").scrollTo( {top:'-=0px', left:'-='+speed});
+							scrollContent("backwards" , sensibility)
 						});
 					},
 					function(){
@@ -117,29 +110,32 @@ $(document).ready(function(){
 			
 			
 			
-			
+			// gestione accensione/spengimento delle frecce
 			$(".CONTROLLER-wrapper").scroll(function() {
-				var scroll_x_left_offset =  Math.abs( $(".CONTROLLER-wrapper").position().left - $(".CONTROLLER-wrapper-nowrap").position().left);
-				var scroll_x_right_offset = Math.abs($(".CONTROLLER-wrapper").position().left - $(".CONTROLLER-wrapper-nowrap").position().left - overflow);
+				var scroll_x_left_offset =  Math.abs( $(".CONTROLLER-wrapper").position().left - $(".CONTROLLER-wrapper-nowrap").position().left );
+				var scroll_x_right_offset = Math.abs( $(".CONTROLLER-wrapper").position().left - $(".CONTROLLER-wrapper-nowrap").position().left - overflow );
 				
-				if(scroll_x_left_offset <= 12){
-					$(".CONTROLLER-arrow-left").hide();
-				}
-				else{
-					$(".CONTROLLER-arrow-left").show();
-				}
+				(scroll_x_left_offset <= hidding_arrows_offset) ? $(".CONTROLLER-arrow-left").fadeOut("slow") : $(".CONTROLLER-arrow-left").fadeIn();
+				(scroll_x_right_offset <= hidding_arrows_offset) ? $(".CONTROLLER-arrow-right").fadeOut("slow") : $(".CONTROLLER-arrow-right").fadeIn();
 				
-				if(scroll_x_right_offset <= 12){
-					$(".CONTROLLER-arrow-right").hide();
-				}
-				else{
-					$(".CONTROLLER-arrow-right").show();
-				}
 			});
 					  
 			
 		}
 
+	}
+	
+	function scrollContent(direction , sensibility){
+		var speed = 5;
+		var arrow_width = $(".CONTROLLER-arrow-right").width();
+		//alert(arrow_width)
+		if(direction == "backwards"){
+			speed = ( parseInt(( 150 - (mouseX - $(".CONTROLLER-wrapper").position().left) )/ sensibility) ) * -1;
+		}
+		else{
+			speed = ((mouseX - $(".CONTROLLER-arrow-right").offset().left) / sensibility) //$(".CONTROLLER-wrapper").position().left 
+		}
+		$(".CONTROLLER-wrapper").scrollTo( {top:'-=0px', left:'+='+speed});
 	}
 	
 	function calculateSlider(){
