@@ -2,14 +2,22 @@
 $(document).ready(function(){
 	
 	
-	var mouseX;
+	var $sheet = $(".SHEET");
+	var $controller = $(".CONTROLLER-wrapper");
+	var $mainarea_header = $(".MAINAREA-header");
+	var $mainarea_navigator = $(".MAINAREA-navigator");
+	var $main_header = $(".MAIN-header");
+	var $main_footer = $(".MAIN-footer");
+	var $mainarea_sheet_footer = $(".MAINAREA-sheet-footer");
+	var $mainarea_controller = $(".MAINAREA-controller");
+		
+		
+	
+	var mouseX,mouseY;
 	$(document).bind("mousemove",function(e){
 			mouseX = e.pageX;
+			//mouseY = e.pageY;
 	}); 
-	
-	
-	calculateLayout();
-	
 	
 	$(function(){
 	    $(window).resize(function(){
@@ -17,38 +25,47 @@ $(document).ready(function(){
 	    });
 	});
 	
+	
+	
+	calculateLayout();
+	
+	
+	
+	
 	function calculateLayout(){
 		
-
+		
+		
+		
 		//vertical
-		var expander_h = getViewPort().height 	- parseInt(($(".MAINAREA-header").is(":visible")) ? $(".MAINAREA-header").height() : 0)
-												- parseInt(($(".MAINAREA-navigator").is(":visible")) ? $(".MAINAREA-navigator").height() : 0) 
-												- parseInt(($(".MAIN-header").is(":visible")) ? $(".MAIN-header").height() : 0) 
-												- parseInt(($(".MAIN-footer").is(":visible")) ? $(".MAIN-footer").height() : 0) 
-												- parseInt(($(".MAINAREA-sheet-footer").is(":visible")) ? $(".MAINAREA-sheet-footer").height() : 0);	
+		var expander_h = getViewPort().height 	- parseInt(( $mainarea_header.is(":visible") ) ? $mainarea_header.height() : 0)
+												- parseInt(($mainarea_navigator.is(":visible")) ? $mainarea_navigator.height() : 0) 
+												- parseInt(($main_header.is(":visible")) ? $main_header.height() : 0) 
+												- parseInt(($main_footer.is(":visible")) ? $main_footer.height() : 0) 
+												- parseInt(($mainarea_sheet_footer.is(":visible")) ? $mainarea_sheet_footer.height() : 0);	
 													
 		// inserisco nel conto se e quanti controller ci sono									
-		$(".MAINAREA-controller").each(function(){
-			( $(this).is(":visible") ) ? expander_h= expander_h -  parseInt($(".MAINAREA-controller").height()) : null;			
+		$mainarea_controller.each(function(){
+			( $(this).is(":visible") ) ? expander_h= expander_h - parseInt($mainarea_controller.height()) : null;			
 		});
 
-		$(".SHEET").css("height",expander_h);
+		$sheet.css("height",expander_h);
 		
 		
 		if(jQuery.browser.msie && jQuery.browser.version == 7){
-			var tr_expander_h = expander_h + parseInt(($(".MAIN-header").is(":visible")) ? $(".MAIN-header").height() : 0) 
-										   + parseInt(($(".MAIN-footer").is(":visible")) ? $(".MAIN-footer").height() : 0);
-			$(".SHEET").parents("tr").eq(0).css("height",tr_expander_h);
+			var tr_expander_h = expander_h + parseInt(($main_header.is(":visible")) ? $main_header.height() : 0) 
+										   + parseInt(($main_footer.is(":visible")) ? $main_footer.height() : 0);
+			$sheet.parents("tr").eq(0).css("height",tr_expander_h);
 		}
 	
 		/// tolgo la width e i margin della sidebar alla width della viewport (circa 250)
-		$(".SHEET").css("width",getViewPort().width - 250);
-		$(".CONTROLLER-wrapper").css("width",getViewPort().width - 235);
+		$sheet.css("width",getViewPort().width - 250);
+		$controller.css("width",getViewPort().width - 235);
 		
 		calculateSlider();
 		
-		$(".MAINAREA-controller").each(function(){
-			calculateController($(this));
+		$mainarea_controller.each(function(){
+			if($(this).is(":visible"))calculateController($(this));
 		})
 		
 	
@@ -68,7 +85,7 @@ $(document).ready(function(){
 		////////////  (come somma delle width e dei margin dei suoi figli)
 		var controller_content_with_ammount = 0;
 		$el.find(".CONTROLLER-wrapper-nowrap > div").each(function(){
-			controller_content_with_ammount += parseInt($(this).width())+28
+			controller_content_with_ammount += parseInt($(this).width())+29
 		});
 		
 		$el.find(".CONTROLLER-wrapper-nowrap").css("width",controller_content_with_ammount)
@@ -139,7 +156,7 @@ $(document).ready(function(){
 			speed = ( parseInt(( arrow_width - (mouseX - $el.find(".CONTROLLER-wrapper").position().left) )/ sensibility) ) * -1;
 		}
 		else{
-			speed = ((mouseX - $el.find(".CONTROLLER-arrow-right").offset().left) / sensibility) //$(".CONTROLLER-wrapper").position().left 
+			speed = ((mouseX - $el.find(".CONTROLLER-arrow-right").offset().left) / sensibility) 
 		}
 		$el.find(".CONTROLLER-wrapper").scrollTo( {top:'-=0px', left:'+='+speed});
 	}
