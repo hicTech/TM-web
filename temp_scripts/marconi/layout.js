@@ -2,15 +2,6 @@
 $(document).ready(function(){
 	
 	
-	var $sheet = $(".SHEET");
-	var $controller = $(".CONTROLLER-wrapper");
-	var $mainarea_header = $(".MAINAREA-header");
-	var $mainarea_navigator = $(".MAINAREA-navigator");
-	var $main_header = $(".MAIN-header");
-	var $main_footer = $(".MAIN-footer");
-	var $mainarea_sheet_footer = $(".MAINAREA-sheet-footer");
-	var $mainarea_controller = $(".MAINAREA-controller");
-		
 		
 	
 	var mouseX,mouseY;
@@ -34,7 +25,15 @@ $(document).ready(function(){
 	
 	function calculateLayout(){
 		
-		
+		var $sidebar = $(".GENERAL-sidebar")
+		var $sheet = $(".SHEET");
+		var $controller = $(".CONTROLLER-wrapper");
+		var $mainarea_header = $(".MAINAREA-header");
+		var $mainarea_navigator = $(".MAINAREA-navigator");
+		var $main_header = $(".MAIN-header");
+		var $main_footer = $(".MAIN-footer");
+		var $mainarea_sheet_footer = $(".MAINAREA-sheet-footer");
+		var $mainarea_controller = $(".MAINAREA-controller");
 		
 		
 		//vertical
@@ -43,12 +42,12 @@ $(document).ready(function(){
 												- parseInt(($main_header.is(":visible")) ? $main_header.height() : 0) 
 												- parseInt(($main_footer.is(":visible")) ? $main_footer.height() : 0) 
 												- parseInt(($mainarea_sheet_footer.is(":visible")) ? $mainarea_sheet_footer.height() : 0);	
-													
+								
 		// inserisco nel conto se e quanti controller ci sono									
 		$mainarea_controller.each(function(){
-			( $(this).is(":visible") ) ? expander_h= expander_h - parseInt($mainarea_controller.height()) : null;			
+			( $(this).is(":visible") ) ? expander_h= expander_h - parseInt($mainarea_controller.height()) : 0;		
 		});
-
+		
 		$sheet.css("height",expander_h);
 		
 		
@@ -58,8 +57,9 @@ $(document).ready(function(){
 			$sheet.parents("tr").eq(0).css("height",tr_expander_h);
 		}
 	
+
 		/// tolgo la width e i margin della sidebar alla width della viewport (circa 250)
-		$sheet.css("width",getViewPort().width - 250);
+		$sheet.css("width",getViewPort().width - ($sidebar.width()+30) );
 		$controller.css("width",getViewPort().width - 235);
 		
 		calculateSlider();
@@ -97,7 +97,7 @@ $(document).ready(function(){
 		var wrapper_height = parseInt( $el.height() );
 		var overflow = content_width - wrapper_width
 		
-		
+
 		
 		if(overflow < scroller_tollerance)
 			return false;

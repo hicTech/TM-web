@@ -7,11 +7,12 @@
 
 .SEARCH-box{
 	color : #fff;
-	width : 280px;
+	width : 250px;
 	min-height : 250px;
 	padding:2px 2px;
 	float :left;
 	border:solid 1px #ddd;
+	margin: 2px;
 	border-radius: 9px;
 	background-color: #ddd;
 	    -webkit-box-shadow:     inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
