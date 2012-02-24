@@ -36,6 +36,8 @@
 
 .TOOL-little-arrows.right{
 	 background-position: 0px 0px;
+	 position: absolute;
+	 right: 15px
 }
 
 .TOOL-little-arrows.right:hover{

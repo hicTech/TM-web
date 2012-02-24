@@ -53,7 +53,7 @@ $(document).ready(function(){
 		
 		var scroller_tollerance = 70;    // di quanti pixel il contenuto deve eccedere rispetto al contenitore per attivare lo scroller
 		var hidding_arrows_offset = 12;
-		var sensibility = 6;
+		var sensibility = 5;
 		
 		///////////// calcolo e settaggio della correta width a CONTROLLER-wrapper-nowrap
 		////////////  (come somma delle width e dei margin dei suoi figli)
@@ -128,9 +128,10 @@ $(document).ready(function(){
 	function scrollContent(direction , sensibility){
 		var speed = 5;
 		var arrow_width = $(".CONTROLLER-arrow-right").width();
+		
 		//alert(arrow_width)
 		if(direction == "backwards"){
-			speed = ( parseInt(( 150 - (mouseX - $(".CONTROLLER-wrapper").position().left) )/ sensibility) ) * -1;
+			speed = ( parseInt(( arrow_width - (mouseX - $(".CONTROLLER-wrapper").position().left) )/ sensibility) ) * -1;
 		}
 		else{
 			speed = ((mouseX - $(".CONTROLLER-arrow-right").offset().left) / sensibility) //$(".CONTROLLER-wrapper").position().left 

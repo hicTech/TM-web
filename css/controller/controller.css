@@ -131,7 +131,7 @@
 .CONTROLLER-arrow-right,.CONTROLLER-arrow-left{
 	display:none;
 	position:fixed;
-	width:150px; 
+	width:210px; 
 	height:140px;
 	right:0px
 }
