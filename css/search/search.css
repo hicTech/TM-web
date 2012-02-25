@@ -1,30 +1,31 @@
-.SEARCH{
-	background-color: #ddd;
-	padding: 2px;
-	overflow:auto;
-	margin:-1px 0px 0px -1px;
+
+.SEARCH-container{
+	margin:10px auto
 }
 
 .SEARCH-box{
 	color : #fff;
 	width : 250px;
-	min-height : 250px;
+	min-height : 380px;
 	padding:2px 2px;
 	float :left;
 	border:solid 1px #ddd;
-	margin: 2px;
+	margin:10px 0px 0px 0px;
 	border-radius: 9px;
+	position: relative;
+	z-index:10;
 	background-color: #ddd;
 	    -webkit-box-shadow:     inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 	               -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	                    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset
+	                    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	
+	/*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+ 	filter: alpha(opacity=65);
+    -moz-opacity: 0.65;
+    -khtml-opacity: 0.65;
+    opacity: 0.65;*/
 }
 
-.SEARCH-box:hover{
-	    -webkit-box-shadow:     inset 1px 1px 35px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	               -moz-box-shadow: inset 1px 1px 35px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	                    box-shadow: inset 1px 1px 35px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset
-}
 
 .SEARCH-box-header{
 	color : #222;
@@ -127,3 +128,62 @@
 .SEARCH-inner-box-item-container ul li:hover{
 	color: #2aa6c0
 }
+
+
+/* active fields */
+
+.SEARCH-container input.active-field{
+	background-color: #a5dff6
+}
+
+.SEARCH-container .checkbox-container,
+.SEARCH-container .radio-container{
+	background-color: #cacaca
+}
+
+.SEARCH-container .checkbox-container.active-field,
+.SEARCH-container .radio-container.active-field {
+	background-color: #a5dff6
+}
+
+/* tags */
+
+.SEARCH-tags-container{
+	clear: both;
+}
+
+.SEARCH-tag-value{
+	font-weight:bold; font-size:13px	
+}
+
+.SEARCH-tags-container > div {
+	float: left;
+	margin: 10px 10px
+}
+
+.SEARCH-tags-container > div > div.SEARCH-tag-container{
+	float: left;
+	padding: 2px 4px;
+	margin: -3px 0px 0px 0px;
+	background-color: #A5DFF6;
+	border-radius: 3px;
+	border: solid 1px #DDD;
+}
+
+.SEARCH-tag-container > div{
+	float: left;
+	margin: 0px 0px 0px 10px;
+	background-image: url(img/x.png);
+	width: 15px;
+	height: 14px;
+	cursor: pointer
+}
+.SEARCH-tag-container > div:hover{
+	background-color: #ddd
+}
+
+.SEARCH-tag-container > span{
+	float: left;
+	margin: 0px 0px 0px 2px
+}
+

@@ -20,6 +20,8 @@
 .ICON-47.orange-styled{background-image: url(img/TM/tm_icons_set_orange_styled_47x47.png);}
 .ICON-47.purple-styled{background-image: url(img/TM/tm_icons_set_purple_styled_47x47.png);}
 .ICON-47.red-styled{background-image: url(img/TM/tm_icons_set_red_styled_47x47.png);}
+.ICON-47.white-styled{background-image: url(img/TM/tm_icons_set_white_styled_47x47.png);}
+.ICON-47.green-styled{background-image: url(img/TM/tm_icons_set_green_styled_47x47.png);}
 
 
 .ICON-47.home{ background-position: 0px 0px; }
@@ -58,6 +60,9 @@
 .ICON-47.diagnosi{ background-position: -376px -94px;}
 .ICON-47.ciclo{ background-position: -423px -94px;}
 
+.ICON-47.richiesta{ background-position: 0px -141px;}
+.ICON-47.valutata{ background-position: -47px -141px;}
+
 
 /*
  * 36 x 36
@@ -73,6 +78,7 @@
 }
 .ICON-36.white{background-image: url(img/TM/tm_icons_set_white_36x36.png);}
 .ICON-36.grey{background-image: url(img/TM/tm_icons_set_grey_36x36.png);}
+.ICON-36.blue{background-image: url(img/TM/tm_icons_set_blue_36x36.png);}
 
 .ICON-36.home{ background-position: 0px 0px; }
 .ICON-36.anagrafica{ background-position: -36px 0px;}
@@ -111,6 +117,8 @@
 .ICON-36.diagnosi{ background-position: -285px -72px;}
 .ICON-36.ciclo{ background-position: -321px -72px;}
 
+.ICON-36.richiesta{ background-position: 0px -108px;}
+.ICON-36.valutata{ background-position: -36px -108px;}
 
 /*
  * badge

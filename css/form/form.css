@@ -205,6 +205,10 @@ textarea:focus{
 	border-radius:3px
 }
 
+.checkbox-container > div:first-child > div,
+.radio-container > div:first-child > div{
+	margin:-11px 0px -8px -14px
+}
 
 .checkbox-container > div,
 .radio-container > div{
@@ -305,7 +309,7 @@ select{
 	font-size:11px;
 	float: left;
 	padding: 3px 3px 4px 8px;
-	margin: 2px 10px 7px 3px;
+	margin: 2px 5px 7px 3px;
 }
 
 .FORM-field-row.little p select{
