@@ -21,8 +21,7 @@ html, body{
 
 
 .GENERAL-sidebar{
-	width:190px;
-	min-width : 190px;
+	min-width : 130px;
 	background-color: #222;
 	vertical-align: top;
 }

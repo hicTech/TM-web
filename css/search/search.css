@@ -5,8 +5,7 @@
 
 .SEARCH-box{
 	color : #fff;
-	width : 250px;
-	min-height : 380px;
+	width: 99%;
 	padding:2px 2px;
 	float :left;
 	border:solid 1px #ddd;
@@ -29,7 +28,7 @@
 
 .SEARCH-box-header{
 	color : #222;
-	height: 25px;
+	height: 28px;
 	font-size: 14px;
 	font-weight:bold;
 	padding:8px 10px;
@@ -152,10 +151,6 @@
 	clear: both;
 }
 
-.SEARCH-tag-value{
-	font-weight:bold; font-size:13px	
-}
-
 .SEARCH-tags-container > div {
 	float: left;
 	margin: 10px 10px
@@ -186,4 +181,6 @@
 	float: left;
 	margin: 0px 0px 0px 2px
 }
+
+
 

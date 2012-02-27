@@ -75,7 +75,7 @@ $(document).ready(function(){
 	$("input[type='date']").each(function(){
 		if( ! $(this).is("[data-role='dateRange-from']") && ! $(this).is("[data-role='dateRange-to']")){
 			$(this).datepicker({ 
-				dateFormat: 'dd/mm/yy'
+				dateFormat: 'yy-mm-dd'
 			});
 		}
 	})

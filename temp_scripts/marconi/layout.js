@@ -60,7 +60,7 @@ $(document).ready(function(){
 
 		/// tolgo la width e i margin della sidebar alla width della viewport (circa 250)
 		$sheet.css("width",getViewPort().width - ($sidebar.width()+30) );
-		$controller.css("width",getViewPort().width - 235);
+		$controller.css("width",getViewPort().width - parseInt( $sidebar.width()) -25);
 		
 		calculateSlider();
 		
