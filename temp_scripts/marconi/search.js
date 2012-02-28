@@ -29,7 +29,7 @@ $(document).ready(function(){
 	
 	$el.find("input[type='date']").each(function(){
 		var $t = $(this);
-		var label = $t.parents(".FORM-field-row").find(".FORM-label").html().toLowerCase();;
+		var label = getTagLabel($t);
 		$t.blur(function(){
 			setTimeout(function(){
 				if( $t.val() != "" ){
@@ -58,39 +58,43 @@ $(document).ready(function(){
 			}
 			else{
 				$container.removeClass("active-field",1000);
-				removeSearchTag($t);
+				removeSearchTag($t,"checkbox");
 			}
 		});
 	})
 	
 	
 	function addSearchTag(type , $t , forced_label){
-		var label = (forced_label == undefined) ? $t.parents(".FORM-field-row").find(".FORM-label").html().toLowerCase() : forced_label;
+		var label = (forced_label == undefined) ? getTagLabel($t) : forced_label;
 		var value = $t.val();
-		var entity = $t.parents(".SEARCH-box").data("search-entity");
+		var entity = getTagEntity($t);
 		var $target = $(".SEARCH-tags-container");
+		var data_id = getTagId($t)
+			
 
 		if(type == "checkbox"){
-			$target.append(addSingleSearchTag(type , entity , label , value));
-			return true;
+			
+			if( $target.find('[data-search-tag-id="'+data_id+'"]').html() == null){
+				$target.append(addSingleSearchTag($t , type , entity , label , value));
+				return true;
+			}
 		}
 		for(i in value.split(" ")){
-			var data_id = (type == "date" )? 'search_tag_'+entity+'_'+label : 'search_tag_'+entity+'_'+label+'_'+value;
+			
 			if( $('[data-search-tag-id="'+data_id+'"]').html() != null){
-				$target.find($('[data-search-tag-id="'+data_id+'"]').replaceWith(addSingleSearchTag(type , entity , label , value.split(" ")[i])));
+				$target.find('[data-search-tag-id="'+data_id+'"]').replaceWith(addSingleSearchTag($t , type , entity , label , value.split(" ")[i]));
 			}
 			else{
-				$target.append(addSingleSearchTag(type , entity , label , value.split(" ")[i]));
+				$target.append(addSingleSearchTag($t , type , entity , label , value.split(" ")[i]));
 			}
 		}
 		
 	}
 	
-	function addSingleSearchTag(type , entity , label , value){
+	function addSingleSearchTag($t , type , entity , label , value){
 		
-		var data_id = (type == "date" )? 'search_tag_'+entity+'_'+label : 'search_tag_'+entity+'_'+label+'_'+value;
+		var data_id = getTagId($t)
 
-		
 		var html = $('<div data-search-tag-id="'+data_id+'">'+
 						'<div class="SEARCH-tag-container">'+
 							'<span> <font class="'+entity+'"><b>'+entity+'</b></font> '+label+':<span class="SEARCH-tag-value"> <b>'+value+'</b></span></span>'+
@@ -99,23 +103,38 @@ $(document).ready(function(){
 				  '</div>');
 				  
 		html.find(".close_this_search_tag").click(function(){
+			alert($(this).parents("[data-search-tag-id]").data("search-tag-id"))
 			$(this).parents("[data-search-tag-id]").remove();
 		});
-		
 		return html;
 	}
 	
-	function removeSearchTag($t){
-		var label = $t.parents(".FORM-field-row").find(".FORM-label").html()
+	function removeSearchTag($t,type){
+		var label = getTagLabel($t);
 		var value = $t.val();
-		var entity = $t.parents(".SEARCH-box").data("search-entity");
+		var entity = getTagEntity($t);
 		
-		var data_id = 'search_tag_'+entity+'_'+label+'_'+value;
+		var data_id = getTagId($t)
+		//alert($("data-search-tag-id="+data_id).html());
 		$("[data-search-tag-id='"+data_id+"']").remove();
 	}
 	
 	
+	function getTagId($t){
+		var value = $t.val();
+		var label = getTagLabel($t);
+		var entity = getTagEntity($t);
+		var id = ( $t.is("[type='date']") ) ? 'search_tag_'+entity+'_'+label : 'search_tag_'+entity+'_'+label+'_'+value;
+		return id.toLowerCase();
+	}
 	
+	function getTagLabel($t){
+		return $t.parents(".FORM-field-row").find(".FORM-label").html();
+	}
+	
+	function getTagEntity($t){
+		return $t.parents(".SEARCH-box").data("search-entity");
+	}
 	
 
 });
