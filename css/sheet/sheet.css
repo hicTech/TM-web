@@ -1,5 +1,5 @@
 .SHEET{
-	height:0px; !important
+	height:0px; /* important */
 	width: 90%;
 	overflow:auto;
 	margin: 0px 10px;

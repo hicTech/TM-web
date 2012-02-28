@@ -1,6 +1,4 @@
-/*
- * 72 x 47 
- */
+@import "../theme/theme.less";
 
 .ICON-47{
 	width: 47px;
@@ -12,16 +10,15 @@
 	margin:-9px
 }
 
-
-.ICON-47.white{background-image: url(img/TM/tm_icons_set_white_47x47.png);}
-.ICON-47.grey{background-image: url(img/TM/tm_icons_set_grey_47x47.png);}
-.ICON-47.grey-styled{background-image: url(img/TM/tm_icons_set_grey_styled_47x47.png);}
-.ICON-47.blue-styled{background-image: url(img/TM/tm_icons_set_blue_styled_47x47.png);}
-.ICON-47.orange-styled{background-image: url(img/TM/tm_icons_set_orange_styled_47x47.png);}
-.ICON-47.purple-styled{background-image: url(img/TM/tm_icons_set_purple_styled_47x47.png);}
-.ICON-47.red-styled{background-image: url(img/TM/tm_icons_set_red_styled_47x47.png);}
-.ICON-47.white-styled{background-image: url(img/TM/tm_icons_set_white_styled_47x47.png);}
-.ICON-47.green-styled{background-image: url(img/TM/tm_icons_set_green_styled_47x47.png);}
+.ICON-47{background-image:@THEME-icon-47-grey-styled}
+.ICON-47.white{background-image: @THEME-icon-47-white;}
+.ICON-47.grey{background-image:@THEME-icon-47-grey}
+.ICON-47.blue-styled{background-image:@THEME-icon-47-blue-styled }
+.ICON-47.orange-styled{background-image:@THEME-icon-47-orange-styled}
+.ICON-47.purple-styled{background-image:@THEME-icon-47-purple-styled}
+.ICON-47.red-styled{background-image:@THEME-icon-47-red-styled}
+.ICON-47.white-styled{background-image:@THEME-icon-47-white-styled}
+.ICON-47.green-styled{background-image:@THEME-icon-47-green-styled}
 
 
 .ICON-47.home{ background-position: 0px 0px; }
@@ -63,6 +60,27 @@
 .ICON-47.richiesta{ background-position: 0px -141px;}
 .ICON-47.valutata{ background-position: -47px -141px;}
 
+.ICON-47.anagrafica.onGreyCanvas{
+	width: 36px;
+	height: 35px;
+	background-color: #999;
+	background-position: -52px -5px;
+	border-radius: 6px;
+}
+.ICON-47.raccolta.onGreyCanvas{
+	width: 36px;
+	height: 35px;
+	background-color: #999;
+	background-position: -99px -5px;
+	border-radius: 6px;
+}
+.ICON-47.unita.onGreyCanvas{
+	width: 36px;
+	height: 35px;
+	background-color: #999;
+	background-position: -146px -5px;
+	border-radius: 6px;
+}
 
 /*
  * 36 x 36
@@ -74,11 +92,12 @@
 	float: left
 }
 .ICON-36.no-canvas{
-	margin:-4px
+	margin:-4px;
 }
-.ICON-36.white{background-image: url(img/TM/tm_icons_set_white_36x36.png);}
-.ICON-36.grey{background-image: url(img/TM/tm_icons_set_grey_36x36.png);}
-.ICON-36.blue{background-image: url(img/TM/tm_icons_set_blue_36x36.png);}
+
+.ICON-36.white{background-image: @THEME-icon-36-white;}
+.ICON-36.grey{background-image: @THEME-icon-36-grey;}
+.ICON-36.blue{background-image: @THEME-icon-36-blue;}
 
 .ICON-36.home{ background-position: 0px 0px; }
 .ICON-36.anagrafica{ background-position: -36px 0px;}
@@ -183,16 +202,17 @@
 /*
  * tool - ICON
  */
-.ICON-tool { width: 16px; height: 16px; background-image: url(img/TOOL/tool_icons_000000.png);display: block; float: left}
-.ICON-tool.grey {background-image: url(img/TOOL/tool_icons_3b3b3b.png); }
-.ICON-tool.light_grey {background-image: url(img/TOOL/tool_icons_888888.png); }
-.ICON-tool.dark_grey {background-image: url(img/TOOL/tool_icons_222222.png); }
-.ICON-tool.very_light_grey {background-image: url(img/TOOL/tool_icons_dddddd.png); }
-.ICON-tool.white {background-image: url(img/TOOL/tool_icons_ffffff.png); }
-.ICON-tool.red {background-image: url(img/TOOL/tool_icons_ff0000.png); }
-.ICON-tool.green {background-image: url(img/TOOL/tool_icons_6fb23d.png); }
-.ICON-tool.blue {background-image: url(img/TOOL/tool_icons_428dda.png); }
+.ICON-tool 	               {background-image: @TMEME-icon-tool; width: 16px; height: 16px; display: block; float: left}
+.ICON-tool.grey            {background-image: @TMEME-icon-tool-grey; }
+.ICON-tool.light_grey      {background-image: @TMEME-icon-tool-light_grey; }
+.ICON-tool.dark_grey       {background-image: @TMEME-icon-tool-dark_grey; }
+.ICON-tool.very_light_grey {background-image: @TMEME-icon-tool-very_light_grey; }
+.ICON-tool.white           {background-image: @TMEME-icon-tool-white ; }
+.ICON-tool.red             {background-image: @TMEME-icon-tool-red; }
+.ICON-tool.green           {background-image: @TMEME-icon-tool-green ; }
+.ICON-tool.blue            {background-image: @TMEME-icon-tool-blue; }
 
+ 
 
 /* positioning */
 .ICON-tool.carat-1-n { background-position: 0 0; }

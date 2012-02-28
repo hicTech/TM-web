@@ -1,15 +1,17 @@
+@import "../theme/theme.less";
 
 .SEARCH-container{
 	margin:10px auto
 }
 
+
 .SEARCH-box{
 	color : #fff;
-	width: 99%;
-	padding:2px 2px;
+	padding:2px 0px;
 	float :left;
+	min-height:265px;
 	border:solid 1px #ddd;
-	margin:10px 0px 0px 0px;
+	margin:0px 1px 0px 0px;
 	border-radius: 9px;
 	position: relative;
 	z-index:10;
@@ -25,10 +27,17 @@
     opacity: 0.65;*/
 }
 
+.SEARCH-box[data-search-entity="unita"]{
+	width: 41%
+}
+.SEARCH-box[data-search-entity="anagrafica"],.SEARCH-box[data-search-entity="raccolta"]{
+	width: 29%
+}
+
 
 .SEARCH-box-header{
 	color : #222;
-	height: 28px;
+	height: 32px;
 	font-size: 14px;
 	font-weight:bold;
 	padding:8px 10px;
@@ -38,7 +47,7 @@
 
 .SEARCH-box-title{
 	float: left;
-	margin: 5px
+	margin: 9px;
 }
 
 .SEARCH-box-header-separator{
@@ -128,11 +137,15 @@
 	color: #2aa6c0
 }
 
+.SEARCH-box-advanced{
+	display: none
+}
 
 /* active fields */
 
 .SEARCH-container input.active-field{
-	background-color: #a5dff6
+	background-color: @THEME-activeBg;
+	color : @THEME-activeColor;
 }
 
 .SEARCH-container .checkbox-container,
@@ -142,7 +155,8 @@
 
 .SEARCH-container .checkbox-container.active-field,
 .SEARCH-container .radio-container.active-field {
-	background-color: #a5dff6
+	background-color: @THEME-activeBg;
+	color : @THEME-activeColor;
 }
 
 /* tags */
@@ -153,14 +167,15 @@
 
 .SEARCH-tags-container > div {
 	float: left;
-	margin: 10px 10px
+	margin: 10px 2px
 }
 
 .SEARCH-tags-container > div > div.SEARCH-tag-container{
 	float: left;
 	padding: 2px 4px;
 	margin: -3px 0px 0px 0px;
-	background-color: #A5DFF6;
+	background-color: @THEME-activeBg;
+	color : @THEME-activeColor;
 	border-radius: 3px;
 	border: solid 1px #DDD;
 }

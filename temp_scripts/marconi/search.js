@@ -2,6 +2,14 @@
 $(document).ready(function(){
 	var $el = $(".SEARCH-container");
 	
+	$el.find(".SEARCH-box").each(function(){
+		$(this).find(".BUTTON").click(function(){
+			$(this).parents(".SEARCH-box-item-container").find(".SEARCH-box-advanced").toggle("fade");
+		})
+	})
+	
+	
+	
 	$el.find("input[type='search']").each(function(){
 		var $t = $(this);
 		$t.blur(function(){
@@ -21,13 +29,13 @@ $(document).ready(function(){
 	
 	$el.find("input[type='date']").each(function(){
 		var $t = $(this);
+		var label = $t.parents(".FORM-field-row").find(".FORM-label").html().toLowerCase();;
 		$t.blur(function(){
 			setTimeout(function(){
 				if( $t.val() != "" ){
 					//$t.addClass("active-field",300);
-					($t.is('[data-role="dateRange-from"]')) ? addSearchTag("input" , $t ,"dopo il") :  addSearchTag("input" , $t ,"prima del");
-					$t.val("");
-					$t.trigger("blur")
+					($t.is('[data-role="dateRange-from"]')) ? addSearchTag("date" , $t ,label+" dopo il") :  addSearchTag("date" , $t ,label+" prima del");
+					
 				}
 				else{
 					//$t.removeClass("active-field",1000);
@@ -57,7 +65,7 @@ $(document).ready(function(){
 	
 	
 	function addSearchTag(type , $t , forced_label){
-		var label = (forced_label == undefined) ? $t.parents(".FORM-field-row").find(".FORM-label").html() : forced_label;
+		var label = (forced_label == undefined) ? $t.parents(".FORM-field-row").find(".FORM-label").html().toLowerCase() : forced_label;
 		var value = $t.val();
 		var entity = $t.parents(".SEARCH-box").data("search-entity");
 		var $target = $(".SEARCH-tags-container");
@@ -67,22 +75,33 @@ $(document).ready(function(){
 			return true;
 		}
 		for(i in value.split(" ")){
-			$target.append(addSingleSearchTag(type , entity , label , value.split(" ")[i]))
+			var data_id = (type == "date" )? 'search_tag_'+entity+'_'+label : 'search_tag_'+entity+'_'+label+'_'+value;
+			if( $('[data-search-tag-id="'+data_id+'"]').html() != null){
+				$target.find($('[data-search-tag-id="'+data_id+'"]').replaceWith(addSingleSearchTag(type , entity , label , value.split(" ")[i])));
+			}
+			else{
+				$target.append(addSingleSearchTag(type , entity , label , value.split(" ")[i]));
+			}
 		}
 		
 	}
 	
 	function addSingleSearchTag(type , entity , label , value){
 		
-		var data_id = 'search_tag_'+entity+'_'+label+'_'+value;
-		$('[data-search-tag-id="'+data_id+'"]').remove();
+		var data_id = (type == "date" )? 'search_tag_'+entity+'_'+label : 'search_tag_'+entity+'_'+label+'_'+value;
+
 		
-		var html = '<div data-search-tag-id="search_tag_'+entity+'_'+label+'_'+value+'">'+
+		var html = $('<div data-search-tag-id="'+data_id+'">'+
 						'<div class="SEARCH-tag-container">'+
-							'<span>'+entity+' '+label+':<span class="SEARCH-tag-value"> <b>'+value+'</b></span></span>';
-							( type!="checkbox") ? html +='<div onclick="$(this).parents(\'[data-search-tag-id]\').remove()" class="close_this_search_tag"></div>' : null ;
-						html += '</div>'+
-				  '</div>';
+							'<span> <font class="'+entity+'"><b>'+entity+'</b></font> '+label+':<span class="SEARCH-tag-value"> <b>'+value+'</b></span></span>'+
+							'<div class="close_this_search_tag"></div>'+
+						'</div>'+
+				  '</div>');
+				  
+		html.find(".close_this_search_tag").click(function(){
+			$(this).parents("[data-search-tag-id]").remove();
+		});
+		
 		return html;
 	}
 	

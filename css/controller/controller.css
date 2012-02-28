@@ -7,7 +7,7 @@
 }
 .CONTROLLER-wrapper{
 	overflow-x: scroll;
-	width: 1000000px;!important
+	width: 1000000px; /* important */
 
 }
 

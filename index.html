@@ -10,23 +10,27 @@
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
+	<!-- theme LESS -->
+		<link rel="stylesheet/less" href="css/theme/theme.less">
+	
 	<!-- CSS TM -->
 	<link rel="stylesheet" href="css/general/general.css">
-	<link rel="stylesheet" href="css/sidebar/sidebar.css">
+	<link rel="stylesheet/less" href="css/sidebar/sidebar.css">
 	<link rel="stylesheet" href="css/mainarea/mainarea.css">	
 	<link rel="stylesheet" href="css/view/view.css">
 	<link rel="stylesheet" href="css/form/form.css">
 	<link rel="stylesheet" href="css/table/table.css">
 	<link rel="stylesheet" href="css/fieldset/fieldset.css">
-	<link rel="stylesheet" href="css/icon/icon.css">
+	<link rel="stylesheet/less" href="css/icon/icon.css">
 	<link rel="stylesheet" href="css/button/button.css">
 	<link rel="stylesheet" href="css/controller/controller.css">
 	<link rel="stylesheet" href="css/tool/tool.css">
 	<link rel="stylesheet" href="css/navigator/navigator.css">
-	<link rel="stylesheet" href="css/search/search.css">
+	<link rel="stylesheet/less" href="css/search/search.css">
 	<link rel="stylesheet" href="css/main/main.css">
 	<link rel="stylesheet" href="css/sheet/sheet.css">
 	<link rel="stylesheet" href="css/scrollbar/scrollbar.css">
+
 	
 	<!-- IE6 and lower -->
 	<!--[if lt IE 7]>
@@ -79,6 +83,9 @@
 	<!-- scrollTo plugin -->
 	<script src="temp_scripts/plugins/jquery.scrollTo-1.4.2-min.js"></script>
 
+
+ 	<script src="temp_scripts/plugins/less-1.2.2.min.js"></script>
+
 	
 </head>
 <body>
@@ -89,7 +96,7 @@
 				<td class="GENERAL-sidebar"> <!-- sidebar -->
 					<div class="SIDEBAR-item" style="margin-top:35px">
 						<div class="SIDEBAR-button selected">
-							<div><div class="ICON-47 grey-styled home"></div></div>
+							<div><div class="ICON-47 home"></div></div>
 							<div class="SIDEBAR-button-label">Home</div>
 						</div>
 					</div>
@@ -97,56 +104,56 @@
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div><div class="ICON-47 grey-styled anagrafica"></div></div>
-							<div class="SIDEBAR-button-label">Anagrafica</div>
+							<div><div class="ICON-47 anagrafica"></div></div>
+							<div class="SIDEBAR-button-label anagrafica">Anagrafica</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div><div class="ICON-47 grey-styled raccolta"></div></div>
-							<div class="SIDEBAR-button-label">Raccolta</div>
+							<div><div class="ICON-47 raccolta"></div></div>
+							<div class="SIDEBAR-button-label raccolta">Raccolta</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div><div class="ICON-47 grey-styled unita"></div></div>
-							<div class="SIDEBAR-button-label">Unità</div>
+							<div><div class="ICON-47 unita"></div></div>
+							<div class="SIDEBAR-button-label unita">Unità</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div><div class="ICON-47 grey-styled criopreservazione"></div></div>
+							<div><div class="ICON-47 criopreservazione"></div></div>
 							<div class="SIDEBAR-button-label">Stoccaggio</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div><div class="ICON-47 grey-styled magazzino"></div></div>
+							<div><div class="ICON-47 magazzino"></div></div>
 							<div class="SIDEBAR-button-label">Magazzino</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div class="ICON-47 grey-styled reportistica"></div>
+							<div class="ICON-47 reportistica"></div>
 							<div class="SIDEBAR-button-label">Reportistica</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div class="ICON-47 grey-styled utenti"></div>
+							<div class="ICON-47 utenti"></div>
 							<div class="SIDEBAR-button-label">Utenti</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
-							<div class="ICON-47 grey-styled admin"></div>
+							<div class="ICON-47 admin"></div>
 							<div class="SIDEBAR-button-label">Admin</div>
 						</div>
 					</div>
@@ -180,7 +187,7 @@
 											
 											
 											<div class="CONTROLLER-box">
-												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label raccolta">Raccolta</div></div>
 												<div class="CONTROLLER-box-header-separator"></div>
 												<div class="CONTROLLER-box-item-container">
 													<div>
@@ -772,21 +779,107 @@
 														
 															<div class="SEARCH-container">
 																
-																<div class="SEARCH-box" data-search-entity="raccolta">
-																	<div class="SEARCH-box-header"><div class="ICON-47 grey raccolta no-canvas"></div><div class="SEARCH-box-title">Raccolta</div></div>
-																	<div class="SEARCH-box-item-container" >
+																
+																<div class="SEARCH-box" data-search-entity="anagrafica">
+																	<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>
+																	<div class="SEARCH-box-item-container">
 																		
-																			<table>
-																				<tbody>
-																					<tr>
-																						<td width="140px">
+																		
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Codice</p>
 																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																							</div>
-																						</td>
+																					
+																							<div class="FORM-field-row little">
+																								<p class="FORM-label">Tipo</p>
+																								<div class="checkbox-container">
+																									<div>Paziente</div>
+																									<div><input type="checkbox"  value="paziente" /></div>
+																								</div>
+																								<div class="checkbox-container">
+																									<div>Donatore</div>
+																									<div><input type="checkbox"  value="donatore" /></div>
+																								</div>
+																							</div>
+																					
+																							
+																								<div class="FORM-field-row little">
+																									<p class="FORM-label">Nome</p>
+																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								</div>
+																								<div class="FORM-field-row little">
+																									<p class="FORM-label">Cognome</p>
+																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								</div>
+																							
+																								
+																							
+																							<div class="SEARCH-box-advanced">
+																								
+																								<div class="FORM-field-row little">
+																									<p class="FORM-label">Luogo di nascita</p>
+																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								</div>
+																								
+																								<div class="FORM-field-row little">
+																									<div class="FORM-field-row little">
+																										<p class="FORM-label">Ospedale di provenienza</p>
+																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																									</div>
+																									<div class="FORM-field-row little">
+																										<p class="FORM-label">Reparto di provenienza</p>
+																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																									</div>
+																									
+																								</div>
+																					
 																						
-																						<td width="260px">
+																								<div class="FORM-field-row little">
+																									<div class="FORM-field">
+																										<p class="FORM-label">Registrato</p>
+																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
+																									</div>
+																									<div class="FORM-field">
+																										<p class="FORM-label">&nbsp; <!-- important --></p>
+																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
+																									</div>
+																								</div>
+																								<div class="FORM-field-row little">
+																									<div class="FORM-field">
+																										<p class="FORM-label">Modificato</p>
+																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
+																									</div>
+																									<div class="FORM-field">
+																										<p class="FORM-label">&nbsp; <!-- important --></p>
+																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
+																									</div>
+																								</div>
+																							</div>
+																							<div style="clear:both;margin:0px auto;width:100px">
+																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																							</div>
+																							
+																						
+																		
+
+																			
+																			
+																			
+																	</div>
+																</div>
+																
+																
+																
+																<div class="SEARCH-box" data-search-entity="raccolta">
+																	<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>
+																	<div class="SEARCH-box-item-container" >
+																		
+																			
+																							<div class="FORM-field-row little">
+																								<p class="FORM-label">Codice</p>
+																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																							</div>
+																						
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Tipo</p>
 																								<div class="checkbox-container">
@@ -810,56 +903,51 @@
 																									<div><input type="checkbox" value="TCT"  /></div>
 																								</div>
 																							</div>
-																						</td>
+																							
+																							<div class="SEARCH-box-advanced">
 																						
-																						<td width="160px">
-																							<div class="FORM-field-row little">
 																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Collection facility</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																							</div>
-																						</td>
-																						<td width="260px">
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Stato</p>
-																								
-																								<div class="checkbox-container icon">
-																									<div><div class="ICON-36 grey valutata no-canvas"></div>Valutazione</div>
-																									<div><input type="checkbox" vlaue="valutazione"/></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>
-																									<div><input type="checkbox" value="idonea"/></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey effettuata no-canvas"></div>Effettuata</div>
-																									<div><input type="checkbox" value="effettuata" /></div>
-																								</div>
-																								
-																							</div>
-																						</td>
-																						<td width="405px">
-																							<div class="FORM-field-row little">
-																								
-																									<div class="FORM-field">
-																										<p class="FORM-label">Da - A</p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
+																									<div class="FORM-field-row little">
+																										<p class="FORM-label">Collection facility</p>
+																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																									</div>
-																									<div class="FORM-field">
-																										<p class="FORM-label">&nbsp; <!-- important --></p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
+																								</div>
+																							
+																								<div class="FORM-field-row little">
+																									<p class="FORM-label">Stato</p>
+																									
+																									<div class="checkbox-container icon">
+																										<div><div class="ICON-36 grey valutata no-canvas"></div>Valutazione</div>
+																										<div><input type="checkbox" vlaue="valutazione"/></div>
 																									</div>
-																								
+																									<div class="checkbox-container">
+																										<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>
+																										<div><input type="checkbox" value="idonea"/></div>
+																									</div>
+																									<div class="checkbox-container">
+																										<div><div class="ICON-36 grey effettuata no-canvas"></div>Effettuata</div>
+																										<div><input type="checkbox" value="effettuata" /></div>
+																									</div>
+																									
+																								</div>
+																							
+																								<div class="FORM-field-row little">
+																									
+																										<div class="FORM-field">
+																											<p class="FORM-label">Da - A</p>
+																											<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
+																										</div>
+																										<div class="FORM-field">
+																											<p class="FORM-label">&nbsp; <!-- important --></p>
+																											<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
+																										</div>
+																									
+																								</div>
 																							</div>
-																						</td>
-																					</tr>
-																				</tbody>
-																			</table>
-						
-																		
-
-																			
+																							<div style="clear:both;margin:0px auto;width:100px">
+																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																							</div>
+	
 																			
 																			
 																	</div>
@@ -868,98 +956,6 @@
 																
 																
 																
-																
-																<div class="SEARCH-box" data-search-entity="anagrafica">
-																	<div class="SEARCH-box-header"><div class="ICON-47 grey anagrafica no-canvas"></div><div class="SEARCH-box-title">Anagrafica</div></div>
-																	<div class="SEARCH-box-item-container" style="display:none">
-																		
-																			<table>
-																				<tbody>
-																					<tr>
-																						<td width="140px">
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																							</div>
-																						</td>
-																						
-																						<td width="260px">
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Tipo</p>
-																								<div class="checkbox-container">
-																									<div>Paziente</div>
-																									<div><input type="checkbox"  value="paziente" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>Donatore</div>
-																									<div><input type="checkbox"  value="donatore" /></div>
-																								</div>
-																							</div>
-																						</td>
-																						
-																						<td width="160px">
-																							
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Nome</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Cognome</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																							
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Luogo di nascita</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																							
-																						</td>
-																						<td width="200px">
-																							<div class="FORM-field-row little">
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Ospedale di provenienza</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Reparto di provenienza</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																								
-																							</div>
-																						</td>
-																						<td width="405px">
-																							<div class="FORM-field-row little">
-																								<div class="FORM-field">
-																									<p class="FORM-label">Da - A:</p>
-																									<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																								</div>
-																								<div class="FORM-field">
-																									<p class="FORM-label">&nbsp; <!-- important --></p>
-																									<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																								</div>
-																							</div>
-																							<div class="FORM-field-row little">
-																								<div class="FORM-field">
-																									<p class="FORM-label">Da - A:</p>
-																									<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																								</div>
-																								<div class="FORM-field">
-																									<p class="FORM-label">&nbsp; <!-- important --></p>
-																									<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																								</div>
-																							</div>
-																						</td>
-																					</tr>
-																				</tbody>
-																			</table>
-						
-																		
-
-																			
-																			
-																			
-																	</div>
-																</div>
 																
 																
 																
@@ -967,92 +963,85 @@
 																
 																
 																<div class="SEARCH-box" data-search-entity="unita">
-																	<div class="SEARCH-box-header"><div class="ICON-47 grey raccolta no-canvas"></div><div class="SEARCH-box-title">Unità</div></div>
-																	<div class="SEARCH-box-item-container" style="display:none">
+																	<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>
+																	<div class="SEARCH-box-item-container" >
 																		
-																			<table>
-																				<tbody>
-																					<tr>
-																						<td width="140px">
+																		
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Codice</p>
 																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																							</div>
-																						</td>
 																						
-																						<td width="650px">
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Stato</p>
 																								
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey accettata no-canvas"></div>Accettata</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="accettata" /></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey manipolazione no-canvas"></div>Manipolata</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="manipolata" /></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey criopreservata no-canvas"></div>Criopres.</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="criopreservata" /></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey scongelamento no-canvas"></div>Scongelata</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="scongelata" /></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey richiesta no-canvas"></div>Richiesta</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="richiesta"/></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="idonea" /></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey rilascio_unita no-canvas"></div>Rilasciata</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="rilasciata" /></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey reinfusione no-canvas"></div>Reinfusa</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="reinfusa" /></div>
 																								</div>
 																								<div class="checkbox-container">
 																									<div><div class="ICON-36 grey valutata no-canvas"></div>Valutata</div>
-																									<div><input type="checkbox" /></div>
+																									<div><input type="checkbox" value="valutata"/></div>
 																								</div>
 																								
 																							</div>
-																						</td>
-																						
-																						<td width="160px">
-																							<div class="FORM-field-row little">
+																							
+																							
+																					
+																							<div class="SEARCH-box-advanced">
 																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Collection facility</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																									<div class="FORM-field-row little">
+																										<p class="FORM-label">Collection facility</p>
+																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																									</div>
+																								</div>
+																						
+																								<div class="FORM-field-row little">
+																									
+																										<div class="FORM-field">
+																											<p class="FORM-label">Da - A</p>
+																											<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
+																										</div>
+																										<div class="FORM-field">
+																											<p class="FORM-label">&nbsp; <!-- important --></p>
+																											<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
+																										</div>
+																									
 																								</div>
 																							</div>
-																						</td>
-																						
-																						<td width="405px">
-																							<div class="FORM-field-row little">
-																								
-																									<div class="FORM-field">
-																										<p class="FORM-label">Da - A</p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																									</div>
-																									<div class="FORM-field">
-																										<p class="FORM-label">&nbsp; <!-- important --></p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																									</div>
-																								
+																							<div style="clear:both;margin:0px auto;width:100px">
+																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
 																							</div>
-																						</td>
-																					</tr>
-																				</tbody>
-																			</table>
-						
-																			
-																			
+																							
+																					
 																	</div>
 																</div>
 																
@@ -1065,7 +1054,7 @@
 																
 																
 																<div class="SEARCH-tags-container">
-																	<div>Stai cercando <b>Raccolta</b> con:</div>
+																	<div class="raccolta">Stai cercando <b>Raccolta</b> con:</div>
 																	
 																</div>
 																

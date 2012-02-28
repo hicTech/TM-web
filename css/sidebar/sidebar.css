@@ -1,3 +1,4 @@
+@import "../theme/theme.less";
 
 .SIDEBAR-button{
 	background-image: url(img/button.png);
@@ -26,14 +27,15 @@
 }
 
 .SIDEBAR-button-icon{
-
 	float: left
 }
 
 .SIDEBAR-button-label{
 	padding: 17px 0px 0px 0px;
-	float: left
+	float: left;
 }
+
+
 
 .SIDEBAR-search{
 		display:none;
