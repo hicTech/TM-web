@@ -22,7 +22,7 @@
 }
 
 
-
+/* ricerca estesa */
 .SEARCH-box.uni{
 	width: 41%
 }
@@ -31,7 +31,7 @@
 	width: 29%
 }
 
-
+/* ricerca compatta */
 .SEARCH-box.compact{
 	width: 48%;
 	margin: 5px 5px;
