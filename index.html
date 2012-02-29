@@ -779,17 +779,17 @@
 															<div class="SEARCH-container">
 																
 																
-																<div class="SEARCH-box" data-search-entity="anagrafica">
+																<div class="SEARCH-box compact header" data-search-entity="anagrafica">
 																	<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>
 																	<div class="SEARCH-box-item-container">
 																		
 																		
-																							<div class="FORM-field-row little">
+																							<div class="FORM-field-row little" >
 																								<p class="FORM-label">Codice</p>
 																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																							</div>
 																					
-																							<div class="FORM-field-row little">
+																							<div class="FORM-field-row little"  style="width:175px">
 																								<p class="FORM-label">Tipo</p>
 																								<div class="checkbox-container">
 																									<div>Paziente</div>
@@ -802,66 +802,15 @@
 																							</div>
 																					
 																							
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Nome</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Cognome</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																							
-																								
-																							
-																							<div class="SEARCH-box-advanced">
-																								
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Luogo di nascita</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																								
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Ospedale di provenienza</p>
-																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																									</div>
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Reparto di provenienza</p>
-																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																									</div>
-																									
-																								</div>
-																					
-																						
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field">
-																										<p class="FORM-label">Registrato</p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																									</div>
-																									<div class="FORM-field">
-																										<p class="FORM-label">&nbsp; <!-- important --></p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																									</div>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field">
-																										<p class="FORM-label">Modificato</p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																									</div>
-																									<div class="FORM-field">
-																										<p class="FORM-label">&nbsp; <!-- important --></p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																									</div>
-																								</div>
+																							<div class="FORM-field-row little" >
+																								<p class="FORM-label">Nome</p>
+																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																							</div>
-																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																							<div class="FORM-field-row little">
+																								<p class="FORM-label">Cognome</p>
+																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																							</div>
 																							
-																						
-																		
-
-																			
 																			
 																			
 																	</div>
@@ -869,7 +818,7 @@
 																
 																
 																
-																<div class="SEARCH-box" data-search-entity="raccolta">
+																<div class="SEARCH-box compact" data-search-entity="raccolta">
 																	<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>
 																	<div class="SEARCH-box-item-container" >
 																		
@@ -878,32 +827,23 @@
 																								<p class="FORM-label">Codice</p>
 																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																							</div>
-																						
+																							
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Tipo</p>
-																								<div class="checkbox-container">
-																									<div>HPC M (aut.)</div>
-																									<div><input type="checkbox"  value="HPC M (autologo)" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>HPC M (all.)</div>
-																									<div><input type="checkbox"  value="HPC M (allogenico)" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>HPC A (aut.)</div>
-																									<div><input type="checkbox" value="HPC A (autologo)"  /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>HPC A (all.)</div>
-																									<div><input type="checkbox" value="HPC A (allogenico)"  /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>TCT</div>
-																									<div><input type="checkbox" value="TCT"  /></div>
-																								</div>
+																								<p>
+																									<select>
+																										<option value="HPC M (autologo)">HPC M (aut.)</option>
+																										<option value="HPC M (allogenico)">HPC M (all.)</option>
+																										<option value="HPC A (autologo)">HPC A (aut.)</option>
+																										<option value="HPC A (allogenico)">HPC A (all.)</option>
+																										<option value="TCT">TCT</option>
+																									</select>
+																								</p>
 																							</div>
+																						
 																							
-																							<div class="SEARCH-box-advanced">
+																							
+																							<div class="SEARCH-box-advanced" style="clear:both">
 																						
 																								<div class="FORM-field-row little">
 																									<div class="FORM-field-row little">
@@ -911,25 +851,19 @@
 																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																									</div>
 																								</div>
-																							
+																								
 																								<div class="FORM-field-row little">
 																									<p class="FORM-label">Stato</p>
-																									
-																									<div class="checkbox-container icon">
-																										<div><div class="ICON-36 grey valutata no-canvas"></div>Valutazione</div>
-																										<div><input type="checkbox" vlaue="valutazione"/></div>
-																									</div>
-																									<div class="checkbox-container">
-																										<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>
-																										<div><input type="checkbox" value="idonea"/></div>
-																									</div>
-																									<div class="checkbox-container">
-																										<div><div class="ICON-36 grey effettuata no-canvas"></div>Effettuata</div>
-																										<div><input type="checkbox" value="effettuata" /></div>
-																									</div>
-																									
+																									<p>
+																										<select>
+																											<option value="valutazione">Valutazione</option>
+																											<option value="idonea">Idonea</option>
+																											<option value="effettuata">Effettuata</option>
+																										</select>
+																									</p>
 																								</div>
 																							
+																								
 																								<div class="FORM-field-row little">
 																									
 																										<div class="FORM-field">
@@ -961,7 +895,7 @@
 																
 																
 																
-																<div class="SEARCH-box" data-search-entity="unita">
+																<div class="SEARCH-box compact" data-search-entity="unita">
 																	<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>
 																	<div class="SEARCH-box-item-container" >
 																		
@@ -970,48 +904,25 @@
 																								<p class="FORM-label">Codice</p>
 																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																							</div>
-																						
+																							
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Stato</p>
-																								
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey accettata no-canvas"></div>Accettata</div>
-																									<div><input type="checkbox" value="accettata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey manipolazione no-canvas"></div>Manipolata</div>
-																									<div><input type="checkbox" value="manipolata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey criopreservata no-canvas"></div>Criopres.</div>
-																									<div><input type="checkbox" value="criopreservata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey scongelamento no-canvas"></div>Scongelata</div>
-																									<div><input type="checkbox" value="scongelata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey richiesta no-canvas"></div>Richiesta</div>
-																									<div><input type="checkbox" value="richiesta"/></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>
-																									<div><input type="checkbox" value="idonea" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey rilascio_unita no-canvas"></div>Rilasciata</div>
-																									<div><input type="checkbox" value="rilasciata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey reinfusione no-canvas"></div>Reinfusa</div>
-																									<div><input type="checkbox" value="reinfusa" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey valutata no-canvas"></div>Valutata</div>
-																									<div><input type="checkbox" value="valutata"/></div>
-																								</div>
-																								
+																								<p>
+																									<select>
+																										<option value="accettata">Accettata</option>
+																										<option value="manipolata">Manipolata</option>
+																										<option value="criopreservata">Criopres.</option>
+																										<option value="scongelata">Scongelata</option>
+																										<option value="richiesta">Richiesta</option>
+																										<option value="idonea">Idonea</option>
+																										<option value="rilasciata">Rilasciata</option>
+																										<option value="reinfusa">Reinfusa</option>
+																										<option value="valutata">Valutata</option>
+																									</select>
+																								</p>
 																							</div>
+																							
+																						
 																							
 																							
 																					
@@ -1097,7 +1008,7 @@
 															<div class="SEARCH-container">
 																
 																
-																<div class="SEARCH-box" data-search-entity="anagrafica">
+																<div class="SEARCH-box ana" data-search-entity="anagrafica">
 																	<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>
 																	<div class="SEARCH-box-item-container">
 																		
@@ -1187,7 +1098,7 @@
 																
 																
 																
-																<div class="SEARCH-box" data-search-entity="raccolta">
+																<div class="SEARCH-box rac" data-search-entity="raccolta">
 																	<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>
 																	<div class="SEARCH-box-item-container" >
 																		
@@ -1279,7 +1190,7 @@
 																
 																
 																
-																<div class="SEARCH-box" data-search-entity="unita">
+																<div class="SEARCH-box uni" data-search-entity="unita">
 																	<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>
 																	<div class="SEARCH-box-item-container" >
 																		

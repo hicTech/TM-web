@@ -59,12 +59,10 @@ $(document).ready(function(){
 				//$("input[type='radio'][name='"+name+"']").parents(".radio-container").removeClass("active-field");
 				var checked = $t.attr("checked");
 				if( checked == "checked" ) {
-					console.log("accendo")
 					$container.addClass("active-field",300);
 					addSearchTag($t)
 				}
 				else{
-					console.log("spengo")
 					$container.removeClass("active-field",1000);
 					removeSearchTag($t,"checkbox");
 				}
@@ -97,6 +95,7 @@ $(document).ready(function(){
 	 */
 	
 	function addSearchTag($t , forced_label){
+			
 			var label = (forced_label == undefined) ? getTagLabel($t) : forced_label;
 			var value = $t.val();
 			var entity = getTagEntity($t);
