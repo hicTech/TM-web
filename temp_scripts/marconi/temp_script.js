@@ -57,7 +57,7 @@ $(document).ready(function(){
 			}
 	})
 	
-	
+
 	/*
 	 * collassable fieldset (LIVE)
 	 */
@@ -223,15 +223,17 @@ $(document).ready(function(){
 		
 				
 	});
-	
 	/*
 	 * gestione SLIDER main
 	 * 
 	 */
 	
 	slider = $('.SLIDER').bxSlider({
-			    	controls : false
+			    	controls : false,
+			    	infiniteLoop : false
 			    });
+	    
+	
 	
 	$('#navigator_back').click(function(){
 	    slider.goToPreviousSlide();

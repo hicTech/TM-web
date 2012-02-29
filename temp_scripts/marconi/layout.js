@@ -167,8 +167,10 @@ $(document).ready(function(){
 		slider.destroyShow();
 		slider = $('.SLIDER').bxSlider({
 			    	controls : false,
-			    	startingSlide : current_slide
+			    	startingSlide : current_slide,
+			    	infiniteLoop: false
 			    });
+			    
 	}
 	
 	
