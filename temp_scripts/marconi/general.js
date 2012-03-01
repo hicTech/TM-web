@@ -14,3 +14,4 @@ function UIalert(title,text){
 		$alert.dialog( "open" );
 		return false;
 	}
+	

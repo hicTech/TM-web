@@ -1,27 +1,34 @@
 
 $(document).ready(function(){
 
-		
+
+
+var test = $("#alert");
+
+alert(test.offset().left+ "disabilitiamo tutti gli input non visibili ;)")
+
 
 	$(".SEARCH-container").each(function(){
 		
 		
 		var $el = $(this)
 		
-		
+		$el.find("input[type='search']").keyup(function(event){
+			  if(event.keyCode == 13){
+			    $(this).trigger("blur")
+			  }
+			});
 		
 		
 		$el.find("input[type='search']").each(function(){
 			var $t = $(this);
 			var unique = $t.data("search-role") == "unique";
-
-			
 			$t.blur(function(){
 				setTimeout(function(){
 					if( $t.val() != "" ){
 						addSearchTag($t);
 						( unique ) ? $t.addClass("active-field",300) : $t.val("");;
-						//$t.trigger("blur")
+					
 					}
 					else{
 						( unique ) ? $t.removeClass("active-field",1000) : null;
@@ -74,17 +81,16 @@ $(document).ready(function(){
 		
 		$el.find("select").each(function(){
 			var $t = $(this);
+			var unique = $t.data("search-role") == "unique";
 			$t.change(function(){
-				
 				setTimeout(function(){
 					if( $t.val() != "" ){
-						$t.addClass("active-field",300);
+						( unique ) ? $t.addClass("active-field",300) : null;
 						addSearchTag($t);
-						//$t.val("");
 						$t.trigger("blur")
 					}
 					else{
-						$t.removeClass("active-field",1000);
+						( unique ) ? $t.removeClass("active-field",1000) :null;
 						removeSearchTag($t);
 					}
 				},200);
@@ -141,8 +147,7 @@ $(document).ready(function(){
 			var type = getTagType($t);	
 			var unique = $t.data("search-role") == "unique";
 	
-			if(type == "checkbox"){
-				
+			if(type == "checkbox"){		
 				if( $target.find('[data-search-tag-id="'+data_id+'"]').html() == null){
 					$target.append(addSingleSearchTag($t , value));
 					return true;
@@ -150,19 +155,15 @@ $(document).ready(function(){
 			}
 			
 			if(type == "date"){
-				
 				if( $target.find('[data-search-tag-id="'+data_id+'"]').html() == null){
 					$target.append(addSingleSearchTag($t , value , forced_label));
 					return true;
 				}
 				else{
-					
 					$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).after(addSingleSearchTag($t , value, forced_label))
 					$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).remove();
-					
 					return true;
 				}
-					
 			}
 			
 			if(unique){
@@ -172,14 +173,11 @@ $(document).ready(function(){
 							$target.append(addSingleSearchTag($t ,  value.split(" ")[i]));
 							return true;
 						}
-						else{
-							
+						else{			
 							$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).after(addSingleSearchTag($t ,  value.split(" ")[i]))
 							$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).remove();
-							
 							return true;
 						}
-					
 				}
 			}
 			else{
@@ -189,8 +187,6 @@ $(document).ready(function(){
 					}
 				}	
 			}
-			
-			
 		}
 		
 		function addSingleSearchTag($t , value, label){
@@ -207,12 +203,16 @@ $(document).ready(function(){
 					  '</div>');
 					  
 			html.find(".close_this_search_tag").click(function(){
+				var data_search_tag_id = $(this).parents("[data-search-tag-id]").data("search-tag-id")
 				if( getTagType($t) == "checkbox" ){
-					uncheckSearchFormField($(this).parents("[data-search-tag-id]").data("search-tag-id"),$t);
+					uncheckSearchFormField( data_search_tag_id,$t );
 				}
 				
 				else if( getTagType($t) == "search" ){
-					clearSearchFormField($(this).parents("[data-search-tag-id]").data("search-tag-id"),$t);
+					clearSearchFormField( data_search_tag_id,$t );
+				}
+				else if( getTagType($t) == "select" ){
+					clearSearchFormSelect( data_search_tag_id,$t );
 				}
 					
 				$(this).parents("[data-search-tag-id]").remove();
@@ -227,7 +227,7 @@ $(document).ready(function(){
 			var unique = $t.data("search-role") == "unique";
 			
 			var data_id = getTagId($t)
-			alert(value)
+			//alert(value)
 			//alert($("data-search-tag-id="+data_id).html());
 			if(value != ""){
 				$t.parents(".SEARCH-container").find("[data-search-tag-id='"+data_id+"']").remove();
@@ -263,7 +263,7 @@ $(document).ready(function(){
 		}
 		
 		function getTagType($t){
-			return $t.attr("type");
+			return ($t.attr("type") == undefined) ? "select" : $t.attr("type");
 		}
 		
 		function getTagContainer($t){
@@ -304,6 +304,22 @@ $(document).ready(function(){
 				if($(this).find(".FORM-label").html().toLowerCase() == label){
 					$(this).find("input").val("");
 					$(this).find("input").trigger("blur");
+				}
+			});
+		}
+		
+		function clearSearchFormSelect(id,$t){
+			if($t.data("search-role") != "unique")
+				return false;
+			var id = id.replace("search_tag_","");
+			id = id.split("_");
+			var entity = id[0];
+			var label = id[1];
+			alert("si si")
+			$t.parents(".SEARCH-container").find("[data-search-entity='"+entity+"']").find(".FORM-field-row").each(function(){
+				if($(this).find(".FORM-label").html().toLowerCase() == label){
+					$(this).find("select").find('[value=""]').attr('selected', 'selected');
+					$(this).find("select").trigger("change");
 				}
 			});
 		}
