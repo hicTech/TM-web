@@ -49,6 +49,7 @@
 
 .step_indicator {
 	background-image: url(img/alpha20.png);
+	margin:0px 0px 0px 0px;
 	cursor : pointer;
 	padding: 3px 5px;
 	border-radius : 4px;

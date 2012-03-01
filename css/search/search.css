@@ -33,51 +33,67 @@
 
 /* ricerca compatta */
 .SEARCH-box.compact{
-	width: 48%;
-	margin: 5px 5px;
-	min-height: 0px
+	width: 49%;
+	margin: 5px 2px;
+	min-height: 0px;
+	display: none;
 	
 }
 
 .SEARCH-box.compact.header{
 	width: 98%;
-	margin: 0px 0px 0px 10px
+	margin: 0px 0px 0px 3px;
+	display: block
 }
 
-.SEARCH-box.compact .SEARCH-box-item-container{
+.SEARCH-box.compact {
 	float:left;
 	clear:none
 }
 
 .SEARCH-box.compact .FORM-field-row{
 	float:left;
-	width:140px;
+	width:130px;
 	clear:none
 }
 
 
-.SEARCH-box.compact.header .SEARCH-box-item-container{
+.SEARCH-box.compact.header{
 	float:left;
 	clear:none
 }
 
 .SEARCH-box.compact.header .FORM-field-row{
 	float:left;
-	width:140px;
+	width:130px;
 	clear:none
 }
 
+.SEARCH-box.compact .FORM-field-row{
+	margin:0px
+}
 
+.SEARCH-box.compact select{
+	width:90%
+}
+
+.SEARCH-box.compact .SEARCH-box-item-container{
+	margin:7px;
+	float:left;
+	clear:none;
+	padding: 0px
+}
 
 
 .SEARCH-box-header{
 	color : #222;
 	height: 32px;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight:bold;
 	padding:8px 10px;
 	float : left;
-	clear: both
+	clear: both;
+	width: 120px
 }
 
 .SEARCH-box-title{
@@ -172,14 +188,14 @@
 	color: #2aa6c0
 }
 
-.SEARCH-box-advanced{
+.SEARCH-box-more-fields{
 	display: none;
 }
 
 
 /* active fields */
 
-.SEARCH-container input.active-field{
+.SEARCH-container input.active-field,.SEARCH-container select.active-field{
 	background-color: @THEME-activeBg;
 	color : @THEME-activeColor;
 }

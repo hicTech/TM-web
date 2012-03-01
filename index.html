@@ -70,9 +70,10 @@
 	<link rel="stylesheet" href="css/jqueryUICustomizations/jqueryUICustomizations.css">
 	
 	<!-- SCRIPT TEMPORANEO hicTech-->
-	<script src="temp_scripts/marconi/temp_script.js"></script>
-	<script src="temp_scripts/marconi/layout.js"></script>
-	<script src="temp_scripts/marconi/search.js"></script>
+	<script src="temp_scripts/marconi/general.js"></script>     <!-- GLOBALE -->
+	<script src="temp_scripts/marconi/temp_script.js"></script> <!-- document.ready -->
+	<script src="temp_scripts/marconi/layout.js"></script>      <!-- document.ready -->
+	<script src="temp_scripts/marconi/search.js"></script>      <!-- document.ready -->
 	
 	<!-- SLIDER MAIN -->
 	<script src="temp_scripts/jquery.bxSlider.min.js"></script>
@@ -786,29 +787,44 @@
 																		
 																							<div class="FORM-field-row little" >
 																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								<p><input style="width:120px" data-search-role="unique" type="search" placeholder="placeholder"></p>
+																							</div>
+																							
+																							<div class="FORM-field-row little">
+																								<p class="FORM-label">Tipo</p>
+																								<p>
+																									<select data-search-role="unique">
+																										<option value="">tutti</option>
+																										<option value="paziente">Paziente</option>
+																										<option value="donatore">Donatore</option>
+																									
+																									</select>
+																								</p>
 																							</div>
 																					
-																							<div class="FORM-field-row little"  style="width:175px">
+																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Tipo</p>
-																								<div class="checkbox-container">
-																									<div>Paziente</div>
-																									<div><input type="checkbox"  value="paziente" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>Donatore</div>
-																									<div><input type="checkbox"  value="donatore" /></div>
-																								</div>
+																								<p>
+																									<select >
+																										<option value="">tutti</option>
+																										<option value="paziente">Paziente</option>
+																										<option value="donatore">Donatore</option>
+																									
+																									</select>
+																								</p>
 																							</div>
 																					
 																							
 																							<div class="FORM-field-row little" >
 																								<p class="FORM-label">Nome</p>
-																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
 																							</div>
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Cognome</p>
-																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
+																							</div>
+																							<div style="float:left">
+																								<button type="button" class="BUTTON advanced_search_button" style="margin:4px 0px 0px 10px"><span class="ICON-tool plusthick"></span>Ricerca avanzate</button>
 																							</div>
 																							
 																			
@@ -831,7 +847,8 @@
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Tipo</p>
 																								<p>
-																									<select>
+																									<select >
+																										<option value="">tutti</option>
 																										<option value="HPC M (autologo)">HPC M (aut.)</option>
 																										<option value="HPC M (allogenico)">HPC M (all.)</option>
 																										<option value="HPC A (autologo)">HPC A (aut.)</option>
@@ -843,7 +860,7 @@
 																						
 																							
 																							
-																							<div class="SEARCH-box-advanced" style="clear:both">
+																							<div class="SEARCH-box-more-fields" style="clear:both">
 																						
 																								<div class="FORM-field-row little">
 																									<div class="FORM-field-row little">
@@ -856,6 +873,7 @@
 																									<p class="FORM-label">Stato</p>
 																									<p>
 																										<select>
+																											<option value="tutti">tutti</option>
 																											<option value="valutazione">Valutazione</option>
 																											<option value="idonea">Idonea</option>
 																											<option value="effettuata">Effettuata</option>
@@ -878,7 +896,7 @@
 																								</div>
 																							</div>
 																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																								<button type="button" class="BUTTON more_button"> Altro </button>
 																							</div>
 	
 																			
@@ -909,6 +927,7 @@
 																								<p class="FORM-label">Stato</p>
 																								<p>
 																									<select>
+																										<option value="tutti">tutti</option>
 																										<option value="accettata">Accettata</option>
 																										<option value="manipolata">Manipolata</option>
 																										<option value="criopreservata">Criopres.</option>
@@ -926,10 +945,10 @@
 																							
 																							
 																					
-																							<div class="SEARCH-box-advanced" style="clear:both">
+																							<div class="SEARCH-box-more-fields" style="clear:both">
 																								<div class="FORM-field-row little">
 																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Collection facility</p>
+																										<p class="FORM-label">Processing facility</p>
 																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																									</div>
 																								</div>
@@ -948,7 +967,7 @@
 																								</div>
 																							</div>
 																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																								<button type="button" class="BUTTON more_button"> Altro </button>
 																							</div>
 																							
 																					
@@ -959,7 +978,7 @@
 																
 																
 																<div class="SEARCH-tags-container">
-																	<div class="anagrafica">Stai cercando <b>Anagrafica</b> con:</div>
+																	<!--<div class="anagrafica">Stai cercando <b>Anagrafica</b> con:</div>-->
 																	
 																</div>
 																
@@ -1028,6 +1047,7 @@
 																									<div>Donatore</div>
 																									<div><input type="checkbox"  value="donatore" /></div>
 																								</div>
+																								
 																							</div>
 																					
 																							
@@ -1042,7 +1062,7 @@
 																							
 																								
 																							
-																							<div class="SEARCH-box-advanced">
+																							<div class="SEARCH-box-more-fields">
 																								
 																								<div class="FORM-field-row little">
 																									<p class="FORM-label">Luogo di nascita</p>
@@ -1084,7 +1104,7 @@
 																								</div>
 																							</div>
 																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																								<button type="button" class="BUTTON more_button"> Altro </button>
 																							</div>
 																							
 																						
@@ -1132,7 +1152,7 @@
 																								</div>
 																							</div>
 																							
-																							<div class="SEARCH-box-advanced">
+																							<div class="SEARCH-box-more-fields">
 																						
 																								<div class="FORM-field-row little">
 																									<div class="FORM-field-row little">
@@ -1173,7 +1193,7 @@
 																								</div>
 																							</div>
 																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																								<button type="button" class="BUTTON more_button"> Altro </button>
 																							</div>
 	
 																			
@@ -1244,10 +1264,10 @@
 																							
 																							
 																					
-																							<div class="SEARCH-box-advanced">
+																							<div class="SEARCH-box-more-fields">
 																								<div class="FORM-field-row little">
 																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Collection facility</p>
+																										<p class="FORM-label">Processing facility</p>
 																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
 																									</div>
 																								</div>
@@ -1266,7 +1286,7 @@
 																								</div>
 																							</div>
 																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON small">Ricerca avanzata</button>
+																								<button type="button" class="BUTTON more_button"> Altro </button>
 																							</div>
 																							
 																					

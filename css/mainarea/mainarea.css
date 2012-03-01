@@ -1,5 +1,5 @@
 .MAINAREA-header{
-	height: 35px
+	height: 30px
 }
 
 .MAINAREA-controller{
@@ -11,11 +11,14 @@
 
 
 .MAINAREA-navigator{
-	height: 50px;
+	height: 30px;
 }
 
 .MAINAREA-main{
 	height: 100%
+}
+.MAINAREA-main td{
+	vertical-align: top
 }
 
 .MAINAREA-slider{

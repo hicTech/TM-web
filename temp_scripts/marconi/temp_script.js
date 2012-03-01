@@ -149,6 +149,7 @@ $(document).ready(function(){
 	})
 	
 	
+	
 	$("#confirm").click(function(){
 		var $confirm = $('<div title="Titolo confirm"><p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Testo confirm</p></div>');
 		$confirm.dialog({
