@@ -3,10 +3,6 @@ $(document).ready(function(){
 
 
 
-var test = $("#alert");
-
-alert(test.offset().left+ "disabilitiamo tutti gli input non visibili ;)")
-
 
 	$(".SEARCH-container").each(function(){
 		
@@ -17,6 +13,7 @@ alert(test.offset().left+ "disabilitiamo tutti gli input non visibili ;)")
 			  if(event.keyCode == 13){
 			    $(this).trigger("blur")
 			  }
+			 
 			});
 		
 		
@@ -167,30 +164,35 @@ alert(test.offset().left+ "disabilitiamo tutti gli input non visibili ;)")
 			}
 			
 			if(unique){
-				for(i in value.split(" ")){
-					
-						if( $target.find('[data-search-tag-id="'+data_id+'"]').html() == null){
-							$target.append(addSingleSearchTag($t ,  value.split(" ")[i]));
-							return true;
-						}
-						else{			
-							$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).after(addSingleSearchTag($t ,  value.split(" ")[i]))
-							$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).remove();
-							return true;
-						}
+				
+				if( (type != "select" && type != "checkbox" ) && value.indexOf(" ") != -1){
+					UIalert("Attenzione","Non sono ammassi spazi vuoti");
+					return false;
 				}
+				if( $target.find('[data-search-tag-id="'+data_id+'"]').html() == null){
+					$target.append(addSingleSearchTag($t ,  value));
+					return true;
+				}
+				else{			
+					$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).after(addSingleSearchTag($t ,  value))
+					$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).remove();
+					return true;
+				}
+				
 			}
 			else{
-				for(i in value.split(" ")){
+				var arr = value.split(" ");
+				for(i in arr){
+					data_id = getTagId($t , arr[i]);
 					if( $t.parents(".SEARCH-container").find('[data-search-tag-id="'+data_id+'"]').html() == null){
-						$target.append(addSingleSearchTag($t , value.split(" ")[i]));
+						$target.append( addSingleSearchTag($t , arr[i] , arr[i]) );
 					}
 				}	
 			}
 		}
 		
 		function addSingleSearchTag($t , value, label){
-			
+
 			var data_id = getTagId($t , label);
 			var entity = getTagEntity($t);
 			var label = (label == undefined )? getTagLabel($t) : label;
@@ -250,7 +252,7 @@ alert(test.offset().left+ "disabilitiamo tutti gli input non visibili ;)")
 			var value = ($t.data("search-role") == "unique") ? "" : '_'+$t.val();
 			var label = getTagLabel($t);
 			var entity = getTagEntity($t);
-			var id = ( $t.is("[type='date']") ) ? 'search_tag_'+entity+'_'+label+'_'+forced_label : 'search_tag_'+entity+'_'+label+value;
+			var id = ( forced_label != undefined ) ? 'search_tag_'+entity+'_'+label+'_'+forced_label : 'search_tag_'+entity+'_'+label+value;
 			return id.toLowerCase();
 		}
 		
@@ -315,7 +317,6 @@ alert(test.offset().left+ "disabilitiamo tutti gli input non visibili ;)")
 			id = id.split("_");
 			var entity = id[0];
 			var label = id[1];
-			alert("si si")
 			$t.parents(".SEARCH-container").find("[data-search-entity='"+entity+"']").find(".FORM-field-row").each(function(){
 				if($(this).find(".FORM-label").html().toLowerCase() == label){
 					$(this).find("select").find('[value=""]').attr('selected', 'selected');
