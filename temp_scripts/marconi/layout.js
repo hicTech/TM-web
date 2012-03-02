@@ -27,6 +27,7 @@ $(document).ready(function(){
 		
 		var $sidebar = $(".GENERAL-sidebar")
 		var $sheet = $(".SHEET");
+		var search = $(".SEARCH-container");
 		var $controller = $(".CONTROLLER-wrapper");
 		var $mainarea_header = $(".MAINAREA-header");
 		var $mainarea_navigator = $(".MAINAREA-navigator");
@@ -39,6 +40,7 @@ $(document).ready(function(){
 		//vertical
 		var expander_h = getViewPort().height 	- parseInt(( $mainarea_header.is(":visible") ) ? $mainarea_header.height() : 0)
 												- parseInt(($mainarea_navigator.is(":visible")) ? $mainarea_navigator.height() : 0) 
+												- parseInt((search.is(":visible")) ? search.height() : 0) 
 												- parseInt(($main_header.is(":visible")) ? $main_header.height() : 0) 
 												- parseInt(($main_footer.is(":visible")) ? $main_footer.height() : 0) 
 												- parseInt(($mainarea_sheet_footer.is(":visible")) ? $mainarea_sheet_footer.height() : 0);	

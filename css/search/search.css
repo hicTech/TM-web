@@ -1,6 +1,8 @@
 @import "../theme/theme.less";
-
 .SEARCH-container{
+	
+}
+.SEARCH-box-container{
 	margin:10px auto
 }
 
