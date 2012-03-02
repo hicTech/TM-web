@@ -217,6 +217,7 @@
 
 .SEARCH-tags-container{
 	clear: both;
+	overflow: auto
 }
 
 .SEARCH-tags-container > div {

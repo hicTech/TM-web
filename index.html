@@ -78,14 +78,11 @@
 	<!-- SLIDER MAIN -->
 	<script src="temp_scripts/jquery.bxSlider.min.js"></script>
 	
-	<!-- time picker -->
+	<!-- plugins -->
 	<script src="temp_scripts/plugins/timePicker.js"></script>
-	
-	<!-- scrollTo plugin -->
 	<script src="temp_scripts/plugins/jquery.scrollTo-1.4.2-min.js"></script>
-
-
- 	<script src="temp_scripts/plugins/less-1.2.2.min.js"></script>
+	<script src="temp_scripts/plugins/resize.js"></script>
+	<script src="temp_scripts/plugins/less-1.2.2.min.js"></script>
 
 	
 </head>
@@ -95,25 +92,25 @@
 		<tbody>		
 			<tr>
 				<td class="GENERAL-sidebar"> <!-- sidebar -->
-					<div class="SIDEBAR-item" style="margin-top:35px">
+					<div class="SIDEBAR-item" style="margin-top:35px" onclick="$('[data-section-id=\'section2\']').hide();$('[data-section-id=\'section1\']').show()">
 						<div class="SIDEBAR-button selected">
 							<div><div class="ICON-47 home"></div></div>
-							<div class="SIDEBAR-button-label">Home</div>
+							<div class="SIDEBAR-button-label" >Home</div>
 						</div>
 					</div>
 					
 					
-					<div class="SIDEBAR-item">
+					<div class="SIDEBAR-item" onclick="$('[data-section-id=\'section1\']').hide();$('[data-section-id=\'section2\']').show()">
 						<div class="SIDEBAR-button">
 							<div><div class="ICON-47 anagrafica"></div></div>
-							<div class="SIDEBAR-button-label anagrafica">Anagrafica</div>
+							<div class="SIDEBAR-button-label anagrafica"  >Anagrafica</div>
 						</div>
 					</div>
 					
 					<div class="SIDEBAR-item">
 						<div class="SIDEBAR-button">
 							<div><div class="ICON-47 raccolta"></div></div>
-							<div class="SIDEBAR-button-label raccolta">Raccolta</div>
+							<div class="SIDEBAR-button-label raccolta" >Raccolta</div>
 						</div>
 					</div>
 					
@@ -163,7 +160,22 @@
 				
 				
 				
-				<td class="GENERAL-mainarea"> <!-- mainarea-->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				<!-- ############################################ SEZIONE 1 ############################################ -->
+				
+				
+				<td class="GENERAL-mainarea" data-section-id="section1"> <!-- mainarea-->
 					<table class="GENERAL-mainarea-table">
 						<tbody>
 							<!--<tr class="MAINAREA-header" >
@@ -712,842 +724,12 @@
 							</tr>
 							
 							<tr class="SEARCH-container">
-								<td> wer</br> wer</br> wer</br> wer</br> wer</br> </td>
-							</tr>
-							
-							<tr class="MAINAREA-navigator">
 								<td>
 									
-									<div class="NAVIGATOR-container">
-										<table class="NAVIGATOR-table">
-											<tr>
-												<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows back" id="navigator_back"></div></td>
-				
-												<td class="NAVIGATOR-steps-indicator">
-													<div class="NAVIGATOR-steps-indicator-container">
-														
-															<div class="step_indicator">Overlay</div>
-															<div class="step_indicator">Search</div>
-															<div class="step_indicator current">Form Grande</div>
-															<div class="step_indicator">Form piccolo</div>
-															<div class="step_indicator">Form piccolo doppio</div>
-															<div class="step_indicator">Labels icons</div>
-															<div class="step_indicator">View</div>
-															<div class="step_indicator">Table</div>
-															<div class="step_indicator">Buttons</div>
-															<div class="step_indicator">TM icons</div>
-															
-															
-													
-													</div>
-												</td>							
-												<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows forward" id="navigator_forward"></div></td>
-											</tr>
-										</table>
-									</div>
 									
-								</td>
-							</tr>
-							<tr class="MAINAREA-main">
-								<td>
-									<div class="MAINAREA-slider">								
-										
-											<ul class="SLIDER">
-												
-												
-												
-												
-												
-												
-												
-												<!--
-												########################### SEARCH unità
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Search</div>
-															</div>
-														</div>
-														<div class="SHEET">
-														
-														
-															
-														
-															<div class="SEARCH-box-container">
-																
-																
-																<div class="SEARCH-box compact header" data-search-entity="unita">
-																	<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>
-																	<div class="SEARCH-box-item-container" >
-																		
-																		
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Stato</p>
-																								<p>
-																									<select data-search-role="unique">
-																										<option value="">tutti</option>
-																										<option value="accettata">Accettata</option>
-																										<option value="manipolata">Manipolata</option>
-																										<option value="criopreservata">Criopres.</option>
-																										<option value="scongelata">Scongelata</option>
-																										<option value="richiesta">Richiesta</option>
-																										<option value="idonea">Idonea</option>
-																										<option value="rilasciata">Rilasciata</option>
-																										<option value="reinfusa">Reinfusa</option>
-																										<option value="valutata">Valutata</option>
-																									</select>
-																								</p>
-																							</div>
-																							
-																						
-																							<div class="FORM-field-row little">
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Precessing facility</p>
-																									<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																								</div>
-																							</div>
-																							
-																							
-																						
-																							
-																							<div style="float:left">
-																								<button type="button" class="BUTTON advanced_search_button" style="margin:4px 0px 0px 10px"><span class="ICON-tool plusthick"></span>Ricerca avanzata</button>
-																							</div>
-																							
-																							
-																							
-																					
-																							
-																							
-																					
-																	</div>
-																</div>
-																
-																
-																
-																<div class="SEARCH-box compact" data-search-entity="raccolta">
-																	<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>
-																	<div class="SEARCH-box-item-container" >
-																		
-																			
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Tipo</p>
-																								<p>
-																									<select data-search-role="unique">
-																										<option value="">tutti</option>
-																										<option value="HPC M (autologo)">HPC M (aut.)</option>
-																										<option value="HPC M (allogenico)">HPC M (all.)</option>
-																										<option value="HPC A (autologo)">HPC A (aut.)</option>
-																										<option value="HPC A (allogenico)">HPC A (all.)</option>
-																										<option value="TCT">TCT</option>
-																									</select>
-																								</p>
-																							</div>
-																							
-																							<div class="SEARCH-box-more-fields" style="clear:both">
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Collection facility</p>
-																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																									</div>
-																								</div>
-																								
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Stato</p>
-																									<p>
-																										<select data-search-role="unique">
-																											<option value="">tutti</option>
-																											<option value="valutazione">Valutazione</option>
-																											<option value="idonea">Idonea</option>
-																											<option value="effettuata">Effettuata</option>
-																										</select>
-																									</p>
-																								</div>
-																						
-																								
-																							</div>
-																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON more_button"> Altro </button>
-																							</div>
-																							
-																						
-																			
-																			
-																	</div>
-																</div>
-																
-																<div class="SEARCH-box compact" data-search-entity="anagrafica">
-																	<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>
-																	<div class="SEARCH-box-item-container">
-																		
-																		
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Tipo</p>
-																								<p>
-																									<select data-search-role="unique">
-																										<option value="">tutti</option>
-																										<option value="paziente">Paziente</option>
-																										<option value="donatore">Donatore</option>
-																									</select>
-																								</p>
-																							</div>
-																							
-																						
-																							
-																							
-																					
-																							<div class="SEARCH-box-more-fields" style="clear:both">
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Nome</p>
-																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																									</div>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Cognome</p>
-																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																									</div>
-																								</div>
-																						
-																								<div class="FORM-field-row little" style="clear:both;width:100%">
-																									
-																										<div class="FORM-field">
-																											<p class="FORM-label">Da - A</p>
-																											<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																										</div>
-																										<div class="FORM-field">
-																											<p class="FORM-label">&nbsp; <!-- important --></p>
-																											<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																										</div>
-																									
-																								</div>
-																							</div>
-																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON more_button"> Altro </button>
-																							</div>
-																					
-																							
-																							
-																							
-																			
-																			
-																	</div>
-																</div>
-																
-																
-															
-																
-																
-																<div class="SEARCH-tags-container">
-																	<!--<div class="anagrafica">Stai cercando <b>Anagrafica</b> con:</div>-->
-																	
-																</div>
-																
-																
-																<div style=" width:100%; margin:10px auto">
-																	<table class="TABLE">
-																	    <thead>
-																	    	<tr>
-																	        	<th>Employee</th>
-																	            <th>Salary</th>
-																	            <th>Bonus</th>
-																	            <th>Supervisor</th>
-																	        </tr>
-																	    </thead>
-																	    <tbody>
-																	    	<tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Stephen C. Cox</td>
-																	            <td>$300</td>
-																	            <td>$50</td>
-																	            <td>Bob</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Josephin Tan</td>
-																	            <td>$150</td>
-																	            <td>-</td>
-																	            <td>Annie</td>
-																	        </tr>
-																	        <tr>
-																	        	<td>Joyce Ming</td>
-																	            <td>$200</td>
-																	            <td>$35</td>
-																	            <td>Andy</td>
-																	        </tr>
-																	    </tbody>
-																	</table>
-																</div>
-																
-															</div>
-										
-										
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												<!--
-												########################### SEARCH raccolta
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Search</div>
-															</div>
-														</div>
-														<div class="SHEET">
-														
-														
-															
-														
-															<div class="SEARCH-box-container">
-																
-																
-																<div class="SEARCH-box compact header" data-search-entity="raccolta">
-																	<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>
-																	<div class="SEARCH-box-item-container" >
-																		
-																			
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Tipo</p>
-																								<p>
-																									<select data-search-role="unique">
-																										<option value="">tutti</option>
-																										<option value="HPC M (autologo)">HPC M (aut.)</option>
-																										<option value="HPC M (allogenico)">HPC M (all.)</option>
-																										<option value="HPC A (autologo)">HPC A (aut.)</option>
-																										<option value="HPC A (allogenico)">HPC A (all.)</option>
-																										<option value="TCT">TCT</option>
-																									</select>
-																								</p>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Collection facility</p>
-																									<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																								</div>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Stato</p>
-																								<p>
-																									<select data-search-role="unique">
-																										<option value="">tutti</option>
-																										<option value="valutazione">Valutazione</option>
-																										<option value="idonea">Idonea</option>
-																										<option value="effettuata">Effettuata</option>
-																									</select>
-																								</p>
-																							</div>
-																						
-																							
-																							<div style="float:left">
-																								<button type="button" class="BUTTON advanced_search_button" style="margin:4px 0px 0px 10px"><span class="ICON-tool plusthick"></span>Ricerca avanzata</button>
-																							</div>
-																							
-																							
-																			
-																			
-																	</div>
-																</div>
-																
-																<div class="SEARCH-box compact" data-search-entity="anagrafica">
-																	<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>
-																	<div class="SEARCH-box-item-container">
-																		
-																		
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Tipo</p>
-																								<p>
-																									<select data-search-role="unique">
-																										<option value="">tutti</option>
-																										<option value="paziente">Paziente</option>
-																										<option value="donatore">Donatore</option>
-																									</select>
-																								</p>
-																							</div>
-																							
-																						
-																							
-																							
-																					
-																							<div class="SEARCH-box-more-fields" style="clear:both">
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Nome</p>
-																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																									</div>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Cognome</p>
-																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																									</div>
-																								</div>
-																						
-																								<div class="FORM-field-row little" style="clear:both;width:100%">
-																									
-																										<div class="FORM-field">
-																											<p class="FORM-label">Da - A</p>
-																											<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																										</div>
-																										<div class="FORM-field">
-																											<p class="FORM-label">&nbsp; <!-- important --></p>
-																											<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																										</div>
-																									
-																								</div>
-																							</div>
-																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON more_button"> Altro </button>
-																							</div>
-																					
-																							
-																							
-																							
-																			
-																			
-																	</div>
-																</div>
-																
-																
-																
-																
-																
-																
-																
-																
-																
-																
-																<div class="SEARCH-box compact" data-search-entity="unita">
-																	<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>
-																	<div class="SEARCH-box-item-container" >
-																		
-																		
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																							</div>
-																							
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Stato</p>
-																								<p>
-																									<select data-search-role="unique">
-																										<option value="">tutti</option>
-																										<option value="accettata">Accettata</option>
-																										<option value="manipolata">Manipolata</option>
-																										<option value="criopreservata">Criopres.</option>
-																										<option value="scongelata">Scongelata</option>
-																										<option value="richiesta">Richiesta</option>
-																										<option value="idonea">Idonea</option>
-																										<option value="rilasciata">Rilasciata</option>
-																										<option value="reinfusa">Reinfusa</option>
-																										<option value="valutata">Valutata</option>
-																									</select>
-																								</p>
-																							</div>
-																							
-																						
-																							
-																							
-																					
-																							<div class="SEARCH-box-more-fields" style="clear:both">
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Processing facility</p>
-																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
-																									</div>
-																								</div>
-																						
-																								<div class="FORM-field-row little" style="clear:both;width:100%">
-																									
-																										<div class="FORM-field">
-																											<p class="FORM-label">Da - A</p>
-																											<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																										</div>
-																										<div class="FORM-field">
-																											<p class="FORM-label">&nbsp; <!-- important --></p>
-																											<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																										</div>
-																									
-																								</div>
-																							</div>
-																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON more_button"> Altro </button>
-																							</div>
-																							
-																					
-																	</div>
-																</div>
-																
-															
-																
-																
-																<div class="SEARCH-tags-container">
-																	<!--<div class="anagrafica">Stai cercando <b>Anagrafica</b> con:</div>-->
-																	
-																</div>
-																
-																
-																
-																
-															</div>
-										
-										
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-												
-												
-												
-												
-												
-								
-								
-												<!--
-												########################### SEARCH anagrafica
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Search</div>
-															</div>
-														</div>
-														<div class="SHEET">
-														
-														
-															
-														
-															<div class="SEARCH-box-container">
+									
+									
+									<div class="SEARCH-box-container">
 																
 																
 																<div class="SEARCH-box compact header" data-search-entity="anagrafica">
@@ -1758,8 +940,113 @@
 																
 																
 															</div>
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+							
+							<tr class="MAINAREA-navigator">
+								<td>
+									
+									<div class="NAVIGATOR-container">
+										<table class="NAVIGATOR-table">
+											<tr>
+												<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows back" id="navigator_back"></div></td>
+				
+												<td class="NAVIGATOR-steps-indicator">
+													<div class="NAVIGATOR-steps-indicator-container">
+														
+															<div class="step_indicator">Overlay</div>
+															<div class="step_indicator">Search</div>
+															<div class="step_indicator current">Form Grande</div>
+															<div class="step_indicator">Form piccolo</div>
+															<div class="step_indicator">Form piccolo doppio</div>
+															<div class="step_indicator">Labels icons</div>
+															<div class="step_indicator">View</div>
+															<div class="step_indicator">Table</div>
+															<div class="step_indicator">Buttons</div>
+															<div class="step_indicator">TM icons</div>
+															
+															
+													
+													</div>
+												</td>							
+												<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows forward" id="navigator_forward"></div></td>
+											</tr>
+										</table>
+									</div>
+									
+								</td>
+							</tr>
+							<tr class="MAINAREA-main">
+								<td>
+									<div class="MAINAREA-slider">								
 										
+											<ul class="SLIDER">
+												
+												
+												<!--
+												########################### risultati di ricerca
+												-->
+												
+												<li>
+													
+													<div >
+														<div class="MAIN-header">
+															<div class="MAIN-title">
+																<div class="ICON-47 anagrafica"></div>
+																<div class="MAIN-title-text">Ricerca anagrafiche</div>
+															</div>
+														</div>
+														<div class="SHEET">
+														
+															we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>
+
 										
+														</div>
+														<div class="MAIN-footer">
+															<div class="MAIN-footer-container">
+																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
+																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
+																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
+															</div>
+														</div>
+													</div>
+													
+													
+													
+												</li>
+												
+												
+												
+												<!--
+												########################### TM-ICONS
+												-->
+												<li>
+													<div >
+														<div class="MAIN-header">
+															<div class="MAIN-title">
+																<div class="ICON-47 grey criopreservata"></div>
+																<div class="MAIN-title-text">TM icons</div>
+															</div>
+														</div>
+														<div class="SHEET">
+													
+															<div style="background-color:#222; overflow:auto; margin-top:10px">
+																<div class="ICON-36 white home"></div>
+																<div class="ICON-36 white anagrafica"></div>
+																<div class="ICON-36 white raccolta"></div>
+																<div class="ICON-36 white unita"></div>
+																<div class="ICON-36 white criopreservata"></div> <!-- oppure ICON-36 white criopreservazione oppure ICON-36 white stoccaggio-->
+																<div class="ICON-36 white magazzino"></div> 
+																<div class="ICON-36 white reportistica"></div> 
+																
+															</div>
+															
 														</div>
 														<div class="MAIN-footer">
 															<div class="MAIN-footer-container">
@@ -1773,116 +1060,660 @@
 												
 												
 												
+
 												
-												
-												
-												
-												
-												
-												
-												<!--
-												########################### SEARCH ESTESA
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Search</div>
+											</ul>
+											
+									</div>
+								</td>
+							</tr>
+							<tr class="MAINAREA-sheet-footer"><td>button</td></tr>
+						</tbody>
+					</table>
+				</td> <!-- end mainarea -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				<!-- ############################################ SEZIONE 2 ############################################ -->
+				
+				
+				
+				
+				
+				
+				
+				<td class="GENERAL-mainarea" style="display:none" data-section-id="section2"> <!-- mainarea-->
+					<table class="GENERAL-mainarea-table">
+						<tbody>
+							<!--<tr class="MAINAREA-header" >
+								<td>header</td>
+							</tr>-->
+							<tr class="MAINAREA-controller">
+								<td>
+									
+									<div class="CONTROLLER-wrapper">
+										
+										
+										
+										
+										<div class="CONTROLLER-arrow-right"><div class="TOOL-little-arrows right"></div></div>
+										<div class="CONTROLLER-arrow-left"><div class="TOOL-little-arrows left"></div></div>
+										
+										
+										
+										
+										
+										<div class="CONTROLLER-wrapper-nowrap">
+											
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label raccolta">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
 															</div>
 														</div>
-														<div class="SHEET">
-														
-														
-															
-														
-															<div class="SEARCH-box-container">
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div>
+														<ul>
+															<li>Primo link bello lungo lungo</li>
+															<li>Secondo link</li>
+															<li>Terzo link</li>															
+														</ul>
+													</div>
+												</div>
+											</div>
+											
+											<div class="CONTROLLER-box">
+												<div class="CONTROLLER-box-header"><div class="ICON-47 grey-styled unita no-canvas"></div><div class="badge-label">Unità</div></div>
+												<div class="CONTROLLER-box-header-separator"></div>
+												<div class="CONTROLLER-box-item-container">
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+														<div class="CONTROLLER-inner-box-item-container">
+															<div>
+																<ul>
+																	<li>Primo link</li>
+																	<li>Secondo link lungo lungo lungo</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+													<div class="CONTROLLER-inner-box">
+														<div class="CONTROLLER-inner-box-header"><div class="ICON-36 white unita no-canvas"></div><div class="badge-label">Unità</div></div>
+														<div class="CONTROLLER-inner-box-header-separator"></div>
+													</div>
+												</div>
+											</div>
+											
+											
+										</div>
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+									</div>
+									
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+							
+							<tr class="SEARCH-container">
+								<td>
+									
+									
+									
+									
+									<div class="SEARCH-box-container">
 																
 																
-																<div class="SEARCH-box ana" data-search-entity="anagrafica">
+																<div class="SEARCH-box compact header" data-search-entity="anagrafica">
 																	<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>
 																	<div class="SEARCH-box-item-container">
 																		
 																		
-																							<div class="FORM-field-row little">
+																							<div class="FORM-field-row little" >
 																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								<p><input style="width:120px" data-search-role="unique" type="search" placeholder="placeholder"></p>
 																							</div>
+																							
+																							<div class="FORM-field-row little">
+																								<p class="FORM-label">Tipo</p>
+																								<p>
+																									<select data-search-role="unique">
+																										<option value="">tutti</option>
+																										<option value="paziente">Paziente</option>
+																										<option value="donatore">Donatore</option>
+																									
+																									</select>
+																								</p>
+																							</div>
+																							
+																							
 																					
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Tipo</p>
-																								<div class="checkbox-container">
-																									<div>Paziente</div>
-																									<div><input type="checkbox"  value="paziente" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>Donatore</div>
-																									<div><input type="checkbox"  value="donatore" /></div>
-																								</div>
-																								
-																							</div>
-																					
-																							
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Nome</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Cognome</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																							
-																								
-																							
-																							<div class="SEARCH-box-more-fields">
-																								
-																								<div class="FORM-field-row little">
-																									<p class="FORM-label">Luogo di nascita</p>
-																									<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																								</div>
-																								
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Ospedale di provenienza</p>
-																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																									</div>
-																									<div class="FORM-field-row little">
-																										<p class="FORM-label">Reparto di provenienza</p>
-																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																									</div>
+																								<p>
+																									<select >
+																										<option value="">tutti</option>
+																										<option value="paziente">Paziente</option>
+																										<option value="donatore">Donatore</option>
 																									
-																								</div>
-																					
-																						
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field">
-																										<p class="FORM-label">Registrato</p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																									</div>
-																									<div class="FORM-field">
-																										<p class="FORM-label">&nbsp; <!-- important --></p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																									</div>
-																								</div>
-																								<div class="FORM-field-row little">
-																									<div class="FORM-field">
-																										<p class="FORM-label">Modificato</p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																									</div>
-																									<div class="FORM-field">
-																										<p class="FORM-label">&nbsp; <!-- important --></p>
-																										<p><input style="width:87px" type="date" data-role="dateRange-to" placeholder="Al"></p>
-																									</div>
-																								</div>
+																									</select>
+																								</p>
 																							</div>
-																							<div style="clear:both;margin:0px auto;width:100px">
-																								<button type="button" class="BUTTON more_button"> Altro </button>
+																					
+																							
+																							<div class="FORM-field-row little" >
+																								<p class="FORM-label">Nome</p>
+																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
+																							</div>
+																							<div class="FORM-field-row little">
+																								<p class="FORM-label">Cognome</p>
+																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
+																							</div>
+																							<div style="float:left">
+																								<button type="button" class="BUTTON advanced_search_button" style="margin:4px 0px 0px 10px"><span class="ICON-tool plusthick"></span>Ricerca avanzata</button>
 																							</div>
 																							
-																						
-																		
-
-																			
 																			
 																			
 																	</div>
@@ -1890,68 +1721,55 @@
 																
 																
 																
-																<div class="SEARCH-box rac" data-search-entity="raccolta">
+																<div class="SEARCH-box compact" data-search-entity="raccolta">
 																	<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>
 																	<div class="SEARCH-box-item-container" >
 																		
 																			
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
-																							</div>
-																						
-																							<div class="FORM-field-row little">
-																								<p class="FORM-label">Tipo</p>
-																								<div class="checkbox-container">
-																									<div>HPC M (aut.)</div>
-																									<div><input type="checkbox"  value="HPC M (autologo)" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>HPC M (all.)</div>
-																									<div><input type="checkbox"  value="HPC M (allogenico)" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>HPC A (aut.)</div>
-																									<div><input type="checkbox" value="HPC A (autologo)"  /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>HPC A (all.)</div>
-																									<div><input type="checkbox" value="HPC A (allogenico)"  /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div>TCT</div>
-																									<div><input type="checkbox" value="TCT"  /></div>
-																								</div>
+																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
 																							</div>
 																							
-																							<div class="SEARCH-box-more-fields">
+																							<div class="FORM-field-row little">
+																								<p class="FORM-label">Tipo</p>
+																								<p>
+																									<select data-search-role="unique">
+																										<option value="">tutti</option>
+																										<option value="HPC M (autologo)">HPC M (aut.)</option>
+																										<option value="HPC M (allogenico)">HPC M (all.)</option>
+																										<option value="HPC A (autologo)">HPC A (aut.)</option>
+																										<option value="HPC A (allogenico)">HPC A (all.)</option>
+																										<option value="TCT">TCT</option>
+																									</select>
+																								</p>
+																							</div>
+																						
+																							
+																							
+																							<div class="SEARCH-box-more-fields" style="clear:both">
 																						
 																								<div class="FORM-field-row little">
 																									<div class="FORM-field-row little">
 																										<p class="FORM-label">Collection facility</p>
-																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
 																									</div>
 																								</div>
-																							
+																								
 																								<div class="FORM-field-row little">
 																									<p class="FORM-label">Stato</p>
-																									
-																									<div class="checkbox-container icon">
-																										<div><div class="ICON-36 grey valutata no-canvas"></div>Valutazione</div>
-																										<div><input type="checkbox" vlaue="valutazione"/></div>
-																									</div>
-																									<div class="checkbox-container">
-																										<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>
-																										<div><input type="checkbox" value="idonea"/></div>
-																									</div>
-																									<div class="checkbox-container">
-																										<div><div class="ICON-36 grey effettuata no-canvas"></div>Effettuata</div>
-																										<div><input type="checkbox" value="effettuata" /></div>
-																									</div>
-																									
+																									<p>
+																										<select data-search-role="unique">
+																											<option value="">tutti</option>
+																											<option value="valutazione">Valutazione</option>
+																											<option value="idonea">Idonea</option>
+																											<option value="effettuata">Effettuata</option>
+																										</select>
+																									</p>
 																								</div>
 																							
-																								<div class="FORM-field-row little">
+																								
+																								<div class="FORM-field-row little" style="clear:both;width:100%">
 																									
 																										<div class="FORM-field">
 																											<p class="FORM-label">Da - A</p>
@@ -1982,69 +1800,47 @@
 																
 																
 																
-																<div class="SEARCH-box uni" data-search-entity="unita">
+																<div class="SEARCH-box compact" data-search-entity="unita">
 																	<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>
 																	<div class="SEARCH-box-item-container" >
 																		
 																		
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Codice</p>
-																								<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																								<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
 																							</div>
-																						
+																							
 																							<div class="FORM-field-row little">
 																								<p class="FORM-label">Stato</p>
-																								
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey accettata no-canvas"></div>Accettata</div>
-																									<div><input type="checkbox" value="accettata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey manipolazione no-canvas"></div>Manipolata</div>
-																									<div><input type="checkbox" value="manipolata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey criopreservata no-canvas"></div>Criopres.</div>
-																									<div><input type="checkbox" value="criopreservata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey scongelamento no-canvas"></div>Scongelata</div>
-																									<div><input type="checkbox" value="scongelata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey richiesta no-canvas"></div>Richiesta</div>
-																									<div><input type="checkbox" value="richiesta"/></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>
-																									<div><input type="checkbox" value="idonea" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey rilascio_unita no-canvas"></div>Rilasciata</div>
-																									<div><input type="checkbox" value="rilasciata" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey reinfusione no-canvas"></div>Reinfusa</div>
-																									<div><input type="checkbox" value="reinfusa" /></div>
-																								</div>
-																								<div class="checkbox-container">
-																									<div><div class="ICON-36 grey valutata no-canvas"></div>Valutata</div>
-																									<div><input type="checkbox" value="valutata"/></div>
-																								</div>
-																								
+																								<p>
+																									<select data-search-role="unique">
+																										<option value="">tutti</option>
+																										<option value="accettata">Accettata</option>
+																										<option value="manipolata">Manipolata</option>
+																										<option value="criopreservata">Criopres.</option>
+																										<option value="scongelata">Scongelata</option>
+																										<option value="richiesta">Richiesta</option>
+																										<option value="idonea">Idonea</option>
+																										<option value="rilasciata">Rilasciata</option>
+																										<option value="reinfusa">Reinfusa</option>
+																										<option value="valutata">Valutata</option>
+																									</select>
+																								</p>
 																							</div>
+																							
+																						
 																							
 																							
 																					
-																							<div class="SEARCH-box-more-fields">
+																							<div class="SEARCH-box-more-fields" style="clear:both">
 																								<div class="FORM-field-row little">
 																									<div class="FORM-field-row little">
 																										<p class="FORM-label">Processing facility</p>
-																										<p><input style="width:120px" type="search" placeholder="placeholder"></p>
+																										<p><input style="width:120px" type="search" data-search-role="unique" placeholder="placeholder"></p>
 																									</div>
 																								</div>
 																						
-																								<div class="FORM-field-row little">
+																								<div class="FORM-field-row little" style="clear:both;width:100%">
 																									
 																										<div class="FORM-field">
 																											<p class="FORM-label">Da - A</p>
@@ -2069,7 +1865,7 @@
 																
 																
 																<div class="SEARCH-tags-container">
-																	<div class="raccolta">Stai cercando <b>Raccolta</b> con:</div>
+																	<!--<div class="anagrafica">Stai cercando <b>Anagrafica</b> con:</div>-->
 																	
 																</div>
 																
@@ -2077,47 +1873,67 @@
 																
 																
 															</div>
-										
-										
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
+									
+									
+									
+									
+									
+									
+								</td>
+							</tr>
+							
+							<tr class="MAINAREA-navigator">
+								<td>
+									
+									<div class="NAVIGATOR-container">
+										<table class="NAVIGATOR-table">
+											<tr>
+												<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows back" id="navigator_back"></div></td>
+				
+												<td class="NAVIGATOR-steps-indicator">
+													<div class="NAVIGATOR-steps-indicator-container">
+														
+															<div class="step_indicator">Overlay</div>
+															<div class="step_indicator">Search</div>
+															<div class="step_indicator current">Form Grande</div>
+															<div class="step_indicator">Form piccolo</div>
+
+															
+															
+													
 													</div>
-												</li>
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												
+												</td>							
+												<td class="NAVIGATOR-arrow-container"><div class="TOOL-big-arrows forward" id="navigator_forward"></div></td>
+											</tr>
+										</table>
+									</div>
+									
+								</td>
+							</tr>
+							
+							<tr class="MAINAREA-main">
+								<td>
+									<div class="MAINAREA-slider">								
+										
+											<ul class="SLIDER">
 												
 												
 												<!--
-												########################### overlay
+												########################### risultati di ricerca
 												-->
-												<li >
+												
+												<li>
+													
 													<div >
 														<div class="MAIN-header">
 															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Overlay</div>
+																<div class="ICON-47 anagrafica"></div>
+																<div class="MAIN-title-text">Ricerca anagrafiche</div>
 															</div>
 														</div>
 														<div class="SHEET">
 														
-															<div class="FORM-field-row FORM-buttons-container">
-																<button type="button" class="BUTTON big" id="alert">Alert</button>
-																<button type="button" class="BUTTON big" id="confirm">Confirm</button>
-															</div>
+															we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>we <br>
 
 										
 														</div>
@@ -2129,1028 +1945,10 @@
 															</div>
 														</div>
 													</div>
+													
+													
+													
 												</li>
-												
-												
-												
-												
-												
-												
-												
-												
-												
-												<!--
-													########################### FORM GRANDE
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Form Grande</div>
-															</div>
-														</div>
-														<div class="SHEET">
-															<div class="SHEET-container">
-										
-														     	<div class="FORM-field-row ">
-																	<p class="FORM-label">Nome:</p>
-																	<p><input type="text" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Password:</p>
-																	<p><input type="password" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Slider:</p>
-																	<p><input type="text" class="FORM-slider-input" placeholder="#"></p>
-																	<p><div class="FORM-slider" data-readonly="true" data-min-value="20" data-max-value="200" data-step-value="10"></div></p>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Data:</p>
-																	<p><input type="date" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<div class="FORM-field">
-																		<p class="FORM-label">Data range:</p>
-																		<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																	</div>
-																	<div class="FORM-field">
-																		<p class="FORM-label">&nbsp; <!-- important --></p>
-																		<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>
-																	</div>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Combo:</p>
-																	<p><input type="number" onblur="$(this).parents('.FORM-field-row').find('[data-role=\'combo-input-data-preview\']').html($(this).val())" style="width:60px" placeholder="0"> &nbsp;&nbsp;&nbsp;
-																		e^ <input type="text"  class="FORM-slider-input" style="width:30px" placeholder="0">
-																		   <font style="color:#888; margin:0px 0px 0px 50px; font-weight:bold">( <span data-role="combo-input-data-preview">0</span> &lowast; e<sup data-role="combo-slider-data-preview">0</sup> )</font>
-																	</p>
-																	<p><div style="margin:3px 0px 0px 105px; width:95px" data-role="slider-combo" class="FORM-slider" data-readonly="true" data-min-value="0" data-max-value="8" data-step-value="2"></div></p>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Orario:</p>
-																	<p><input type="time"  maxlength="5" placeholder="placeholder"></p>
-																</div>
-														     
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Cerca:</p>
-																	<p><input type="search" placeholder="placeholder"></p>
-																</div>
-																
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Titolo:</p>
-																	<p><select><option>pollo</option><option>gallo</option><option>gatto</option><option>cane</option></select></p>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Titolo:</p>
-																	<p><textarea></textarea></p>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Tags:</p>
-																	<p><select data-role="tags"><option value=''>Seleziona</option><option value='val_1'>Opzione 1</option><option value='val_2'>Opzione 2</option><option value='val_3'>Opzione 3</option></select></p>
-																	<p><input type="hidden"></input></p>
-																	<p><div class='tag_container'></div></p>	
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Text tags:</p>
-																	<p><input data-role="tags" type="text" placeholder="Parole separate da spazi"></input></p>
-																	<p><input type="hidden"></input></p>
-																	<p><div class='tag_container'></div></p>	
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Seleziona multipla:</p>
-																	<div class="checkbox-container">
-																		<div>Primo</div>
-																		<div><input type="checkbox" /></div>
-																	</div>
-																	<div class="checkbox-container">
-																		<div>Secondo</div>
-																		<div><input type="checkbox"/></div>
-																	</div>
-																	<div class="checkbox-container">
-																		<div>Terzo</div>
-																		<div><input type="checkbox"/></div>
-																	</div>
-																</div>
-																
-																<div class="FORM-field-row ">
-																	<p class="FORM-label">Seleziona esclusiva:</p>
-																	<div class="radio-container">
-																		<div>Primo</div>
-																		<div><input type="radio" name="radio" /></div>
-																	</div>
-																	<div class="radio-container">
-																		<div>Secondo</div>
-																		<div><input type="radio"  name="radio" /></div>
-																	</div>
-																</div>
-																
-															</div>
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-
-
-
-
-
-
-
-
-												
-												
-												
-												<!--
-													########################### FORM PICCOLO
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Form piccolo</div>
-															</div>
-														</div>
-														<div class="SHEET">
-															<div class="SHEET-container">
-										
-														     	<div class="FORM-field-row little">
-																	<p class="FORM-label">Nome:</p>
-																	<p><input class="little" type="text" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Password:</p>
-																	<p><input class="little" type="password" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Slider:</p>
-																	<p><input type="text" class="FORM-slider-input" placeholder="#"></p>
-																	<p><div class="FORM-slider" data-readonly="true" data-min-value="20" data-max-value="200" data-step-value="10"></div></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Data:</p>
-																	<p><input type="date" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<div class="FORM-field">
-																		<p class="FORM-label">Data range:</p>
-																		<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																	</div>
-																	<div class="FORM-field">
-																		<p class="FORM-label">&nbsp; <!-- important --></p>
-																		<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>
-																	</div>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Combo:</p>
-																	<p><input type="number" onblur="$(this).parents('.FORM-field-row').find('[data-role=\'combo-input-data-preview\']').html($(this).val())" style="width:60px" placeholder="0"> &nbsp;&nbsp;&nbsp;
-																		e^ <input type="text"  class="FORM-slider-input" style="width:30px" placeholder="0">
-																		   <font style="color:#888; margin:0px 0px 0px 50px; font-weight:bold">( <span data-role="combo-input-data-preview">0</span> &lowast; e<sup data-role="combo-slider-data-preview">0</sup> )</font>
-																	</p>
-																	<p><div style="margin:3px 0px 0px 95px; width:70px" data-role="slider-combo" class="FORM-slider" data-readonly="true" data-min-value="0" data-max-value="8" data-step-value="2"></div></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Orario:</p>
-																	<p><input type="time"  maxlength="5" placeholder="placeholder"></p>
-																</div>
-														     
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Cerca:</p>
-																	<p><input type="search" placeholder="placeholder"></p>
-																</div>
-																
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Titolo:</p>
-																	<p><select><option>pollo</option><option>gallo</option><option>gatto</option><option>cane</option></select></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Titolo:</p>
-																	<p><textarea></textarea></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Tags:</p>
-																	<p><select data-role="tags"><option value=''>Seleziona</option><option value='val_1'>Opzione 1</option><option value='val_2'>Opzione 2</option><option value='val_3'>Opzione 3</option></select></p>
-																	<p><input type="hidden"></input></p>
-																	<p><div class='tag_container'></div></p>	
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Text tags:</p>
-																	<p><input data-role="tags" type="text" placeholder="Parole separate da spazi"></input></p>
-																	<p><input type="hidden"></input></p>
-																	<p><div class='tag_container'></div></p>	
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Seleziona multipla:</p>
-																	<div class="checkbox-container">
-																		<div>Primo</div>
-																		<div><input type="checkbox" /></div>
-																	</div>
-																	<div class="checkbox-container">
-																		<div>Secondo</div>
-																		<div><input type="checkbox"/></div>
-																	</div>
-																	<div class="checkbox-container">
-																		<div>Terzo</div>
-																		<div><input type="checkbox"/></div>
-																	</div>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Seleziona esclusiva:</p>
-																	<div class="radio-container">
-																		<div>Primo</div>
-																		<div><input type="radio" name="radio" /></div>
-																	</div>
-																	<div class="radio-container">
-																		<div>Secondo</div>
-																		<div><input type="radio"  name="radio" /></div>
-																	</div>
-																</div>
-																
-															</div>
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-												
-												
-												
-												
-												
-												<!--
-													########################### FORM PICCOLO doppio
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Form piccolo doppio</div>
-															</div>
-														</div>
-														<div class="SHEET">
-															<div class="SHEET-container-half">
-										
-														     	
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Password:</p>
-																	<p><input class="little" type="password" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Slider:</p>
-																	<p><input type="text" class="FORM-slider-input" placeholder="#"></p>
-																	<p><div class="FORM-slider" data-readonly="true" data-min-value="20" data-max-value="200" data-step-value="10"></div></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Data:</p>
-																	<p><input type="date" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<div class="FORM-field">
-																		<p class="FORM-label">Data range:</p>
-																		<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																	</div>
-																	<div class="FORM-field">
-																		<p class="FORM-label">&nbsp; <!-- important --></p>
-																		<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>
-																	</div>
-																</div>
-																
-															</div>
-															
-															<div class="SHEET-container-half">
-										
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Password:</p>
-																	<p><input class="little" type="password" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Slider:</p>
-																	<p><input type="text" class="FORM-slider-input" placeholder="#"></p>
-																	<p><div class="FORM-slider" data-readonly="true" data-min-value="20" data-max-value="200" data-step-value="10"></div></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<p class="FORM-label">Data:</p>
-																	<p><input type="date" placeholder="placeholder"></p>
-																</div>
-																
-																<div class="FORM-field-row little">
-																	<div class="FORM-field">
-																		<p class="FORM-label">Data range:</p>
-																		<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>
-																	</div>
-																	<div class="FORM-field">
-																		<p class="FORM-label">&nbsp; <!-- important --></p>
-																		<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>
-																	</div>
-																</div>
-																
-															</div>
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-								
-												
-												
-												<!--
-												########################### LABEL with icons
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Labels icons</div>
-															</div>
-														</div>
-														<div class="SHEET">
-														
-															<div style='margin:0px 0px 20px 0px; overflow:auto'>
-																
-															
-																<div class="ICON-badge white"><div class="ICON-36 grey home no-canvas"></div><div class="badge-label">Home</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey timing no-canvas"></div><div class="badge-label">Timing</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey alert no-canvas"></div><div class="badge-label">Alert</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
-																<div class="ICON-badge white"><div class="ICON-36 grey idoneita_unita_criopreservata no-canvas"></div><div class="badge-label">Idoneità unità criopreservata</div></div>
-															
-															
-															</div>
-															
-															<div style="overflow:auto; margin:0px 0px 20px 0px">
-																
-															
-																<div class="ICON-badge grey"><div class="ICON-36 white home no-canvas"></div><div class="badge-label">Home</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white timing no-canvas"></div><div class="badge-label">Timing</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white alert no-canvas"></div><div class="badge-label">Alert</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
-																<div class="ICON-badge grey"><div class="ICON-36 white scongelamento no-canvas"></div><div class="badge-label">Scongelamento</div></div>
-															
-															
-															</div>
-															
-																
-															<div style="overflow:auto; margin:0px 0px 20px 0px">
-																<div class="ICON-badge grey small"><div class="ICON-36 white home no-canvas"></div><div class="badge-label">Home</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white timing no-canvas"></div><div class="badge-label">Timing</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white alert no-canvas"></div><div class="badge-label">Alert</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
-																<div class="ICON-badge grey small"><div class="ICON-36 white utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
-															</div>
-															
-															<div style="overflow:auto; margin:0px 0px 20px 0px">
-																<div class="ICON-badge white small "><div class="ICON-36 grey home no-canvas"></div><div class="badge-label">Home</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey timing no-canvas"></div><div class="badge-label">Timing</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey alert no-canvas"></div><div class="badge-label">Alert</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
-																<div class="ICON-badge white small"><div class="ICON-36 grey utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
-															</div>
-															
-															<div>ATTIVI</div>
-															
-															<div style="overflow:auto; margin:0px 0px 20px 0px">
-																<div class="ICON-badge grey small active"><div class="ICON-36 white home no-canvas"></div><div class="badge-label">Home</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white timing no-canvas"></div><div class="badge-label">Timing</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white alert no-canvas"></div><div class="badge-label">Alert</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
-																<div class="ICON-badge grey small active"><div class="ICON-36 white utenti no-canvas"></div><div class="badge-label">Utenti</div></div>
-															</div>
-															
-															<div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey home no-canvas"></div><div class="badge-label">Home</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey allogenica no-canvas"></div><div class="badge-label">Allogenica</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey raccolta no-canvas"></div><div class="badge-label">Raccolta</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey criopreservazione no-canvas"></div><div class="badge-label">Criopreservazione</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey paziente no-canvas"></div><div class="badge-label">Paziente</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey timing no-canvas"></div><div class="badge-label">Timing</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey clinica no-canvas"></div><div class="badge-label">Clinica</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey autologa no-canvas"></div><div class="badge-label">Autologa</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey ciclo no-canvas"></div><div class="badge-label">Ciclo</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey frazionamento no-canvas"></div><div class="badge-label">Frazionamento</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey alert no-canvas"></div><div class="badge-label">Alert</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey diagnosi no-canvas"></div><div class="badge-label">Diagnosi</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey stoccaggio no-canvas"></div><div class="badge-label">Stoccaggio</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey lotto no-canvas"></div><div class="badge-label">Lotto</div></div>
-																<div class="ICON-badge white small active"><div class="ICON-36 grey idoneita_unita_criopreservata no-canvas"></div><div class="badge-label">Idoneità unità criopreservata</div></div>
-															</div>
-										
-										
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-								
-								
-								
-								
-								
-								
-								
-								
-								
-								
-												<!--
-												########################### VIEW
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">View</div>
-															</div>
-														</div>
-														<div class="SHEET">
-														
-															<fieldset class="FIELDSET">
-																<legend class="FIELDSET-legend">Legend</legend>
-																<div>
-																	<div class="VIEW-row">
-																		<div class="VIEW-label">Codice:</div>
-																		<div class="VIEW-value">F-345</div>
-																	</div>
-																	<div class="VIEW-row">
-																		<div class="VIEW-label">Data:</div>
-																		<div class="VIEW-value">12/25/2012</div>
-																	</div>
-																</div>
-															</fieldset>
-															
-															<fieldset class="FIELDSET collapsible collapsed">
-																<legend class="FIELDSET-legend"><button type="button" class="BUTTON small">Altro tasto</button></legend>
-																<div class="FIELDSET-collapsible-area">
-																	<div class="VIEW-row">
-																		<div class="VIEW-label">Codice:</div>
-																		<div class="VIEW-value">F-345</div>
-																	</div>
-																	<div class="VIEW-row">
-																		<div class="VIEW-label">Data:</div>
-																		<div class="VIEW-value">12/25/2012</div>
-																	</div>
-																</div>
-															</fieldset>
-															
-												
-															<div class="VIEW-fieldset">
-																<div class="VIEW-filed-set-icon"><div class="ICON-47 white paziente"></div>Dati paziente</div>
-																<div class="VIEW-row">
-																	<div class="VIEW-label">Nome:</div>
-																	<div class="VIEW-value">Marco</div>
-																</div>
-																<div class="VIEW-row">
-																	<div class="VIEW-label">Cognome:</div>
-																	<div class="VIEW-value">Liguori</div>
-																</div>
-																<div class="VIEW-row">
-																	<div class="VIEW-label">Data di nascita:</div>
-																	<div class="VIEW-value">17/12/1982</div>
-																</div>
-																<div class="VIEW-row">
-																	<div class="VIEW-label">Codice:</div>
-																	<div class="VIEW-value">38882</div>
-																</div>
-															</div>
-										
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-												
-												
-												
-												
-												
-												
-												<!--
-												########################### TABLE
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Table</div>
-															</div>
-														</div>
-														<div class="SHEET">
-														
-															<table class="TABLE">
-															    <thead>
-															    	<tr>
-															        	<th>Employee</th>
-															            <th>Salary</th>
-															            <th>Bonus</th>
-															            <th>Supervisor</th>
-															        </tr>
-															    </thead>
-															    <tbody>
-															    	<tr>
-															        	<td>Stephen C. Cox</td>
-															            <td>$300</td>
-															            <td>$50</td>
-															            <td>Bob</td>
-															        </tr>
-															        <tr>
-															        	<td>Josephin Tan</td>
-															            <td>$150</td>
-															            <td>-</td>
-															            <td>Annie</td>
-															        </tr>
-															        <tr>
-															        	<td>Joyce Ming</td>
-															            <td>$200</td>
-															            <td>$35</td>
-															            <td>Andy</td>
-															        </tr>
-															        <tr>
-															        	<td>James A. Pentel</td>
-															            <td>$175</td>
-															            <td>$25</td>
-															            <td>Annie</td>
-															        </tr>
-															        <tr>
-															        	<td>Joyce Ming</td>
-															            <td>$200</td>
-															            <td>$35</td>
-															            <td>Andy</td>
-															        </tr>
-															        <tr>
-															        	<td>James A. Pentel</td>
-															            <td>$175</td>
-															            <td>$25</td>
-															            <td>Annie</td>
-															        </tr>
-															        <tr>
-															        	<td>Joyce Ming</td>
-															            <td>$200</td>
-															            <td>$35</td>
-															            <td>Andy</td>
-															        </tr>
-															        <tr>
-															        	<td>James A. Pentel</td>
-															            <td>$175</td>
-															            <td>$25</td>
-															            <td>Annie</td>
-															        </tr>
-															        <tr>
-															        	<td>Joyce Ming</td>
-															            <td>$200</td>
-															            <td>$35</td>
-															            <td>Andy</td>
-															        </tr>
-															        <tr>
-															        	<td>James A. Pentel</td>
-															            <td>$175</td>
-															            <td>$25</td>
-															            <td>Annie</td>
-															        </tr>
-															    </tbody>
-															</table>
-										
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-												
-												
-												
-												
-												
-												<!--
-												########################### BUTTONS
-												-->
-												<li>
-													<div >
-														<div class="MAIN-header">
-															<div class="MAIN-title">
-																<div class="ICON-47 grey criopreservata"></div>
-																<div class="MAIN-title-text">Buttons</div>
-															</div>
-														</div>
-														<div class="SHEET">
-														
-																<div class="FORM-field-row FORM-buttons-container">
-																	<button type="button" class="BUTTON big">Tasto uno</button> 
-																	<button type="button" class="BUTTON">Altro tasto</button>
-																	<button type="button" class="BUTTON small">Altro tasto</button>
-																	
-																	<button type="button" class="BUTTON big green">Tasto uno</button> 
-																	<button type="button" class="BUTTON green">Altro tasto</button>
-																	<button type="button" class="BUTTON small green">Altro tasto</button>
-			
-																</div>
-																
-																<div class="FORM-field-row FORM-buttons-container">
-																	<button type="button" class="BUTTON big blue">Tasto uno</button> 
-																	<button type="button" class="BUTTON blue">Altro tasto</button>
-																	<button type="button" class="BUTTON small blue">Altro tasto</button>
-																	
-																	<button type="button" class="BUTTON big red">Tasto uno</button> 
-																	<button type="button" class="BUTTON red">Altro tasto</button>
-																	<button type="button" class="BUTTON small red">Altro  asd</button>
-																	
-																</div>
-																
-																<div class="FORM-field-row FORM-buttons-container">
-																	<button type="button" class="BUTTON"><span class="ICON-tool info" ></span>Info</button>														
-																	<button type="button" class="BUTTON"><span class="ICON-tool check" ></span>Salva</button>
-																	<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																	<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																	<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button> 
-																	<button type="button" class="BUTTON"><span class="ICON-tool print" ></span>Stampa</button> 
-																	<button type="button" class="BUTTON"><span class="ICON-tool power" ></span>Logout</button> 
-																	<button type="button" class="BUTTON"><span class="ICON-tool search" ></span>Cerca</button> 														
-																</div>
-																
-																<div class="FORM-field-row FORM-buttons-container">
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white info" ></span>Informazioni</button> 														
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white check" ></span>Salva</button>
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white trash" ></span>Elimina</button> 
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white pencil" ></span>Modifica</button> 
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white plusthick" ></span>Nuovo</button> 
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white print" ></span>Stampa</button> 
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white power" ></span>Logout</button> 
-																	<button type="button" class="BUTTON blue"><span class="ICON-tool white search" ></span>Cerca</button> 														
-																</div>
-																
-																<div class="FORM-field-row FORM-buttons-container">
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white info" ></span>Informazioni</button> 														
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white check" ></span>Salva</button>
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white trash" ></span>Elimina</button> 
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white pencil" ></span>Modifica</button> 
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white plusthick" ></span>Nuovo</button> 
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white print" ></span>Stampa</button> 
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white power" ></span>Logout</button> 
-																	<button type="button" class="BUTTON green"><span class="ICON-tool white search" ></span>Cerca</button> 														
-																</div>
-																
-																<div class="FORM-field-row FORM-buttons-container">
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white info" ></span>Informazioni</button> 														
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white check" ></span>Salva</button>
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white trash" ></span>Elimina</button> 
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white pencil" ></span>Modifica</button> 
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white plusthick" ></span>Nuovo</button> 
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white print" ></span>Stampa</button> 
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white power" ></span>Logout</button> 
-																	<button type="button" class="BUTTON red"><span class="ICON-tool white search" ></span>Cerca</button> 														
-																</div>
-																
-																<div>
-																	<div style="margin:20px">ICON-tool <b>l'hover con mouse ti dice il class da usare</b></div>
-																	<div>
-																		
-																		
-																				 <span title="ICON-tool carat-1-n" class="ICON-tool carat-1-n"></span>
-																				 <span title="ICON-tool carat-1-ne" class="ICON-tool carat-1-ne"></span>
-																				 <span title="ICON-tool carat-1-e" class="ICON-tool carat-1-e"></span>
-																				
-																				 <span title="ICON-tool carat-1-se" class="ICON-tool carat-1-se"></span>
-																				 <span title="ICON-tool carat-1-s" class="ICON-tool carat-1-s"></span>
-																				 <span title="ICON-tool carat-1-sw" class="ICON-tool carat-1-sw"></span>
-																				 <span title="ICON-tool carat-1-w" class="ICON-tool carat-1-w"></span>
-																				 <span title="ICON-tool carat-1-nw" class="ICON-tool carat-1-nw"></span>
-																				 <span title="ICON-tool carat-2-n-s" class="ICON-tool carat-2-n-s"></span>
-																				 <span title="ICON-tool carat-2-e-w" class="ICON-tool carat-2-e-w"></span>
-																				 <span title="ICON-tool triangle-1-n" class="ICON-tool triangle-1-n"></span>
-																				 <span title="ICON-tool triangle-1-ne" class="ICON-tool triangle-1-ne"></span>
-																				
-																				 <span title="ICON-tool triangle-1-e" class="ICON-tool triangle-1-e"></span>
-																				 <span title="ICON-tool triangle-1-se" class="ICON-tool triangle-1-se"></span>
-																				 <span title="ICON-tool triangle-1-s" class="ICON-tool triangle-1-s"></span>
-																				 <span title="ICON-tool triangle-1-sw" class="ICON-tool triangle-1-sw"></span>
-																				 <span title="ICON-tool triangle-1-w" class="ICON-tool triangle-1-w"></span>
-																				 <span title="ICON-tool triangle-1-nw" class="ICON-tool triangle-1-nw"></span>
-																				 <span title="ICON-tool triangle-2-n-s" class="ICON-tool triangle-2-n-s"></span>
-																				 <span title="ICON-tool triangle-2-e-w" class="ICON-tool triangle-2-e-w"></span>
-																				 <span title="ICON-tool arrow-1-n" class="ICON-tool arrow-1-n"></span>
-																				
-																				 <span title="ICON-tool arrow-1-ne" class="ICON-tool arrow-1-ne"></span>
-																				 <span title="ICON-tool arrow-1-e" class="ICON-tool arrow-1-e"></span>
-																				 <span title="ICON-tool arrow-1-se" class="ICON-tool arrow-1-se"></span>
-																				 <span title="ICON-tool arrow-1-s" class="ICON-tool arrow-1-s"></span>
-																				 <span title="ICON-tool arrow-1-sw" class="ICON-tool arrow-1-sw"></span>
-																				 <span title="ICON-tool arrow-1-w" class="ICON-tool arrow-1-w"></span>
-																				 <span title="ICON-tool arrow-1-nw" class="ICON-tool arrow-1-nw"></span>
-																				 <span title="ICON-tool arrow-2-n-s" class="ICON-tool arrow-2-n-s"></span>
-																				 <span title="ICON-tool arrow-2-ne-sw" class="ICON-tool arrow-2-ne-sw"></span>
-																				
-																				 <span title="ICON-tool arrow-2-e-w" class="ICON-tool arrow-2-e-w"></span>
-																				 <span title="ICON-tool arrow-2-se-nw" class="ICON-tool arrow-2-se-nw"></span>
-																				 <span title="ICON-tool arrowstop-1-n" class="ICON-tool arrowstop-1-n"></span>
-																				 <span title="ICON-tool arrowstop-1-e" class="ICON-tool arrowstop-1-e"></span>
-																				 <span title="ICON-tool arrowstop-1-s" class="ICON-tool arrowstop-1-s"></span>
-																				 <span title="ICON-tool arrowstop-1-w" class="ICON-tool arrowstop-1-w"></span>
-																				 <span title="ICON-tool arrowthick-1-n" class="ICON-tool arrowthick-1-n"></span>
-																				 <span title="ICON-tool arrowthick-1-ne" class="ICON-tool arrowthick-1-ne"></span>
-																				 <span title="ICON-tool arrowthick-1-e" class="ICON-tool arrowthick-1-e"></span>
-																				
-																				 <span title="ICON-tool arrowthick-1-se" class="ICON-tool arrowthick-1-se"></span>
-																				 <span title="ICON-tool arrowthick-1-s" class="ICON-tool arrowthick-1-s"></span>
-																				 <span title="ICON-tool arrowthick-1-sw" class="ICON-tool arrowthick-1-sw"></span>
-																				 <span title="ICON-tool arrowthick-1-w" class="ICON-tool arrowthick-1-w"></span>
-																				 <span title="ICON-tool arrowthick-1-nw" class="ICON-tool arrowthick-1-nw"></span>
-																				 <span title="ICON-tool arrowthick-2-n-s" class="ICON-tool arrowthick-2-n-s"></span>
-																				 <span title="ICON-tool arrowthick-2-ne-sw" class="ICON-tool arrowthick-2-ne-sw"></span>
-																				 <span title="ICON-tool arrowthick-2-e-w" class="ICON-tool arrowthick-2-e-w"></span>
-																				 <span title="ICON-tool arrowthick-2-se-nw" class="ICON-tool arrowthick-2-se-nw"></span>
-																				
-																				 <span title="ICON-tool arrowthickstop-1-n" class="ICON-tool arrowthickstop-1-n"></span>
-																				 <span title="ICON-tool arrowthickstop-1-e" class="ICON-tool arrowthickstop-1-e"></span>
-																				 <span title="ICON-tool arrowthickstop-1-s" class="ICON-tool arrowthickstop-1-s"></span>
-																				 <span title="ICON-tool arrowthickstop-1-w" class="ICON-tool arrowthickstop-1-w"></span>
-																				 <span title="ICON-tool arrowreturnthick-1-w" class="ICON-tool arrowreturnthick-1-w"></span>
-																				 <span title="ICON-tool arrowreturnthick-1-n" class="ICON-tool arrowreturnthick-1-n"></span>
-																				 <span title="ICON-tool arrowreturnthick-1-e" class="ICON-tool arrowreturnthick-1-e"></span>
-																				 <span title="ICON-tool arrowreturnthick-1-s" class="ICON-tool arrowreturnthick-1-s"></span>
-																				 <span title="ICON-tool arrowreturn-1-w" class="ICON-tool arrowreturn-1-w"></span>
-																				
-																				 <span title="ICON-tool arrowreturn-1-n" class="ICON-tool arrowreturn-1-n"></span>
-																				 <span title="ICON-tool arrowreturn-1-e" class="ICON-tool arrowreturn-1-e"></span>
-																				 <span title="ICON-tool arrowreturn-1-s" class="ICON-tool arrowreturn-1-s"></span>
-																				 <span title="ICON-tool arrowrefresh-1-w" class="ICON-tool arrowrefresh-1-w"></span>
-																				 <span title="ICON-tool arrowrefresh-1-n" class="ICON-tool arrowrefresh-1-n"></span>
-																				 <span title="ICON-tool arrowrefresh-1-e" class="ICON-tool arrowrefresh-1-e"></span>
-																				 <span title="ICON-tool arrowrefresh-1-s" class="ICON-tool arrowrefresh-1-s"></span>
-																				 <span title="ICON-tool arrow-4" class="ICON-tool arrow-4"></span>
-																				 <span title="ICON-tool arrow-4-diag" class="ICON-tool arrow-4-diag"></span>
-																				
-																				 <span title="ICON-tool extlink" class="ICON-tool extlink"></span>
-																				 <span title="ICON-tool newwin" class="ICON-tool newwin"></span>
-																				 <span title="ICON-tool refresh" class="ICON-tool refresh"></span>
-																				 <span title="ICON-tool shuffle" class="ICON-tool shuffle"></span>
-																				 <span title="ICON-tool transfer-e-w" class="ICON-tool transfer-e-w"></span>
-																				 <span title="ICON-tool transferthick-e-w" class="ICON-tool transferthick-e-w"></span>
-																				 <span title="ICON-tool folder-collapsed" class="ICON-tool folder-collapsed"></span>
-																				 <span title="ICON-tool folder-open" class="ICON-tool folder-open"></span>
-																				 <span title="ICON-tool document" class="ICON-tool document"></span>
-																				
-																				 <span title="ICON-tool document-b" class="ICON-tool document-b"></span>
-																				 <span title="ICON-tool note" class="ICON-tool note"></span>
-																				 <span title="ICON-tool mail-closed" class="ICON-tool mail-closed"></span>
-																				 <span title="ICON-tool mail-open" class="ICON-tool mail-open"></span>
-																				 <span title="ICON-tool suitcase" class="ICON-tool suitcase"></span>
-																				 <span title="ICON-tool comment" class="ICON-tool comment"></span>
-																				 <span title="ICON-tool person" class="ICON-tool person"></span>
-																				 <span title="ICON-tool print" class="ICON-tool print"></span>
-																				 <span title="ICON-tool trash" class="ICON-tool trash"></span>
-																				
-																				 <span title="ICON-tool locked" class="ICON-tool locked"></span>
-																				 <span title="ICON-tool unlocked" class="ICON-tool unlocked"></span>
-																				 <span title="ICON-tool bookmark" class="ICON-tool bookmark"></span>
-																				 <span title="ICON-tool tag" class="ICON-tool tag"></span>
-																				 <span title="ICON-tool home" class="ICON-tool home"></span>
-																				 <span title="ICON-tool flag" class="ICON-tool flag"></span>
-																				 <span title="ICON-tool calculator" class="ICON-tool calculator"></span>
-																				 <span title="ICON-tool cart" class="ICON-tool cart"></span>
-																				 <span title="ICON-tool pencil" class="ICON-tool pencil"></span>
-																				
-																				 <span title="ICON-tool clock" class="ICON-tool clock"></span>
-																				 <span title="ICON-tool disk" class="ICON-tool disk"></span>
-																				 <span title="ICON-tool calendar" class="ICON-tool calendar"></span>
-																				 <span title="ICON-tool zoomin" class="ICON-tool zoomin"></span>
-																				 <span title="ICON-tool zoomout" class="ICON-tool zoomout"></span>
-																				 <span title="ICON-tool search" class="ICON-tool search"></span>
-																				 <span title="ICON-tool wrench" class="ICON-tool wrench"></span>
-																				 <span title="ICON-tool gear" class="ICON-tool gear"></span>
-																				 <span title="ICON-tool heart" class="ICON-tool heart"></span>
-																				
-																				 <span title="ICON-tool star" class="ICON-tool star"></span>
-																				 <span title="ICON-tool link" class="ICON-tool link"></span>
-																				 <span title="ICON-tool cancel" class="ICON-tool cancel"></span>
-																				 <span title="ICON-tool plus" class="ICON-tool plus"></span>
-																				 <span title="ICON-tool plusthick" class="ICON-tool plusthick"></span>
-																				 <span title="ICON-tool minus" class="ICON-tool minus"></span>
-																				 <span title="ICON-tool minusthick" class="ICON-tool minusthick"></span>
-																				 <span title="ICON-tool close" class="ICON-tool close"></span>
-																				 <span title="ICON-tool closethick" class="ICON-tool closethick"></span>
-																				
-																				 <span title="ICON-tool key" class="ICON-tool key"></span>
-																				 <span title="ICON-tool lightbulb" class="ICON-tool lightbulb"></span>
-																				 <span title="ICON-tool scissors" class="ICON-tool scissors"></span>
-																				 <span title="ICON-tool clipboard" class="ICON-tool clipboard"></span>
-																				 <span title="ICON-tool copy" class="ICON-tool copy"></span>
-																				 <span title="ICON-tool contact" class="ICON-tool contact"></span>
-																				 <span title="ICON-tool image" class="ICON-tool image"></span>
-																				 <span title="ICON-tool video" class="ICON-tool video"></span>
-																				 <span title="ICON-tool script" class="ICON-tool script"></span>
-																				 <span title="ICON-tool alert" class="ICON-tool alert"></span>
-																				
-																				 <span title="ICON-tool info" class="ICON-tool info"></span>
-																				 <span title="ICON-tool notice" class="ICON-tool notice"></span>
-																				 <span title="ICON-tool help" class="ICON-tool help"></span>
-																				 <span title="ICON-tool check" class="ICON-tool check"></span>
-																				 <span title="ICON-tool bullet" class="ICON-tool bullet"></span>
-																				 <span title="ICON-tool radio-off" class="ICON-tool radio-off"></span>
-																				 <span title="ICON-tool radio-on" class="ICON-tool radio-on"></span>
-																				 <span title="ICON-tool pin-w" class="ICON-tool pin-w"></span>
-																				 <span title="ICON-tool pin-s" class="ICON-tool pin-s"></span>
-																				 <span title="ICON-tool play" class="ICON-tool play"></span>
-																				 <span title="ICON-tool pause" class="ICON-tool pause"></span>
-																				
-																				 <span title="ICON-tool seek-next" class="ICON-tool seek-next"></span>
-																				 <span title="ICON-tool seek-prev" class="ICON-tool seek-prev"></span>
-																				 <span title="ICON-tool seek-end" class="ICON-tool seek-end"></span>
-																				 <span title="ICON-tool seek-first" class="ICON-tool seek-first"></span>
-																				 <span title="ICON-tool stop" class="ICON-tool stop"></span>
-																				 <span title="ICON-tool eject" class="ICON-tool eject"></span>
-																				 <span title="ICON-tool volume-off" class="ICON-tool volume-off"></span>
-																				 <span title="ICON-tool volume-on" class="ICON-tool volume-on"></span>
-																				 <span title="ICON-tool power" class="ICON-tool power"></span>
-																				
-																				 <span title="ICON-tool signal-diag" class="ICON-tool signal-diag"></span>
-																				 <span title="ICON-tool signal" class="ICON-tool signal"></span>
-																				 <span title="ICON-tool battery-0" class="ICON-tool battery-0"></span>
-																				 <span title="ICON-tool battery-1" class="ICON-tool battery-1"></span>
-																				 <span title="ICON-tool battery-2" class="ICON-tool battery-2"></span>
-																				 <span title="ICON-tool battery-3" class="ICON-tool battery-3"></span>
-																				 <span title="ICON-tool circle-plus" class="ICON-tool circle-plus"></span>
-																				 <span title="ICON-tool circle-minus" class="ICON-tool circle-minus"></span>
-																				 <span title="ICON-tool circle-close" class="ICON-tool circle-close"></span>
-																				
-																				 <span title="ICON-tool circle-triangle-e" class="ICON-tool circle-triangle-e"></span>
-																				 <span title="ICON-tool circle-triangle-s" class="ICON-tool circle-triangle-s"></span>
-																				 <span title="ICON-tool circle-triangle-w" class="ICON-tool circle-triangle-w"></span>
-																				 <span title="ICON-tool circle-triangle-n" class="ICON-tool circle-triangle-n"></span>
-																				 <span title="ICON-tool circle-arrow-e" class="ICON-tool circle-arrow-e"></span>
-																				 <span title="ICON-tool circle-arrow-s" class="ICON-tool circle-arrow-s"></span>
-																				 <span title="ICON-tool circle-arrow-w" class="ICON-tool circle-arrow-w"></span>
-																				 <span title="ICON-tool circle-arrow-n" class="ICON-tool circle-arrow-n"></span>
-																				 <span title="ICON-tool circle-zoomin" class="ICON-tool circle-zoomin"></span>
-																				
-																				 <span title="ICON-tool circle-zoomout" class="ICON-tool circle-zoomout"></span>
-																				 <span title="ICON-tool circle-check" class="ICON-tool circle-check"></span>
-																				 <span title="ICON-tool circlesmall-plus" class="ICON-tool circlesmall-plus"></span>
-																				 <span title="ICON-tool circlesmall-minus" class="ICON-tool circlesmall-minus"></span>
-																				 <span title="ICON-tool circlesmall-close" class="ICON-tool circlesmall-close"></span>
-																				 <span title="ICON-tool squaresmall-plus" class="ICON-tool squaresmall-plus"></span>
-																				 <span title="ICON-tool squaresmall-minus" class="ICON-tool squaresmall-minus"></span>
-																				 <span title="ICON-tool squaresmall-close" class="ICON-tool squaresmall-close"></span>
-																				 <span title="ICON-tool grip-dotted-vertical" class="ICON-tool grip-dotted-vertical"></span>
-																				
-																				 <span title="ICON-tool grip-dotted-horizontal" class="ICON-tool grip-dotted-horizontal"></span>
-																				 <span title="ICON-tool grip-solid-vertical" class="ICON-tool grip-solid-vertical"></span>
-																				 <span title="ICON-tool grip-solid-horizontal" class="ICON-tool grip-solid-horizontal"></span>
-																				 <span title="ICON-tool gripsmall-diagonal-se" class="ICON-tool gripsmall-diagonal-se"></span>
-																				 <span title="ICON-tool grip-diagonal-se" class="ICON-tool grip-diagonal-se"></span>
-																				 
-																				<span title="ICON-tool circle-plus" class="ICON-tool circle-plus"></span>
-																				
-																				<span title="ICON-tool grey circle-plus" class="ICON-tool grey circle-plus"></span>		
-																				<span title="ICON-tool very_light_grey circle-plus" class="ICON-tool very_light_grey circle-plus"></span>
-																				<span title="ICON-tool light_grey circle-plus" class="ICON-tool light_grey circle-plus"></span>
-																				<span title="ICON-tool dark_grey circle-plus" class="ICON-tool dark_grey circle-plus"></span>
-																				<span title="ICON-tool white circle-plus" class="ICON-tool white circle-plus"></span>
-																				<span title="ICON-tool red circle-plus" class="ICON-tool red circle-plus"></span>
-																				<span title="ICON-tool green circle-plus" class="ICON-tool green circle-plus"></span>
-																				<span title="ICON-tool blue circle-plus" class="ICON-tool blue circle-plus"></span>
-						
-																		
-																		
-																	</div>
-																</div>
-															
-										
-														</div>
-														<div class="MAIN-footer">
-															<div class="MAIN-footer-container">
-																<button type="button" class="BUTTON"><span class="ICON-tool trash" ></span>Elimina</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool pencil" ></span>Modifica</button> 
-																<button type="button" class="BUTTON"><span class="ICON-tool plusthick" ></span>Nuovo</button>
-															</div>
-														</div>
-													</div>
-												</li>
-												
-												
-												
-												
-												
-												
 												
 												
 												
@@ -3166,332 +1964,7 @@
 															</div>
 														</div>
 														<div class="SHEET">
-														
-
-															<div style="background-color:#222; overflow:auto">
-																<div class="ICON-47 grey-styled home"></div>
-																<div class="ICON-47 grey-styled anagrafica"></div>
-																<div class="ICON-47 grey-styled raccolta"></div>
-																<div class="ICON-47 grey-styled unita"></div>
-																<div class="ICON-47 grey-styled criopreservata"></div> <!-- oppure ICON-47 grey-styled criopreservazione oppure ICON-47 grey-styled stoccaggio-->
-																<div class="ICON-47 grey-styled magazzino"></div> 
-																<div class="ICON-47 grey-styled reportistica"></div> 
-																<div class="ICON-47 grey-styled admin"></div> 
-																<div class="ICON-47 grey-styled utenti"></div> 
-																<div class="ICON-47 grey-styled alert"></div> 
-																<div class="ICON-47 grey-styled frazionamento"></div>
-																<div class="ICON-47 grey-styled paziente"></div>
-																<div class="ICON-47 grey-styled manipolazione"></div>
-																<div class="ICON-47 grey-styled caratterizzazione"></div>
-																<div class="ICON-47 grey-styled accettata"></div> <!-- oppure ICON-47 grey-styled idonea -->
-																<div class="ICON-47 grey-styled clinica"></div> 
-																<div class="ICON-47 grey-styled timing"></div> 
-																<div class="ICON-47 grey-styled rilascio_unita"></div> 
-																<div class="ICON-47 grey-styled idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 grey-styled autologa"></div>  <!-- oppure ICON-47 grey-styled reinfusione -->
-																<div class="ICON-47 grey-styled in_raccolta"></div>
-																<div class="ICON-47 grey-styled lotto"></div>
-																<div class="ICON-47 grey-styled stoccaggio"></div>
-																<div class="ICON-47 grey-styled scongelamento"></div>
-																<div class="ICON-47 grey-styled terminata"></div> <!-- oppure ICON-47 grey-styled effettuata -->
-																<div class="ICON-47 grey-styled unita_accettata"></div> 
-																<div class="ICON-47 grey-styled allogenica"></div> 
-																<div class="ICON-47 grey-styled unita_reinfusa"></div> 
-																<div class="ICON-47 grey-styled diagnosi"></div> 
-																<div class="ICON-47 grey-styled ciclo"></div> 
-																<div class="ICON-47 grey-styled richiesta"></div> 
-																<div class="ICON-47 grey-styled valutata"></div> 
-															</div>
-															
-															
-															<div style="background-color:#222; overflow:auto; margin-top:10px">
-																<div class="ICON-47 white home"></div>
-																<div class="ICON-47 white anagrafica"></div>
-																<div class="ICON-47 white raccolta"></div>
-																<div class="ICON-47 white unita"></div>
-																<div class="ICON-47 white criopreservata"></div> <!-- oppure ICON-47 white criopreservazione oppure ICON-47 white stoccaggio-->
-																<div class="ICON-47 white magazzino"></div> 
-																<div class="ICON-47 white reportistica"></div> 
-																<div class="ICON-47 white admin"></div> 
-																<div class="ICON-47 white utenti"></div> 
-																<div class="ICON-47 white alert"></div> 
-																<div class="ICON-47 white frazionamento"></div>
-																<div class="ICON-47 white paziente"></div>
-																<div class="ICON-47 white manipolazione"></div>
-																<div class="ICON-47 white caratterizzazione"></div>
-																<div class="ICON-47 white accettata"></div> <!-- oppure ICON-47 white idonea -->
-																<div class="ICON-47 white clinica"></div> 
-																<div class="ICON-47 white timing"></div> 
-																<div class="ICON-47 white rilascio_unita"></div> 
-																<div class="ICON-47 white idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 white autologa"></div>  <!-- oppure ICON-47 white reinfusione -->
-																<div class="ICON-47 white in_raccolta"></div>
-																<div class="ICON-47 white lotto"></div>
-																<div class="ICON-47 white stoccaggio"></div>
-																<div class="ICON-47 white scongelamento"></div>
-																<div class="ICON-47 white terminata"></div> <!-- oppure ICON-47 white effettuata -->
-																<div class="ICON-47 white unita_accettata"></div> 
-																<div class="ICON-47 white allogenica"></div> 
-																<div class="ICON-47 white unita_reinfusa"></div> 
-																<div class="ICON-47 white diagnosi"></div> 
-																<div class="ICON-47 white ciclo"></div>
-																<div class="ICON-47 white richiesta"></div> 
-																<div class="ICON-47 white valutata"></div>
-															</div>
-															
-															<div style="background-color:#222; overflow:auto; margin-top:10px">
-																<div class="ICON-47 white-styled home"></div>
-																<div class="ICON-47 white-styled anagrafica"></div>
-																<div class="ICON-47 white-styled raccolta"></div>
-																<div class="ICON-47 white-styled unita"></div>
-																<div class="ICON-47 white-styled criopreservata"></div> <!-- oppure ICON-47 white-styled criopreservazione oppure ICON-47 white-styled stoccaggio-->
-																<div class="ICON-47 white-styled magazzino"></div> 
-																<div class="ICON-47 white-styled reportistica"></div> 
-																<div class="ICON-47 white-styled admin"></div> 
-																<div class="ICON-47 white-styled utenti"></div> 
-																<div class="ICON-47 white-styled alert"></div> 
-																<div class="ICON-47 white-styled frazionamento"></div>
-																<div class="ICON-47 white-styled paziente"></div>
-																<div class="ICON-47 white-styled manipolazione"></div>
-																<div class="ICON-47 white-styled caratterizzazione"></div>
-																<div class="ICON-47 white-styled accettata"></div> <!-- oppure ICON-47 white-styled idonea -->
-																<div class="ICON-47 white-styled clinica"></div> 
-																<div class="ICON-47 white-styled timing"></div> 
-																<div class="ICON-47 white-styled rilascio_unita"></div> 
-																<div class="ICON-47 white-styled idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 white-styled autologa"></div>  <!-- oppure ICON-47 white-styled reinfusione -->
-																<div class="ICON-47 white-styled in_raccolta"></div>
-																<div class="ICON-47 white-styled lotto"></div>
-																<div class="ICON-47 white-styled stoccaggio"></div>
-																<div class="ICON-47 white-styled scongelamento"></div>
-																<div class="ICON-47 white-styled terminata"></div> <!-- oppure ICON-47 white-styled effettuata -->
-																<div class="ICON-47 white-styled unita_accettata"></div> 
-																<div class="ICON-47 white-styled allogenica"></div> 
-																<div class="ICON-47 white-styled unita_reinfusa"></div> 
-																<div class="ICON-47 white-styled diagnosi"></div> 
-																<div class="ICON-47 white-styled ciclo"></div>
-																<div class="ICON-47 white-styled richiesta"></div> 
-																<div class="ICON-47 white-styled valutata"></div>
-															</div>
-															
-															
-															<div style="background-color:#222; overflow:auto; margin-top:10px">
-																<div class="ICON-47 blue-styled home"></div>
-																<div class="ICON-47 blue-styled anagrafica"></div>
-																<div class="ICON-47 blue-styled raccolta"></div>
-																<div class="ICON-47 blue-styled unita"></div>
-																<div class="ICON-47 blue-styled criopreservata"></div> <!-- oppure ICON-47 blue-styled criopreservazione oppure ICON-47 blue-styled stoccaggio-->
-																<div class="ICON-47 blue-styled magazzino"></div> 
-																<div class="ICON-47 blue-styled reportistica"></div> 
-																<div class="ICON-47 blue-styled admin"></div> 
-																<div class="ICON-47 blue-styled utenti"></div> 
-																<div class="ICON-47 blue-styled alert"></div> 
-																<div class="ICON-47 blue-styled frazionamento"></div>
-																<div class="ICON-47 blue-styled paziente"></div>
-																<div class="ICON-47 blue-styled manipolazione"></div>
-																<div class="ICON-47 blue-styled caratterizzazione"></div>
-																<div class="ICON-47 blue-styled accettata"></div> <!-- oppure ICON-47 blue-styled idonea -->
-																<div class="ICON-47 blue-styled clinica"></div> 
-																<div class="ICON-47 blue-styled timing"></div> 
-																<div class="ICON-47 blue-styled rilascio_unita"></div> 
-																<div class="ICON-47 blue-styled idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 blue-styled autologa"></div>  <!-- oppure ICON-47 blue-styled reinfusione -->
-																<div class="ICON-47 blue-styled in_raccolta"></div>
-																<div class="ICON-47 blue-styled lotto"></div>
-																<div class="ICON-47 blue-styled stoccaggio"></div>
-																<div class="ICON-47 blue-styled scongelamento"></div>
-																<div class="ICON-47 blue-styled terminata"></div> <!-- oppure ICON-47 blue-styled effettuata -->
-																<div class="ICON-47 blue-styled unita_accettata"></div> 
-																<div class="ICON-47 blue-styled allogenica"></div> 
-																<div class="ICON-47 blue-styled unita_reinfusa"></div> 
-																<div class="ICON-47 blue-styled diagnosi"></div> 
-																<div class="ICON-47 blue-styled ciclo"></div>
-																<div class="ICON-47 blue-styled richiesta"></div> 
-																<div class="ICON-47 blue-styled valutata"></div>
-															</div>
-															
-															<div style="background-color:#222; overflow:auto; margin-top:10px">
-																<div class="ICON-47 green-styled home"></div>
-																<div class="ICON-47 green-styled anagrafica"></div>
-																<div class="ICON-47 green-styled raccolta"></div>
-																<div class="ICON-47 green-styled unita"></div>
-																<div class="ICON-47 green-styled criopreservata"></div> <!-- oppure ICON-47 green-styled criopreservazione oppure ICON-47 green-styled stoccaggio-->
-																<div class="ICON-47 green-styled magazzino"></div> 
-																<div class="ICON-47 green-styled reportistica"></div> 
-																<div class="ICON-47 green-styled admin"></div> 
-																<div class="ICON-47 green-styled utenti"></div> 
-																<div class="ICON-47 green-styled alert"></div> 
-																<div class="ICON-47 green-styled frazionamento"></div>
-																<div class="ICON-47 green-styled paziente"></div>
-																<div class="ICON-47 green-styled manipolazione"></div>
-																<div class="ICON-47 green-styled caratterizzazione"></div>
-																<div class="ICON-47 green-styled accettata"></div> <!-- oppure ICON-47 green-styled idonea -->
-																<div class="ICON-47 green-styled clinica"></div> 
-																<div class="ICON-47 green-styled timing"></div> 
-																<div class="ICON-47 green-styled rilascio_unita"></div> 
-																<div class="ICON-47 green-styled idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 green-styled autologa"></div>  <!-- oppure ICON-47 green-styled reinfusione -->
-																<div class="ICON-47 green-styled in_raccolta"></div>
-																<div class="ICON-47 green-styled lotto"></div>
-																<div class="ICON-47 green-styled stoccaggio"></div>
-																<div class="ICON-47 green-styled scongelamento"></div>
-																<div class="ICON-47 green-styled terminata"></div> <!-- oppure ICON-47 green-styled effettuata -->
-																<div class="ICON-47 green-styled unita_accettata"></div> 
-																<div class="ICON-47 green-styled allogenica"></div> 
-																<div class="ICON-47 green-styled unita_reinfusa"></div> 
-																<div class="ICON-47 green-styled diagnosi"></div> 
-																<div class="ICON-47 green-styled ciclo"></div> 
-																<div class="ICON-47 green-styled richiesta"></div> 
-																<div class="ICON-47 green-styled valutata"></div>
-															</div>
-															
-															<div style="background-color:#222; overflow:auto; margin-top:10px">
-																<div class="ICON-47 red-styled home"></div>
-																<div class="ICON-47 red-styled anagrafica"></div>
-																<div class="ICON-47 red-styled raccolta"></div>
-																<div class="ICON-47 red-styled unita"></div>
-																<div class="ICON-47 red-styled criopreservata"></div> <!-- oppure ICON-47 red-styled criopreservazione oppure ICON-47 red-styled stoccaggio-->
-																<div class="ICON-47 red-styled magazzino"></div> 
-																<div class="ICON-47 red-styled reportistica"></div> 
-																<div class="ICON-47 red-styled admin"></div> 
-																<div class="ICON-47 red-styled utenti"></div> 
-																<div class="ICON-47 red-styled alert"></div> 
-																<div class="ICON-47 red-styled frazionamento"></div>
-																<div class="ICON-47 red-styled paziente"></div>
-																<div class="ICON-47 red-styled manipolazione"></div>
-																<div class="ICON-47 red-styled caratterizzazione"></div>
-																<div class="ICON-47 red-styled accettata"></div> <!-- oppure ICON-47 red-styled idonea -->
-																<div class="ICON-47 red-styled clinica"></div> 
-																<div class="ICON-47 red-styled timing"></div> 
-																<div class="ICON-47 red-styled rilascio_unita"></div> 
-																<div class="ICON-47 red-styled idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 red-styled autologa"></div>  <!-- oppure ICON-47 red-styled reinfusione -->
-																<div class="ICON-47 red-styled in_raccolta"></div>
-																<div class="ICON-47 red-styled lotto"></div>
-																<div class="ICON-47 red-styled stoccaggio"></div>
-																<div class="ICON-47 red-styled scongelamento"></div>
-																<div class="ICON-47 red-styled terminata"></div> <!-- oppure ICON-47 red-styled effettuata -->
-																<div class="ICON-47 red-styled unita_accettata"></div> 
-																<div class="ICON-47 red-styled allogenica"></div> 
-																<div class="ICON-47 red-styled unita_reinfusa"></div> 
-																<div class="ICON-47 red-styled diagnosi"></div> 
-																<div class="ICON-47 red-styled ciclo"></div>
-																<div class="ICON-47 red-styled richiesta"></div> 
-																<div class="ICON-47 red-styled valutata"></div>
-															</div>
-															
-															
-															
-															
-															
-															
-															<div style="background-color:#222; overflow:auto; margin-top:10px">
-																<div class="ICON-47 orange-styled home"></div>
-																<div class="ICON-47 orange-styled anagrafica"></div>
-																<div class="ICON-47 orange-styled raccolta"></div>
-																<div class="ICON-47 orange-styled unita"></div>
-																<div class="ICON-47 orange-styled criopreservata"></div> <!-- oppure ICON-47 orange-styled criopreservazione oppure ICON-47 orange-styled stoccaggio-->
-																<div class="ICON-47 orange-styled magazzino"></div> 
-																<div class="ICON-47 orange-styled reportistica"></div> 
-																<div class="ICON-47 orange-styled admin"></div> 
-																<div class="ICON-47 orange-styled utenti"></div> 
-																<div class="ICON-47 orange-styled alert"></div> 
-																<div class="ICON-47 orange-styled frazionamento"></div>
-																<div class="ICON-47 orange-styled paziente"></div>
-																<div class="ICON-47 orange-styled manipolazione"></div>
-																<div class="ICON-47 orange-styled caratterizzazione"></div>
-																<div class="ICON-47 orange-styled accettata"></div> <!-- oppure ICON-47 orange-styled idonea -->
-																<div class="ICON-47 orange-styled clinica"></div> 
-																<div class="ICON-47 orange-styled timing"></div> 
-																<div class="ICON-47 orange-styled rilascio_unita"></div> 
-																<div class="ICON-47 orange-styled idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 orange-styled autologa"></div>  <!-- oppure ICON-47 orange-styled reinfusione -->
-																<div class="ICON-47 orange-styled in_raccolta"></div>
-																<div class="ICON-47 orange-styled lotto"></div>
-																<div class="ICON-47 orange-styled stoccaggio"></div>
-																<div class="ICON-47 orange-styled scongelamento"></div>
-																<div class="ICON-47 orange-styled terminata"></div> <!-- oppure ICON-47 orange-styled effettuata -->
-																<div class="ICON-47 orange-styled unita_accettata"></div> 
-																<div class="ICON-47 orange-styled allogenica"></div> 
-																<div class="ICON-47 orange-styled unita_reinfusa"></div> 
-																<div class="ICON-47 orange-styled diagnosi"></div> 
-																<div class="ICON-47 orange-styled ciclo"></div>
-																<div class="ICON-47 orange-styled richiesta"></div> 
-																<div class="ICON-47 orange-styled valutata"></div>
-															</div>
-															
-															
-															<div style="background-color:#222; overflow:auto; margin-top:10px">
-																<div class="ICON-47 purple-styled home"></div>
-																<div class="ICON-47 purple-styled anagrafica"></div>
-																<div class="ICON-47 purple-styled raccolta"></div>
-																<div class="ICON-47 purple-styled unita"></div>
-																<div class="ICON-47 purple-styled criopreservata"></div> <!-- oppure ICON-47 purple-styled criopreservazione oppure ICON-47 purple-styled stoccaggio-->
-																<div class="ICON-47 purple-styled magazzino"></div> 
-																<div class="ICON-47 purple-styled reportistica"></div> 
-																<div class="ICON-47 purple-styled admin"></div> 
-																<div class="ICON-47 purple-styled utenti"></div> 
-																<div class="ICON-47 purple-styled alert"></div> 
-																<div class="ICON-47 purple-styled frazionamento"></div>
-																<div class="ICON-47 purple-styled paziente"></div>
-																<div class="ICON-47 purple-styled manipolazione"></div>
-																<div class="ICON-47 purple-styled caratterizzazione"></div>
-																<div class="ICON-47 purple-styled accettata"></div> <!-- oppure ICON-47 purple-styled idonea -->
-																<div class="ICON-47 purple-styled clinica"></div> 
-																<div class="ICON-47 purple-styled timing"></div> 
-																<div class="ICON-47 purple-styled rilascio_unita"></div> 
-																<div class="ICON-47 purple-styled idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 purple-styled autologa"></div>  <!-- oppure ICON-47 purple-styled reinfusione -->
-																<div class="ICON-47 purple-styled in_raccolta"></div>
-																<div class="ICON-47 purple-styled lotto"></div>
-																<div class="ICON-47 purple-styled stoccaggio"></div>
-																<div class="ICON-47 purple-styled scongelamento"></div>
-																<div class="ICON-47 purple-styled terminata"></div> <!-- oppure ICON-47 purple-styled effettuata -->
-																<div class="ICON-47 purple-styled unita_accettata"></div> 
-																<div class="ICON-47 purple-styled allogenica"></div> 
-																<div class="ICON-47 purple-styled unita_reinfusa"></div> 
-																<div class="ICON-47 purple-styled diagnosi"></div> 
-																<div class="ICON-47 purple-styled ciclo"></div>
-																<div class="ICON-47 purple-styled richiesta"></div> 
-																<div class="ICON-47 purple-styled valutata"></div>
-															</div>
-																
-															
-															<div style="background-color:#fff; overflow:auto; margin-top:10px">
-																<div class="ICON-47 grey home"></div>
-																<div class="ICON-47 grey anagrafica"></div>
-																<div class="ICON-47 grey raccolta"></div>
-																<div class="ICON-47 grey unita"></div>
-																<div class="ICON-47 grey criopreservata"></div> <!-- oppure ICON-47 grey criopreservazione oppure ICON-47 grey stoccaggio-->
-																<div class="ICON-47 grey magazzino"></div> 
-																<div class="ICON-47 grey reportistica"></div> 
-																<div class="ICON-47 grey admin"></div> 
-																<div class="ICON-47 grey utenti"></div> 
-																<div class="ICON-47 grey alert"></div> 
-																<div class="ICON-47 grey frazionamento"></div>
-																<div class="ICON-47 grey paziente"></div>
-																<div class="ICON-47 grey manipolazione"></div>
-																<div class="ICON-47 grey caratterizzazione"></div>
-																<div class="ICON-47 grey accettata"></div> <!-- oppure ICON-47 grey idonea -->
-																<div class="ICON-47 grey clinica"></div> 
-																<div class="ICON-47 grey timing"></div> 
-																<div class="ICON-47 grey rilascio_unita"></div> 
-																<div class="ICON-47 grey idoneita_unita_criopreservata"></div> 
-																<div class="ICON-47 grey autologa"></div>  <!-- oppure ICON-47 grey reinfusione -->
-																<div class="ICON-47 grey in_raccolta"></div>
-																<div class="ICON-47 grey lotto"></div>
-																<div class="ICON-47 grey stoccaggio"></div>
-																<div class="ICON-47 grey scongelamento"></div>
-																<div class="ICON-47 grey terminata"></div> <!-- oppure ICON-47 grey effettuata -->
-																<div class="ICON-47 grey unita_accettata"></div> 
-																<div class="ICON-47 grey allogenica"></div> 
-																<div class="ICON-47 grey unita_reinfusa"></div> 
-																<div class="ICON-47 grey diagnosi"></div> 
-																<div class="ICON-47 grey ciclo"></div>
-																<div class="ICON-47 grey richiesta"></div> 
-																<div class="ICON-47 grey valutata"></div>
-															</div>
-																
+													
 															<div style="background-color:#222; overflow:auto; margin-top:10px">
 																<div class="ICON-36 white home"></div>
 																<div class="ICON-36 white anagrafica"></div>
@@ -3500,105 +1973,9 @@
 																<div class="ICON-36 white criopreservata"></div> <!-- oppure ICON-36 white criopreservazione oppure ICON-36 white stoccaggio-->
 																<div class="ICON-36 white magazzino"></div> 
 																<div class="ICON-36 white reportistica"></div> 
-																<div class="ICON-36 white admin"></div> 
-																<div class="ICON-36 white utenti"></div> 
-																<div class="ICON-36 white alert"></div> 
-																<div class="ICON-36 white frazionamento"></div>
-																<div class="ICON-36 white paziente"></div>
-																<div class="ICON-36 white manipolazione"></div>
-																<div class="ICON-36 white caratterizzazione"></div>
-																<div class="ICON-36 white accettata"></div> <!-- oppure ICON-36 white idonea -->
-																<div class="ICON-36 white clinica"></div> 
-																<div class="ICON-36 white timing"></div> 
-																<div class="ICON-36 white rilascio_unita"></div> 
-																<div class="ICON-36 white idoneita_unita_criopreservata"></div> 
-																<div class="ICON-36 white autologa"></div>  <!-- oppure ICON-36 white reinfusione -->
-																<div class="ICON-36 white in_raccolta"></div>
-																<div class="ICON-36 white lotto"></div>
-																<div class="ICON-36 white stoccaggio"></div>
-																<div class="ICON-36 white scongelamento"></div>
-																<div class="ICON-36 white terminata"></div> <!-- oppure ICON-36 white effettuata -->
-																<div class="ICON-36 white unita_accettata"></div> 
-																<div class="ICON-36 white allogenica"></div> 
-																<div class="ICON-36 white unita_reinfusa"></div> 
-																<div class="ICON-36 white diagnosi"></div> 
-																<div class="ICON-36 white ciclo"></div>
-																<div class="ICON-36 white richiesta"></div> 
-																<div class="ICON-36 white valutata"></div>
+																
 															</div>
 															
-															<div style="background-color:#fff; overflow:auto; margin-top:10px">
-																<div class="ICON-36 grey home"></div>
-																<div class="ICON-36 grey anagrafica"></div>
-																<div class="ICON-36 grey raccolta"></div>
-																<div class="ICON-36 grey unita"></div>
-																<div class="ICON-36 grey criopreservata"></div> <!-- oppure ICON-36 grey criopreservazione oppure ICON-36 grey stoccaggio-->
-																<div class="ICON-36 grey magazzino"></div> 
-																<div class="ICON-36 grey reportistica"></div> 
-																<div class="ICON-36 grey admin"></div> 
-																<div class="ICON-36 grey utenti"></div> 
-																<div class="ICON-36 grey alert"></div> 
-																<div class="ICON-36 grey frazionamento"></div>
-																<div class="ICON-36 grey paziente"></div>
-																<div class="ICON-36 grey manipolazione"></div>
-																<div class="ICON-36 grey caratterizzazione"></div>
-																<div class="ICON-36 grey accettata"></div> <!-- oppure ICON-36 grey idonea -->
-																<div class="ICON-36 grey clinica"></div> 
-																<div class="ICON-36 grey timing"></div> 
-																<div class="ICON-36 grey rilascio_unita"></div> 
-																<div class="ICON-36 grey idoneita_unita_criopreservata"></div> 
-																<div class="ICON-36 grey autologa"></div>  <!-- oppure ICON-36 grey reinfusione -->
-																<div class="ICON-36 grey in_raccolta"></div>
-																<div class="ICON-36 grey lotto"></div>
-																<div class="ICON-36 grey stoccaggio"></div>
-																<div class="ICON-36 grey scongelamento"></div>
-																<div class="ICON-36 grey terminata"></div> <!-- oppure ICON-36 grey effettuata -->
-																<div class="ICON-36 grey unita_accettata"></div> 
-																<div class="ICON-36 grey allogenica"></div> 
-																<div class="ICON-36 grey unita_reinfusa"></div> 
-																<div class="ICON-36 grey diagnosi"></div> 
-																<div class="ICON-36 grey ciclo"></div>
-																<div class="ICON-36 grey richiesta"></div> 
-																<div class="ICON-36 grey valutata"></div>
-															</div>
-															
-															<div style="background-color:#fff; overflow:auto; margin-top:10px">
-																<div class="ICON-36 blue home"></div>
-																<div class="ICON-36 blue anagrafica"></div>
-																<div class="ICON-36 blue raccolta"></div>
-																<div class="ICON-36 blue unita"></div>
-																<div class="ICON-36 blue criopreservata"></div> <!-- oppure ICON-36 blue criopreservazione oppure ICON-36 blue stoccaggio-->
-																<div class="ICON-36 blue magazzino"></div> 
-																<div class="ICON-36 blue reportistica"></div> 
-																<div class="ICON-36 blue admin"></div> 
-																<div class="ICON-36 blue utenti"></div> 
-																<div class="ICON-36 blue alert"></div> 
-																<div class="ICON-36 blue frazionamento"></div>
-																<div class="ICON-36 blue paziente"></div>
-																<div class="ICON-36 blue manipolazione"></div>
-																<div class="ICON-36 blue caratterizzazione"></div>
-																<div class="ICON-36 blue accettata"></div> <!-- oppure ICON-36 blue idonea -->
-																<div class="ICON-36 blue clinica"></div> 
-																<div class="ICON-36 blue timing"></div> 
-																<div class="ICON-36 blue rilascio_unita"></div> 
-																<div class="ICON-36 blue idoneita_unita_criopreservata"></div> 
-																<div class="ICON-36 blue autologa"></div>  <!-- oppure ICON-36 blue reinfusione -->
-																<div class="ICON-36 blue in_raccolta"></div>
-																<div class="ICON-36 blue lotto"></div>
-																<div class="ICON-36 blue stoccaggio"></div>
-																<div class="ICON-36 blue scongelamento"></div>
-																<div class="ICON-36 blue terminata"></div> <!-- oppure ICON-36 blue effettuata -->
-																<div class="ICON-36 blue unita_accettata"></div> 
-																<div class="ICON-36 blue allogenica"></div> 
-																<div class="ICON-36 blue unita_reinfusa"></div> 
-																<div class="ICON-36 blue diagnosi"></div> 
-																<div class="ICON-36 blue ciclo"></div>
-																<div class="ICON-36 blue richiesta"></div> 
-																<div class="ICON-36 blue valutata"></div>
-															</div>
-
-
-										
 														</div>
 														<div class="MAIN-footer">
 															<div class="MAIN-footer-container">
@@ -3612,22 +1989,6 @@
 												
 												
 												
-												
-												
-												
-												
-												
-												
-												
-												
-
-
-
-
-
-
-
-
 
 												
 											</ul>
@@ -3635,6 +1996,7 @@
 									</div>
 								</td>
 							</tr>
+							
 							<tr class="MAINAREA-sheet-footer"><td>button</td></tr>
 						</tbody>
 					</table>

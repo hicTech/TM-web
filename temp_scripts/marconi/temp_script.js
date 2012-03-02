@@ -224,16 +224,8 @@ $(document).ready(function(){
 		
 				
 	});
-	/*
-	 * gestione SLIDER main
-	 * 
-	 */
 	
-	slider = $('.SLIDER').bxSlider({
-			    	controls : false,
-			    	infiniteLoop : false
-			    });
-	    
+	
 	
 	
 	$('#navigator_back').click(function(){

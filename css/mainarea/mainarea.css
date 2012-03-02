@@ -5,13 +5,13 @@
 .MAINAREA-controller{
 	background-color:#222;
 	vertical-align: top;
-	display: none
 }
 
 
 
 .MAINAREA-navigator{
 	height: 30px;
+	
 }
 
 .MAINAREA-main{

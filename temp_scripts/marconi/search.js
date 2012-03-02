@@ -1,8 +1,7 @@
 
 $(document).ready(function(){
 
-
-
+	
 
 	$(".SEARCH-container").each(function(){
 		

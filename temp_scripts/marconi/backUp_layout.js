@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 	
 
-	
+	var current_resizing_time = 0;
 	
 	var mouseX,mouseY;
 	$(document).bind("mousemove",function(e){
@@ -14,78 +14,44 @@ $(document).ready(function(){
 	
 	
 	
-	var body_w,body_h = 0;
 	
 	$(function(){
 	    $(window).resize(function(){
-	    	calculateLayout("window");
-	    	/*
-	    	var body_w_now = parseInt($('.GENERAL-body').width());
-	    	var body_h_now = parseInt($('.GENERAL-body').height());
-	    	if(body_w_now != body_w || body_h_now != body_h){
-	    		body_w = body_w_now;
-	    		body_h = body_h_now;
-	    		
-	    	}
-	    	*/
+	        calculateLayout()
 	    });
 	});
 	
 	
-	var $section;
-	$(".GENERAL-mainarea").each(function(){
-		if( $(this).is(":visible") )
-			$section = $(this);
-	})
 	
 	
 	
-	slider =  $section.find('.SLIDER').bxSlider({
-		    	controls : false,
-		    	infiniteLoop : false
-		    });
 	
 	
-	$(".CONTROLLER-wrapper").resize(function(){
-		//calculateLayout("controller");
-	})
-	
-	$(".SEARCH-box-container").resize(function(){
-		//calculateLayout("search");
+	$(".CONTROLLER-wrapper,.SEARCH-box-container").resize(function(){
+		calculateLayout();
 	})
 
 	
-	
-	calculateLayout("init");
-	
-	
-	var current_resizing_time = 0;
-	
-	function calculateLayout(mess){
-		
-		/*
-	 * gestione SLIDER main
-	 * 
-	 */
+	calculateLayout();
 	
 	
-	    
-		
-		
-		
-		
+	
+	
+	function calculateLayout(){
+		var $section = $('[data-id-sections="home"]');
 		//// impedisco che venga invocata a ripetizione sia al resizing della window sia dai vari listener
-		
+		/*
 		var time=new Date();
 		var now =  time.getTime();
 		if (current_resizing_time !=0 && parseInt( now - current_resizing_time) < 500){
-			
 			return false;
 		}
-		console.log(mess)
 		current_resizing_time = now;
-		
+		*/
 		//// impedisco che venga invocata a ripetizione sia al resizing della window sia dai vari listener
+		
+		
+		
 		
 		var $sidebar = $(".GENERAL-sidebar")
 		var $sheet = $section.find(".SHEET");
@@ -227,7 +193,6 @@ $(document).ready(function(){
 	}
 	
 	function calculateSlider($section){
-		
 		var current_slide = slider.getCurrentSlide();
 		slider.destroyShow();
 		slider = $section.find('.SLIDER').bxSlider({
