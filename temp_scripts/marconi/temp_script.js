@@ -220,23 +220,10 @@ $(document).ready(function(){
 		]
 		});
 		
-	$(".forward").click(function(){
-		
-				
-	});
 	
 	
 	
 	
-	$('#navigator_back').click(function(){
-	    slider.goToPreviousSlide();
-	    return false;
-	});
-	
-	$('#navigator_forward').click(function(){
-	    slider.goToNextSlide();
-	    return false;
-	});
 	
 	
 	

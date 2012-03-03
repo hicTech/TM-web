@@ -1,70 +1,125 @@
 
 $(document).ready(function(){
 	
-
 	
+	
+	
+	var sliderRegister = new Array();
+	refreshLayout();
+	
+	
+
+	$("#temp-button-anagrafica").click(function(){
+		$('[data-mainarea-id=\'unita\']').hide();
+		$('[data-mainarea-id=\'raccolta\']').hide();
+		$('[data-mainarea-id=\'anagrafica\']').show();
+		refreshLayout();
+	})
+	
+	$("#temp-button-raccolta").click(function(){
+		$('[data-mainarea-id=\'unita\']').hide();
+		$('[data-mainarea-id=\'anagrafica\']').hide();
+		$('[data-mainarea-id=\'raccolta\']').show();
+		refreshLayout();
+	})
+	
+	$("#temp-button-unita").click(function(){
+		$('[data-mainarea-id=\'anagrafica\']').hide();
+		$('[data-mainarea-id=\'raccolta\']').hide();
+		$('[data-mainarea-id=\'unita\']').show();
+		refreshLayout();
+	})
+	
+
 	
 	var mouseX,mouseY;
 	$(document).bind("mousemove",function(e){
 			mouseX = e.pageX;
 			//mouseY = e.pageY;
 	}); 
-
-	
-	
-	var body_w,body_h = 0;
-	
-	$(function(){
-	    $(window).resize(function(){
-	    	//calculateLayout("window");
-	    	/*
-	    	var body_w_now = parseInt($('.GENERAL-body').width());
-	    	var body_h_now = parseInt($('.GENERAL-body').height());
-	    	if(body_w_now != body_w || body_h_now != body_h){
-	    		body_w = body_w_now;
-	    		body_h = body_h_now;
-	    		
-	    	}
-	    	*/
-	    });
-	});
-	
 	
 
-	$(".GENERAL-mainarea").each(function(){
-		if( $(this).is(":visible") )
-			calculateLayout($(this));
-	})
-	
-	
-	
-	
-	var slider =  $section.find('.SLIDER').bxSlider({
-		    	controls : false,
-		    	infiniteLoop : false
-		    });
-	
-	/*
+    $(window).resize(function(){
+    	refreshLayout();
+
+    });
+
 	$(".CONTROLLER-wrapper").resize(function(){
-		calculateLayout("controller");
+		refreshLayout();
 	})
 	
 	$(".SEARCH-box-container").resize(function(){
-		calculateLayout("search");
+		refreshLayout();
 	})
-	*/
+	
+
+
+
+		
+	function refreshLayout(){
+		
+		$(".GENERAL-mainarea").each(function(){
+			if( $(this).is(":visible") ){
+				calculateLayout( $(this) );
+			   	setSlider($(this));
+			}
+				
+		})
+	}
+	
 
 	
+	function setSlider($mainarea){
+		var mainarea_id = $mainarea.data("mainarea-id");
+			   	
+			   	// se per questa mainarea non esiste lo slider lo creo in sliderRegister{} pompo l'oggetto bxSlider ed il riferimento al DOM di questa mainarea
+			    if(sliderRegister[mainarea_id] == undefined){
+			    	sliderRegister[mainarea_id] = {
+			    		"bxSliderObject" : createSlider( $mainarea ),
+			    		"domObject" : $mainarea
+			    	}
+			    }
+			    
+			    // se per questa mainarea esiste lo slider me lo prendo da sliderRegister{} e lo refresho mantenendone la slide corrente selezionata
+    			// in fine ripompo l'oggetto bxSlider in sliderRagister{} per mantenerlo coerente
+			    else{
+			    	var current_slide = sliderRegister[mainarea_id].bxSliderObject.getCurrentSlide();
+			    	
+					sliderRegister[mainarea_id].bxSliderObject.destroyShow();
+					slider = sliderRegister[mainarea_id].domObject.find('.SLIDER').bxSlider({
+						    	controls : false,
+						    	startingSlide : current_slide,
+						    	infiniteLoop: false
+						    });
+					sliderRegister[mainarea_id].bxSliderObject = slider;
+			    }
+	}
 	
-	
+	function createSlider($mainarea){
+		
+		slider = $mainarea.find('.SLIDER').bxSlider({
+			    	controls : false,
+			    	infiniteLoop: false
+			    });
+			    $mainarea.find('.back').click(function(){
+				    slider.goToPreviousSlide();
+				    return false;
+				});
+				
+				 $mainarea.find('.forward').click(function(){
+				    slider.goToNextSlide();
+				    return false;
+				});
+				
+		return slider;
+	}
 	
 	
 	var current_resizing_time = 0;
 	
-	function calculateLayout($el){
-		
-		var $section = $el;
-		
+	
+	function calculateLayout($mainarea){
+
 		//// impedisco che venga invocata a ripetizione sia al resizing della window sia dai vari listener
 		
 		var time=new Date();
@@ -73,28 +128,29 @@ $(document).ready(function(){
 			
 			return false;
 		}
-		
+		//console.log(mess)
 		current_resizing_time = now;
 		
-		//// impedisco che venga invocata a ripetizione sia al resizing della window sia dai vari listener
 		
+		//// impedisco che venga invocata a ripetizione sia al resizing della window sia dai vari listener
+
 		var $sidebar = $(".GENERAL-sidebar")
-		var $sheet = $section.find(".SHEET");
-		var search = $section.find(".SEARCH-container");
-		var $controller = $section.find(".CONTROLLER-wrapper");
-		var $mainarea_header = $section.find(".MAINAREA-header");
-		var $main_header = $section.find(".MAIN-header");
-		var $mainarea_navigator = $section.find(".MAINAREA-navigator");
-		var $main_header = $section.find(".MAIN-header");
-		var $main_footer = $section.find(".MAIN-footer");
-		var $mainarea_sheet_footer = $section.find(".MAINAREA-sheet-footer");
-		var $mainarea_controller = $section.find(".MAINAREA-controller");
+		var $sheet = $mainarea.find(".SHEET");
+		var $search = $mainarea.find(".SEARCH-container");
+		var $controller = $mainarea.find(".CONTROLLER-wrapper");
+		var $mainarea_header = $mainarea.find(".MAINAREA-header");
+		var $main_header = $mainarea.find(".MAIN-header");
+		var $mainarea_navigator = $mainarea.find(".MAINAREA-navigator");
+		var $main_header = $mainarea.find(".MAIN-header");
+		var $main_footer = $mainarea.find(".MAIN-footer");
+		var $mainarea_sheet_footer = $mainarea.find(".MAINAREA-sheet-footer");
+		var $mainarea_controller = $mainarea.find(".MAINAREA-controller");
 		
 		
 		//vertical
 		var expander_h = getViewPort().height 	- parseInt(( $mainarea_header.is(":visible") ) ? $mainarea_header.height() : 0)
 												- parseInt(($mainarea_navigator.is(":visible")) ? $mainarea_navigator.height() : 0) 
-												- parseInt((search.is(":visible")) ? search.height() : 0) 
+												- parseInt(($search.is(":visible")) ? $search.height() : 0) 
 												- parseInt(($main_header.is(":visible")) ? $main_header.height() : 0) 
 												- parseInt(($main_footer.is(":visible")) ? $main_footer.height() : 0) 
 												- parseInt(($mainarea_sheet_footer.is(":visible")) ? $mainarea_sheet_footer.height() : 0);	
@@ -118,21 +174,21 @@ $(document).ready(function(){
 		$sheet.css("width",getViewPort().width - ($sidebar.width()+30) );
 		$controller.css("width",getViewPort().width - parseInt( $sidebar.width()) -25);
 		
-		calculateSlider($section);
-		
 		$mainarea_controller.each(function(){
 			if($(this).is(":visible"))calculateController($(this));
 		})
 		
-	
 	}
 	
-
+	
+	
+	
+	
 	
 	function calculateController($el){
 		
-		var scroller_tollerance = 70;    // di quanti pixel il contenuto deve eccedere rispetto al contenitore per attivare lo scroller
-		var hidding_arrows_offset = 12;
+		var scroller_tollerance = 40;    // di quanti pixel il contenuto deve eccedere rispetto al contenitore per attivare lo scroller
+		var hidding_arrows_offset = 30;
 		var sensibility = 9;
 		var scrollbar_height = 20;
 		var interval = (jQuery.browser.mozilla) ? 40 : 1; 
@@ -217,17 +273,6 @@ $(document).ready(function(){
 		$el.find(".CONTROLLER-wrapper").scrollTo( {top:'-=0px', left:'+='+speed});
 	}
 	
-	function calculateSlider($section){
-		
-		var current_slide = slider.getCurrentSlide();
-		slider.destroyShow();
-		slider = $section.find('.SLIDER').bxSlider({
-			    	controls : false,
-			    	startingSlide : current_slide,
-			    	infiniteLoop: false
-			    });
-	}
-	
 	
 	
 	
@@ -257,10 +302,6 @@ $(document).ready(function(){
 			height : viewportHeight
 		}
 	}
-	
-	
-	
-	
 	
 
 });
