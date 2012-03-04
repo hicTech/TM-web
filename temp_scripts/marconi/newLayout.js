@@ -1,4 +1,4 @@
-
+var fatto = false
 $(document).ready(function(){
 	
 	
@@ -7,12 +7,17 @@ $(document).ready(function(){
 	var sliderRegister = new Array();
 	refreshLayout();
 	
-	
+
+	setTimeout(function(){
+		refreshLayout()
+	},200)
+		
 
 	$("#temp-button-anagrafica").click(function(){
 		$('[data-mainarea-id=\'unita\']').hide();
 		$('[data-mainarea-id=\'raccolta\']').hide();
 		$('[data-mainarea-id=\'anagrafica\']').show();
+		$('[data-mainarea-id=\'esempio\']').hide();
 		refreshLayout();
 	})
 	
@@ -20,6 +25,7 @@ $(document).ready(function(){
 		$('[data-mainarea-id=\'unita\']').hide();
 		$('[data-mainarea-id=\'anagrafica\']').hide();
 		$('[data-mainarea-id=\'raccolta\']').show();
+		$('[data-mainarea-id=\'esempio\']').hide();
 		refreshLayout();
 	})
 	
@@ -27,6 +33,15 @@ $(document).ready(function(){
 		$('[data-mainarea-id=\'anagrafica\']').hide();
 		$('[data-mainarea-id=\'raccolta\']').hide();
 		$('[data-mainarea-id=\'unita\']').show();
+		$('[data-mainarea-id=\'esempio\']').hide();
+		refreshLayout();
+	})
+	
+	$("#temp-button-esempio").click(function(){
+		$('[data-mainarea-id=\'anagrafica\']').hide();
+		$('[data-mainarea-id=\'raccolta\']').hide();
+		$('[data-mainarea-id=\'unita\']').hide();
+		$('[data-mainarea-id=\'esempio\']').show();
 		refreshLayout();
 	})
 	
@@ -59,15 +74,13 @@ $(document).ready(function(){
 
 
 
-		
+	
 	function refreshLayout(){
-		
 		$(".GENERAL-mainarea").each(function(){
 			if( $(this).is(":visible") ){
 				calculateLayout( $(this) );
 			   	setSlider($(this));
-			}
-				
+			}	
 		})
 	}
 	
@@ -174,8 +187,9 @@ $(document).ready(function(){
 		}
 	
 
-		/// tolgo la width e i margin della sidebar alla width della viewport (circa 250)
-		$sheet.css("width",getViewPort().width - ($sidebar.width()+30) );
+		/// tolgo la width e i margin della sidebar alla width della viewport (160)
+		
+		$sheet.css("width",getViewPort().width - (130+30) );
 		
 		$controller.css("width",getViewPort().width - parseInt( $sidebar.width()) -25);
 		
