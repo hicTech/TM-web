@@ -125,54 +125,7 @@ $(document).ready(function(){
 			}
 		})
 	});
-	
-	
-	/*
-	 * alert
-	 */
-	
-	$("#alert").click(function(){
-		var $alert = $('<div title="Titolo alert"><p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span>Testo alert</p></div>');
-		$alert.dialog({
-			modal:true,
-			autoOpen: false,
-			show: "fade",
-			hide: "fade",
-			buttons: {
-				Ok: function() {
-					$( this ).dialog( "close" );
-				}
-			}
-		});
-		$alert.dialog( "open" );
-		return false;
-	})
-	
-	
-	
-	$("#confirm").click(function(){
-		var $confirm = $('<div title="Titolo confirm"><p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Testo confirm</p></div>');
-		$confirm.dialog({
-			modal:true,
-			autoOpen: false,
-			show: "fade",
-			hide: "fade",
-			buttons: {
-				"Conferma": function() {
-					alert('conferma');
-					$( this ).dialog( "close" );
-				},
-				"Nega": function() {
-					alert('nega');
-					$( this ).dialog( "close" );
-				}
-			}
-		});
-		$confirm.dialog( "open" );
-		return false;
 
-	})
-	
 	
 	/*
 	 * input[type='search']  (LIVE)  

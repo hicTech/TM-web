@@ -97,17 +97,39 @@ $(document).ready(function(){
 		//tasti "ricerca avanzata" ed "altro"
 		
 		$el.find(".advanced_search_button").each(function(){
-			if($(this).parents(".SEARCH-box").is(".header")){
-				$(this).click(function(){
-					$(this).parents(".SEARCH-box").next().toggle("fade");
-					$(this).parents(".SEARCH-box").next().next().toggle("fade");
-				})
-			}
+			//$(this).click(function(){
+				//UIgenericOverlay();	
+			//})
+			
+			/*$(this).click(function(){
+				$(this).parents(".GENERAL-mainarea-table").find(".SEARCH-box-container").each(function(){
+					$(this).toggle();
+				});
+				$(this).parents(".GENERAL-mainarea-table").find(".MAINAREA-slider").toggle();
+			})*/
 		})
 		
-		$el.find(".more_button").each(function(){
+		/*$el.find(".more_button").each(function(){
 			$(this).click(function(){
 				$(this).parents(".SEARCH-box-item-container").find(".SEARCH-box-more-fields").toggle("fade");
+			})
+		})*/
+		
+		$el.find(".confirm_advanced_search_button").each(function(){
+			$(this).click(function(){
+				
+			})
+		})
+		
+		$el.find(".clear_advanced_search_button").each(function(){
+			$(this).click(function(){
+				
+			})
+		})
+		
+		$el.find(".close_advanced_search_button").each(function(){
+			$(this).click(function(){
+				
 			})
 		})
 		
@@ -329,4 +351,266 @@ $(document).ready(function(){
 });
 
 	
+// html ricerca
+
+
+var html_ricerca_completa ='<div class="SEARCH-box-container">'+
+																
+																
+										'<div class="SEARCH-box ana" data-search-entity="anagrafica">'+
+											'<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>'+
+											'<div class="SEARCH-box-item-container">'+
+												
+												
+																	'<div class="FORM-field-row little">'+
+																		'<p class="FORM-label">Codice</p>'+
+																		'<p><input type="search" placeholder="placeholder"></p>'+
+																	'</div>'+
+															
+																	'<div class="FORM-field-row little">'+
+																		'<p class="FORM-label">Tipo</p>'+
+																		'<div class="checkbox-container">'+
+																			'<div>Paziente</div>'+
+																			'<div><input type="checkbox"  value="paziente" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div>Donatore</div>'+
+																			'<div><input type="checkbox"  value="donatore" /></div>'+
+																		'</div>'+
+																		
+																	'</div>'+
+															
+																	
+																	'<div class="FORM-field-row little">'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">Nome</p>'+
+																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
+																		'</div>'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">Cognome</p>'+
+																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
+																		'</div>'+
+																	'</div>'+
+																	
+																	'<div class="FORM-field-row little">'+
+																		'<p class="FORM-label">Luogo di nascita</p>'+
+																		'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
+																	'</div>'+
+																	
+																	'<div class="FORM-field-row little">'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">Ospedale proven.</p>'+
+																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
+																		'</div>'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">Reparto proven.</p>'+
+																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
+																		'</div>'+
+																	'</div>'+
+																	
+															
+																	'<div class="FORM-field-row little">'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">Registrato</p>'+
+																			'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
+																		'</div>'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">&nbsp; <!-- important --></p>'+
+																			'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
+																		'</div>'+
+																	'</div>'+
+																	'<div class="FORM-field-row little">'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">Modificato</p>'+
+																			'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
+																		'</div>'+
+																		'<div class="FORM-field">'+
+																			'<p class="FORM-label">&nbsp; <!-- important --></p>'+
+																			'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
+																		'</div>'+
+																	'</div>'+
+																	
+																
+												
+
+													
+													
+													
+											'</div>'+
+										'</div>'+
+																
+																
+																
+										'<div class="SEARCH-box rac" data-search-entity="raccolta">'+
+											'<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>'+
+											'<div class="" >'+
+												
+													
+																	'<div class="FORM-field-row little">'+
+																		'<p class="FORM-label">Codice</p>'+
+																		'<p><input  type="search" placeholder="placeholder"></p>'+
+																	'</div>'+
+																
+																	'<div class="FORM-field-row little">'+
+																		'<p class="FORM-label">Tipo</p>'+
+																		'<div class="checkbox-container">'+
+																			'<div>HPC M (aut.)</div>'+
+																			'<div><input type="checkbox"  value="HPC M (autologo)" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div>HPC M (all.)</div>'+
+																			'<div><input type="checkbox"  value="HPC M (allogenico)" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div>HPC A (aut.)</div>'+
+																			'<div><input type="checkbox" value="HPC A (autologo)"  /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div>HPC A (all.)</div>'+
+																			'<div><input type="checkbox" value="HPC A (allogenico)"  /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div>TCT</div>'+
+																			'<div><input type="checkbox" value="TCT"  /></div>'+
+																		'</div>'+
+																		'<div class="FORM-field-row little">'+
+																			'<div class="FORM-field-row little">'+
+																				'<p class="FORM-label">Collection facility</p>'+
+																				'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
+																			'</div>'+
+																		'</div>'+
+																	
+																		'<div class="FORM-field-row little">'+
+																			'<p class="FORM-label">Stato</p>'+
+																			
+																			'<div class="checkbox-container icon">'+
+																				'<div><div class="ICON-36 grey valutata no-canvas"></div>Valutazione</div>'+
+																				'<div><input type="checkbox" value="valutazione"/></div>'+
+																			'</div>'+
+																			'<div class="checkbox-container">'+
+																				'<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>'+
+																				'<div><input type="checkbox" value="idonea"/></div>'+
+																			'</div>'+
+																			'<div class="checkbox-container">'+
+																				'<div><div class="ICON-36 grey effettuata no-canvas"></div>Effettuata</div>'+
+																				'<div><input type="checkbox" value="effettuata" /></div>'+
+																			'</div>'+
+																			
+																		'</div>'+
+																	
+																		'<div class="FORM-field-row little">'+
+																			
+																				'<div class="FORM-field">'+
+																					'<p class="FORM-label">Da - A</p>'+
+																					'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
+																				'</div>'+
+																				'<div class="FORM-field">'+
+																					'<p class="FORM-label">&nbsp; <!-- important --></p>'+
+																					'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
+																				'</div>'+
+																			
+																		'</div>'+
+																	'</div>'+
+
+													
+													
+											'</div>'+
+										'</div>'+
+																
+																
+																
+																
+										'<div class="SEARCH-box uni" data-search-entity="unita">'+
+											'<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>'+
+											'<div class="SEARCH-box-item-container" >'+
+												
+												
+																	'<div class="FORM-field-row little">'+
+																		'<p class="FORM-label">Codice</p>'+
+																		'<p><input type="search" placeholder="placeholder"></p>'+
+																	'</div>'+
+																
+																	'<div class="FORM-field-row little">'+
+																		'<p class="FORM-label">Stato</p>'+
+																		
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey accettata no-canvas"></div>Accettata</div>'+
+																			'<div><input type="checkbox" value="accettata" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey manipolazione no-canvas"></div>Manipolata</div>'+
+																			'<div><input type="checkbox" value="manipolata" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey criopreservata no-canvas"></div>Criopres.</div>'+
+																			'<div><input type="checkbox" value="criopreservata" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey scongelamento no-canvas"></div>Scongelata</div>'+
+																			'<div><input type="checkbox" value="scongelata" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey richiesta no-canvas"></div>Richiesta</div>'+
+																			'<div><input type="checkbox" value="richiesta"/></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>'+
+																			'<div><input type="checkbox" value="idonea" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey rilascio_unita no-canvas"></div>Rilasciata</div>'+
+																			'<div><input type="checkbox" value="rilasciata" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey reinfusione no-canvas"></div>Reinfusa</div>'+
+																			'<div><input type="checkbox" value="reinfusa" /></div>'+
+																		'</div>'+
+																		'<div class="checkbox-container">'+
+																			'<div><div class="ICON-36 grey valutata no-canvas"></div>Valutata</div>'+
+																			'<div><input type="checkbox" value="valutata"/></div>'+
+																		'</div>'+
+																		'<div class="FORM-field-row little">'+
+																			'<div class="FORM-field-row little">'+
+																				'<p class="FORM-label">Processing facility</p>'+
+																				'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
+																			'</div>'+
+																		'</div>'+
+																
+																		'<div class="FORM-field-row little">'+
+																			
+																				'<div class="FORM-field">'+
+																					'<p class="FORM-label">Da - A</p>'+
+																					'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
+																				'</div>'+
+																				'<div class="FORM-field">'+
+																					'<p class="FORM-label">&nbsp; <!-- important --></p>'+
+																					'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
+																				'</div>'+
+																			
+																		'</div>'+
+																	'</div>'+
+																	
+															
+											'</div>'+
+										'</div>'+
+																
+															
+																
+																
+										'<div class="SEARCH-tags-container">'+
+											'<div class="raccolta">Stai cercando <b>Raccolta</b> con:</div>'+
+											
+										'</div>'+
+										'<div class="MAIN-footer">'+
+											'<div class="MAIN-footer-container">'+
+												'<button type="button" class="BUTTON confirm_advanced_search_button">Cerca</button> '+
+												'<button type="button" class="BUTTON clear_advanced_search_button">Rimuovi tutti</button> '+
+												'<button type="button" class="BUTTON close_advanced_search_button">Annulla</button>'+
+											'</div>'+
+										'</div>'+
+										
+										
+										
+									'</div>';
+
 	

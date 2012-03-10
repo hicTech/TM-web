@@ -8,8 +8,8 @@
 }
 
 
-.TABLE tr:nth-child(odd)    { background-color:#c4c4c5}
-.TABLE tr:nth-child(even)    { background-color:#d1d1d1}
+.TABLE tr:nth-child(odd)    { background-color:#d1d1d1}
+.TABLE tr:nth-child(even)    { background-color:#c4c4c5}
 
 
 
