@@ -20,7 +20,7 @@ $(document).ready(function(){
 			var $t = $(this);
 			var unique = $t.data("search-role") == "unique";
 			$t.blur(function(){
-				setTimeout(function(){
+				
 					if( $t.val() != "" ){
 						addSearchTag($t);
 						( unique ) ? $t.addClass("active-field",300) : $t.val("");;
@@ -29,7 +29,6 @@ $(document).ready(function(){
 					else{
 						( unique ) ? $t.removeClass("active-field",1000) : null;
 					}
-				},200);
 			});
 			
 			if(unique){
@@ -95,53 +94,107 @@ $(document).ready(function(){
 		});
 		
 		
-		//tasti "ricerca avanzata" ed "altro"
+		/*
+		 * 		
+		<!-- ################################## RICERCA ESTESA ####################################--->
+		<!-- ################################## RICERCA ESTESA ####################################--->
+		<!-- ################################## RICERCA ESTESA ####################################--->
+		<!-- ################################## RICERCA ESTESA ####################################--->
+		 */
 		
 		$el.find(".advanced_search_button").each(function(){
+			var id = $(this).parents(".SEARCH-box").data("search-entity")
 			$(this).click(function(){
-				UIgenericOverlay();	
+				showAdvancedSearch(id);
 			})
 			
-			/*$(this).click(function(){
-				$(this).parents(".GENERAL-mainarea-table").find(".SEARCH-box-container").each(function(){
-					$(this).toggle();
-				});
-				$(this).parents(".GENERAL-mainarea-table").find(".MAINAREA-slider").toggle();
-			})*/
 		})
-		
-		/*$el.find(".more_button").each(function(){
+	
+		$el.find(".clear_advanced_search_button").each(function(){
 			$(this).click(function(){
-				$(this).parents(".SEARCH-box-item-container").find(".SEARCH-box-more-fields").toggle("fade");
+				resetFullSearch($(this))
 			})
-		})*/
+		});
+		
+		$el.find(".close_advanced_search_button").each(function(){
+			var id = $(this).parents(".SEARCH-container").attr("id").replace("full_search_","")
+			$(this).click(function(){
+				$("#full_search_"+id).dialog("close")
+			})
+		});
 		
 		$el.find(".confirm_advanced_search_button").each(function(){
 			$(this).click(function(){
+				var id = $(this).parents(".SEARCH-container").attr("id").replace("full_search_","")
+				var result = $el.find(".SEARCH-tags-container").html();
+				if(result.length != 0){
+					$("#full_search_"+id).dialog("close");
+					setResultsTag(result , id);
+					$(".SEARCH-box").each(function(){
+						if($(this).is(":visible"))
+							$(this).hide();
+					})
+				}
 				
-			})
+			});
+
+			
 		})
 		
-		$el.find(".clear_advanced_search_button").each(function(){
-			$(this).click(function(){
-				$(this).parents(".SEARCH-box-container").find(".SEARCH-tags-container").find(".close_this_search_tag").each(function(){
+		function setResultsTag(result , id){
+				var r = result +'<button type="button" class="BUTTON reset_advanced_search_button">Annulla</button><button type="button" class="BUTTON edit_advanced_search_button">Modifica</button>';
+				$(".SEARCH-tags-container").each(function(){
+					if($(this).is(":visible")){
+							 $(this).html(r);
+							 $(this).find(".close_this_search_tag").hide();
+							 $(this).find(".edit_advanced_search_button").click(function(){
+							 	$(this).unbind("click")
+								showAdvancedSearch(id);	
+							 });
+							 
+							 $(this).find(".reset_advanced_search_button").click(function(){
+							 	$(this).unbind("click")
+							 	$(this).parents(".SEARCH-box-container").find(".SEARCH-box").show();
+							 	$(this).parents(".SEARCH-tags-container").html("");
+								resetFullSearch($(this))
+							 });
+					}
+					
+				});
+			
+		}
+		
+		function resetFullSearch($this){
+			var id = $this.parents(".SEARCH-container").attr("id");
+			var $element = $("#"+id);
+			$element.find(".close_this_search_tag").each(function(){
 					$(this).trigger("click")
 				});
-				$(this).parents(".SEARCH-box-container").find("input").val("")
-			})
-		})
 		
-		$el.find(".close_advanced_search_button").each(function(){
-			$(this).click(function(){
-				
-			})
-		})
-		
+		}
 		
 		
 		
 	})
 	
+	
+	
+	function showAdvancedSearch(id){
+		var $content = $("#full_search_"+id);
+		$content.dialog({
+			modal:true,
+			title : "Ricerca avanzata",
+			minWidth: 1000,
+			minHeight: 600,
+			draggable: false,
+			resizable : false,
+			
+		});
+		$content.dialog( "open" );
+		return false;
+		
+	}
+
 	
 	
 	

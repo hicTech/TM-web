@@ -38,18 +38,17 @@ function UIconfirm(){
 }
 
 function UIgenericOverlay(content){
-	var $content = $("#full_search");
+	/*var $content = $("#full_search_anagrafica");
 		$content.dialog({
 			modal:true,
 			title : "Ricerca avanzata",
 			minWidth: 1000,
 			minHeight: 600,
-			show: "fade",
-			hide: "fade",
 			draggable: false,
 			resizable : false,
 			
 		});
 		$content.dialog( "open" );
 		return false;
+		*/
 }
