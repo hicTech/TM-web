@@ -41,6 +41,7 @@ function UIgenericOverlay(content){
 	var $content = $("#full_search");
 		$content.dialog({
 			modal:true,
+			title : "Ricerca avanzata",
 			minWidth: 1000,
 			minHeight: 600,
 			show: "fade",

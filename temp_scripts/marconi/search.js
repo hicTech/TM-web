@@ -44,6 +44,7 @@ $(document).ready(function(){
 			var $t = $(this);
 			var label = getTagLabel($t);
 			$t.blur(function(){
+				
 				setTimeout(function(){
 					if( $t.val() != "" ){
 						//$t.addClass("active-field",300);
@@ -97,9 +98,9 @@ $(document).ready(function(){
 		//tasti "ricerca avanzata" ed "altro"
 		
 		$el.find(".advanced_search_button").each(function(){
-			//$(this).click(function(){
-				//UIgenericOverlay();	
-			//})
+			$(this).click(function(){
+				UIgenericOverlay();	
+			})
 			
 			/*$(this).click(function(){
 				$(this).parents(".GENERAL-mainarea-table").find(".SEARCH-box-container").each(function(){
@@ -123,7 +124,10 @@ $(document).ready(function(){
 		
 		$el.find(".clear_advanced_search_button").each(function(){
 			$(this).click(function(){
-				
+				$(this).parents(".SEARCH-box-container").find(".SEARCH-tags-container").find(".close_this_search_tag").each(function(){
+					$(this).trigger("click")
+				});
+				$(this).parents(".SEARCH-box-container").find("input").val("")
 			})
 		})
 		
@@ -151,7 +155,7 @@ $(document).ready(function(){
 	 */
 	
 	function addSearchTag($t , forced_label){
-		
+
 			if( $t.val().length < 3 ){
 					UIalert("Attenzione","Inerisci 3 o più caratteri");
 					return false;
@@ -164,12 +168,13 @@ $(document).ready(function(){
 			var data_id = getTagId($t , forced_label);
 			var type = getTagType($t);	
 			var unique = $t.data("search-role") == "unique";
-	
+			
 			if(type == "checkbox"){		
 				if( $target.find('[data-search-tag-id="'+data_id+'"]').html() == null){
 					$target.append(addSingleSearchTag($t , value));
 					return true;
 				}
+				
 			}
 			
 			if(type == "date"){
@@ -183,7 +188,7 @@ $(document).ready(function(){
 					return true;
 				}
 			}
-			
+
 			if(unique){
 				
 				if( (type != "select" && type != "checkbox" ) && value.indexOf(" ") != -1){
@@ -194,30 +199,35 @@ $(document).ready(function(){
 					$target.append(addSingleSearchTag($t ,  value));
 					return true;
 				}
-				else{			
-					$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).after(addSingleSearchTag($t ,  value))
-					$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).remove();
+				else{
+					//$target.find('[data-search-tag-id="'+data_id+'"]').eq(0).after(addSingleSearchTag($t ,  value))
+					$target.find('[data-search-tag-id="'+data_id+'"]').remove();
+					$target.append(addSingleSearchTag($t ,  value));
 					return true;
 				}
 				
 			}
 			else{
-				var arr = value.split(" ");
-				for(i in arr){
-					data_id = getTagId($t , arr[i]);
-					if( $t.parents(".SEARCH-container").find('[data-search-tag-id="'+data_id+'"]').html() == null){
-						$target.append( addSingleSearchTag($t , arr[i] , arr[i]) );
+				if(type != "checkbox"){
+					var arr = value.split(" ");
+					for(i in arr){
+						data_id = getTagId($t , arr[i]);
+						
+						if( $t.parents(".SEARCH-container").find('[data-search-tag-id="'+data_id+'"]').html() == null){
+							$target.append( addSingleSearchTag($t , arr[i]) );
+						}
 					}
-				}	
+				}
+					
 			}
 		}
 		
 		function addSingleSearchTag($t , value, label){
-
-			var data_id = getTagId($t , label);
+			
+			var data_id = (label == undefined )? getTagId($t) : getTagId($t , label);
 			var entity = getTagEntity($t);
 			var label = (label == undefined )? getTagLabel($t) : label;
-	
+			//alert("appioppo "+data_id)
 			var html = $('<div data-search-tag-id="'+data_id+'">'+
 							'<div class="SEARCH-tag-container">'+
 								'<span> <font class="'+entity+'"><b>'+entity+'</b></font> '+label+':<span class="SEARCH-tag-value"> <b>'+value+'</b></span></span>'+
@@ -278,7 +288,7 @@ $(document).ready(function(){
 		}
 		
 		function getTagLabel($t){
-			return $t.parents(".FORM-field-row").find(".FORM-label").html();
+			return $t.parents(".FORM-field").find(".FORM-label").html();
 		}
 		
 		function getTagEntity($t){
@@ -353,264 +363,3 @@ $(document).ready(function(){
 	
 // html ricerca
 
-
-var html_ricerca_completa ='<div class="SEARCH-box-container">'+
-																
-																
-										'<div class="SEARCH-box ana" data-search-entity="anagrafica">'+
-											'<div class="SEARCH-box-header"><div class="ICON-47  anagrafica onGreyCanvas"></div><div class="SEARCH-box-title anagrafica">Anagrafica</div></div>'+
-											'<div class="SEARCH-box-item-container">'+
-												
-												
-																	'<div class="FORM-field-row little">'+
-																		'<p class="FORM-label">Codice</p>'+
-																		'<p><input type="search" placeholder="placeholder"></p>'+
-																	'</div>'+
-															
-																	'<div class="FORM-field-row little">'+
-																		'<p class="FORM-label">Tipo</p>'+
-																		'<div class="checkbox-container">'+
-																			'<div>Paziente</div>'+
-																			'<div><input type="checkbox"  value="paziente" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div>Donatore</div>'+
-																			'<div><input type="checkbox"  value="donatore" /></div>'+
-																		'</div>'+
-																		
-																	'</div>'+
-															
-																	
-																	'<div class="FORM-field-row little">'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">Nome</p>'+
-																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
-																		'</div>'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">Cognome</p>'+
-																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
-																		'</div>'+
-																	'</div>'+
-																	
-																	'<div class="FORM-field-row little">'+
-																		'<p class="FORM-label">Luogo di nascita</p>'+
-																		'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
-																	'</div>'+
-																	
-																	'<div class="FORM-field-row little">'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">Ospedale proven.</p>'+
-																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
-																		'</div>'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">Reparto proven.</p>'+
-																			'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
-																		'</div>'+
-																	'</div>'+
-																	
-															
-																	'<div class="FORM-field-row little">'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">Registrato</p>'+
-																			'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
-																		'</div>'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">&nbsp; <!-- important --></p>'+
-																			'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
-																		'</div>'+
-																	'</div>'+
-																	'<div class="FORM-field-row little">'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">Modificato</p>'+
-																			'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
-																		'</div>'+
-																		'<div class="FORM-field">'+
-																			'<p class="FORM-label">&nbsp; <!-- important --></p>'+
-																			'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
-																		'</div>'+
-																	'</div>'+
-																	
-																
-												
-
-													
-													
-													
-											'</div>'+
-										'</div>'+
-																
-																
-																
-										'<div class="SEARCH-box rac" data-search-entity="raccolta">'+
-											'<div class="SEARCH-box-header"><div class="ICON-47 raccolta onGreyCanvas"></div><div class="SEARCH-box-title raccolta">Raccolta</div></div>'+
-											'<div class="" >'+
-												
-													
-																	'<div class="FORM-field-row little">'+
-																		'<p class="FORM-label">Codice</p>'+
-																		'<p><input  type="search" placeholder="placeholder"></p>'+
-																	'</div>'+
-																
-																	'<div class="FORM-field-row little">'+
-																		'<p class="FORM-label">Tipo</p>'+
-																		'<div class="checkbox-container">'+
-																			'<div>HPC M (aut.)</div>'+
-																			'<div><input type="checkbox"  value="HPC M (autologo)" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div>HPC M (all.)</div>'+
-																			'<div><input type="checkbox"  value="HPC M (allogenico)" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div>HPC A (aut.)</div>'+
-																			'<div><input type="checkbox" value="HPC A (autologo)"  /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div>HPC A (all.)</div>'+
-																			'<div><input type="checkbox" value="HPC A (allogenico)"  /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div>TCT</div>'+
-																			'<div><input type="checkbox" value="TCT"  /></div>'+
-																		'</div>'+
-																		'<div class="FORM-field-row little">'+
-																			'<div class="FORM-field-row little">'+
-																				'<p class="FORM-label">Collection facility</p>'+
-																				'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
-																			'</div>'+
-																		'</div>'+
-																	
-																		'<div class="FORM-field-row little">'+
-																			'<p class="FORM-label">Stato</p>'+
-																			
-																			'<div class="checkbox-container icon">'+
-																				'<div><div class="ICON-36 grey valutata no-canvas"></div>Valutazione</div>'+
-																				'<div><input type="checkbox" value="valutazione"/></div>'+
-																			'</div>'+
-																			'<div class="checkbox-container">'+
-																				'<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>'+
-																				'<div><input type="checkbox" value="idonea"/></div>'+
-																			'</div>'+
-																			'<div class="checkbox-container">'+
-																				'<div><div class="ICON-36 grey effettuata no-canvas"></div>Effettuata</div>'+
-																				'<div><input type="checkbox" value="effettuata" /></div>'+
-																			'</div>'+
-																			
-																		'</div>'+
-																	
-																		'<div class="FORM-field-row little">'+
-																			
-																				'<div class="FORM-field">'+
-																					'<p class="FORM-label">Da - A</p>'+
-																					'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
-																				'</div>'+
-																				'<div class="FORM-field">'+
-																					'<p class="FORM-label">&nbsp; <!-- important --></p>'+
-																					'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
-																				'</div>'+
-																			
-																		'</div>'+
-																	'</div>'+
-
-													
-													
-											'</div>'+
-										'</div>'+
-																
-																
-																
-																
-										'<div class="SEARCH-box uni" data-search-entity="unita">'+
-											'<div class="SEARCH-box-header"><div class="ICON-47 unita onGreyCanvas"></div><div class="SEARCH-box-title unita">Unità</div></div>'+
-											'<div class="SEARCH-box-item-container" >'+
-												
-												
-																	'<div class="FORM-field-row little">'+
-																		'<p class="FORM-label">Codice</p>'+
-																		'<p><input type="search" placeholder="placeholder"></p>'+
-																	'</div>'+
-																
-																	'<div class="FORM-field-row little">'+
-																		'<p class="FORM-label">Stato</p>'+
-																		
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey accettata no-canvas"></div>Accettata</div>'+
-																			'<div><input type="checkbox" value="accettata" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey manipolazione no-canvas"></div>Manipolata</div>'+
-																			'<div><input type="checkbox" value="manipolata" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey criopreservata no-canvas"></div>Criopres.</div>'+
-																			'<div><input type="checkbox" value="criopreservata" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey scongelamento no-canvas"></div>Scongelata</div>'+
-																			'<div><input type="checkbox" value="scongelata" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey richiesta no-canvas"></div>Richiesta</div>'+
-																			'<div><input type="checkbox" value="richiesta"/></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey idonea no-canvas"></div>Idonea</div>'+
-																			'<div><input type="checkbox" value="idonea" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey rilascio_unita no-canvas"></div>Rilasciata</div>'+
-																			'<div><input type="checkbox" value="rilasciata" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey reinfusione no-canvas"></div>Reinfusa</div>'+
-																			'<div><input type="checkbox" value="reinfusa" /></div>'+
-																		'</div>'+
-																		'<div class="checkbox-container">'+
-																			'<div><div class="ICON-36 grey valutata no-canvas"></div>Valutata</div>'+
-																			'<div><input type="checkbox" value="valutata"/></div>'+
-																		'</div>'+
-																		'<div class="FORM-field-row little">'+
-																			'<div class="FORM-field-row little">'+
-																				'<p class="FORM-label">Processing facility</p>'+
-																				'<p><input style="width:120px" type="search" placeholder="placeholder"></p>'+
-																			'</div>'+
-																		'</div>'+
-																
-																		'<div class="FORM-field-row little">'+
-																			
-																				'<div class="FORM-field">'+
-																					'<p class="FORM-label">Da - A</p>'+
-																					'<p><input type="date" data-role="dateRange-from" placeholder="Dal"></p>'+
-																				'</div>'+
-																				'<div class="FORM-field">'+
-																					'<p class="FORM-label">&nbsp; <!-- important --></p>'+
-																					'<p><input type="date" data-role="dateRange-to" placeholder="Al"></p>'+
-																				'</div>'+
-																			
-																		'</div>'+
-																	'</div>'+
-																	
-															
-											'</div>'+
-										'</div>'+
-																
-															
-																
-																
-										'<div class="SEARCH-tags-container">'+
-											'<div class="raccolta">Stai cercando <b>Raccolta</b> con:</div>'+
-											
-										'</div>'+
-										'<div class="MAIN-footer">'+
-											'<div class="MAIN-footer-container">'+
-												'<button type="button" class="BUTTON confirm_advanced_search_button">Cerca</button> '+
-												'<button type="button" class="BUTTON clear_advanced_search_button">Rimuovi tutti</button> '+
-												'<button type="button" class="BUTTON close_advanced_search_button">Annulla</button>'+
-											'</div>'+
-										'</div>'+
-										
-										
-										
-									'</div>';
-
-	
