@@ -7,23 +7,30 @@
 }
 
 .TOOL-big-arrows.forward{
-	 background-position: 0px 0px;
+	 background-position: -22px 0px;
 }
 
 .TOOL-big-arrows.forward:hover{
-	 background-position: -22px 0px; 
-}
-
-.TOOL-big-arrows.back{
-	 background-position: -66px 0px;
-
-
-}
-
-.TOOL-big-arrows.back:hover{
 	 background-position: -44px 0px; 
 }
 
+.TOOL-big-arrows.forward.disabled{
+	 background-position: 0px 0px;
+	 cursor: default
+}
+
+.TOOL-big-arrows.back{
+	 background-position: -88px 0px;
+}
+
+.TOOL-big-arrows.back:hover{
+	 background-position: -66px 0px; 
+}
+
+.TOOL-big-arrows.back.disabled{
+	 background-position: -110px 0px;
+	 cursor: default
+}
 
 
 .TOOL-little-arrows{

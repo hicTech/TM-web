@@ -168,7 +168,21 @@ $(document).ready(function(){
 	function updateSliderIndicators(current_slide,tot,current_slide_html_obj){
 		var $navigator = current_slide_html_obj.parents(".GENERAL-mainarea").find("tr.MAINAREA-navigator");
 		$navigator.find(".step_indicator").removeClass("current");
-		$navigator.find(".step_indicator").eq(current_slide).addClass("current")
+		$navigator.find(".step_indicator").eq(current_slide).addClass("current");
+		var $back_button = $navigator.find(".back");
+		var $forward_button = $navigator.find(".forward");
+		
+		$back_button.removeClass("disabled");
+		$forward_button.removeClass("disabled");
+		
+		if(current_slide == 0){
+			$back_button.addClass("disabled");
+		}
+		else if(current_slide == tot-1 ){
+			$forward_button.addClass("disabled");
+		}
+
+		
 	}
 
 	
