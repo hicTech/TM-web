@@ -95,6 +95,7 @@ $(document).ready(function(){
 	}
 	
 
+
 	
 	function setSlider($mainarea){
 		var mainarea_id = $mainarea.data("mainarea-id");
